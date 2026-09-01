@@ -1,57 +1,89 @@
 {
   "schema": "CAMT.ModuleUpdateCatalog.1",
   "channel": "Beta",
-  "generated": "2026-08-25T06:20:00+02:00",
-  "repository": "https://github.com/agebrander-def/CAMT-Updates",
+  "generated": "2026-09-01T07:45:00+02:00",
+  "repository": "https://github.com/cyberfirepulse/CAMT-Updates",
   "modules": [
+    {
+      "package_id": "camt.core.update_manager",
+      "name": "CAMT Update Manager",
+      "channel": "Beta",
+      "version": "1.2.3",
+      "category": "Other",
+      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse migration, and explicit installed-versus-repository version handling.",
+      "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta4/CAMT_Update_Manager_v1_2_3.camtmodule",
+      "sha256": "C33D981F1B3985C39772512CEF1D2AEE7749F72B3197538F179337892FC4AAEA"
+    },
+    {
+      "package_id": "camt.cve.research_correlation",
+      "name": "CVE Research & Correlation",
+      "channel": "Beta",
+      "version": "1.0.0",
+      "category": "Other",
+      "description": "Geavanceerd lokaal CVE-onderzoek en correlatie tegen CAMT's bestaande vulnerability dataset.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CVE_Research_Correlation.camtmodule",
+      "sha256": "BDC9760FA17944D35466549937AEB36F035450201B69F5EEE8DD935BEDD21EA9"
+    },
+    {
+      "package_id": "camt.dataset.exchange",
+      "name": "Dataset Exchange",
+      "channel": "Beta",
+      "version": "1.0.0",
+      "category": "Other",
+      "description": "CSV/JSON dataset preview, mapping, CTI actor import, generic export and CAMT Dataset Package creation.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Dataset_Exchange.camtmodule",
+      "sha256": "08086AE43F8CB705709540A04E7B483066037395E8882E8F6FDFDB553B3FBC6C"
+    },
     {
       "package_id": "camt.evidence.integrity",
       "name": "CAMT Evidence Integrity",
       "channel": "Beta",
       "version": "1.0.1",
-      "category": "Evidence",
+      "category": "Other",
       "description": "Evidence hashing, integrity verification and chain-of-custody manifest workspace.",
-      "download_url": "https://raw.githubusercontent.com/agebrander-def/CAMT-Updates/main/modules/CAMT_Evidence_Integrity_v1_0_1.camtmodule",
-      "sha256": "0eec817cf99d681fe83517730d507b106969b5ca71e06a712e6c7062bbf25a19",
-      "release_notes_url": "https://github.com/agebrander-def/CAMT-Updates/blob/main/release-notes/evidence-integrity-1.0.1.md",
-      "release_notes": "Evidence Integrity 1.0.1: verification states, current hash tracking and CSV manifest export."
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Evidence_Integrity_v1_0_1.camtmodule",
+      "sha256": "0EEC817CF99D681FE83517730D507B106969B5CA71E06A712E6C7062BBF25A19"
     },
     {
       "package_id": "camt.log.timeline_explorer",
       "name": "CAMT Log Timeline Explorer",
       "channel": "Beta",
       "version": "1.0.1",
-      "category": "Forensics",
+      "category": "Other",
       "description": "Generic log normalization, filtering, statistics and forensic timeline export.",
-      "download_url": "https://raw.githubusercontent.com/agebrander-def/CAMT-Updates/main/modules/CAMT_Log_Timeline_Explorer_v1_0_1.camtmodule",
-      "sha256": "7a9364e9b85d0faf02a8a2b23a06b27ad0a4350076cbf668f417e6ab02e6489c",
-      "release_notes_url": "https://github.com/agebrander-def/CAMT-Updates/blob/main/release-notes/log-timeline-explorer-1.0.1.md",
-      "release_notes": "Log Timeline Explorer 1.0.1: severity filtering and top-source statistics."
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Log_Timeline_Explorer_v1_0_1.camtmodule",
+      "sha256": "7A9364E9B85D0FAF02A8A2B23A06B27AD0A4350076CBF668F417E6AB02E6489C"
     },
     {
       "package_id": "camt.netmap.baseline_comparator",
       "name": "CAMT NetMap Baseline Comparator",
       "channel": "Beta",
       "version": "1.0.1",
-      "category": "Network",
+      "category": "Other",
       "description": "Compare CAMT NetMap/topology snapshots and identify added, removed and changed assets.",
-      "download_url": "https://raw.githubusercontent.com/agebrander-def/CAMT-Updates/main/modules/CAMT_NetMap_Baseline_Comparator_v1_0_1.camtmodule",
-      "sha256": "91a0b92252f97ef267e848ca425c00ff18137b72d30ae55a4850c58683071041",
-      "release_notes_url": "https://github.com/agebrander-def/CAMT-Updates/blob/main/release-notes/netmap-baseline-comparator-1.0.1.md",
-      "release_notes": "NetMap Baseline Comparator 1.0.1: service/vulnerability delta detection and detailed JSON diff export."
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_NetMap_Baseline_Comparator_v1_0_1.camtmodule",
+      "sha256": "91A0B92252F97EF267E848CA425C00FF18137B72D30AE55A4850C58683071041"
     },
     {
-      "package_id": "camt.core.update_manager",
-      "name": "CAMT Update Manager",
+      "package_id": "camt.network.visualisation",
+      "name": "Network Visualisation Professional",
       "channel": "Beta",
-      "version": "1.2.3",
-      "category": "Core",
-      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse repository migration, and explicit installed-versus-repository version handling.",
-      "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta4/CAMT_Update_Manager_v1_2_3.camtmodule",
-      "sha256": "C33D981F1B3985C39772512CEF1D2AEE7749F72B3197538F179337892FC4AAEA",
-      "release_notes": "Update Manager 1.2.3: repository version is clearly distinguished from the installed version; older repository versions are not offered as updates."
-    }
+      "version": "3.4.2",
+      "category": "Other",
+      "description": "CAMT Network Visualisation Professional with persistent Inspector editing, direct Network Mapper import/synchronisation, observed/inferred topology links, link metadata, preservation of manual enrichment, and conservative verified gateway inference.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Network_Visualisation_Professional_v3_4_2.camtmodule",
+      "sha256": "1BF14D3F47669A22DAC681E143AA6E80F2E4CFE70D73509DA973FD71292E1979"
     },
+    {
+      "package_id": "camt.ot_ics.investigation",
+      "name": "OT/ICS Investigation",
+      "channel": "Beta",
+      "version": "1.0.0",
+      "category": "Other",
+      "description": "OT/ICS-focused investigation workbench for free text, Purdue/asset context, operational impact and handoff to CAMT scenario/twin/risk workspaces.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/OT_ICS_Investigation.camtmodule",
+      "sha256": "A36218320FBEFEEBF6751133356343906B5467917067027D0C8EB6D45670B649"
+    }
   ],
   "signing": {
     "algorithm": "ed25519",
