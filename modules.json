@@ -50,7 +50,7 @@
       "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta4/CAMT_Update_Manager_v1_2_3.camtmodule",
       "sha256": "C33D981F1B3985C39772512CEF1D2AEE7749F72B3197538F179337892FC4AAEA",
       "release_notes": "Update Manager 1.2.3: repository version is clearly distinguished from the installed version; older repository versions are not offered as updates."
-    },
+    }
   ],
   "signing": {
     "algorithm": "ed25519",
