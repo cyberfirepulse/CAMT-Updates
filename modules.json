@@ -1,18 +1,19 @@
 {
   "schema": "CAMT.ModuleUpdateCatalog.1",
   "channel": "Beta",
-  "generated": "2026-09-01T07:45:00+02:00",
+  "generated": "2026-09-01T07:55:00+02:00",
   "repository": "https://github.com/cyberfirepulse/CAMT-Updates",
   "modules": [
     {
       "package_id": "camt.core.update_manager",
       "name": "CAMT Update Manager",
       "channel": "Beta",
-      "version": "1.2.3",
+      "version": "1.2.4",
       "category": "Other",
-      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse migration, and explicit installed-versus-repository version handling.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Update_Manager_v1_2_3.camtmodule",
-      "sha256": "C33D981F1B3985C39772512CEF1D2AEE7749F72B3197538F179337892FC4AAEA"
+      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse repository migration, explicit version handling, and laptop-safe Module Repository layout.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Update_Manager_v1_2_4.camtmodule",
+      "sha256": "5F0445C14EDB65F84A761B7D68996EE07843E49327AA58E8E37EB5BAE1319C79",
+      "release_notes": "Update Manager 1.2.4: laptop-safe Module Repository layout, bottom action buttons remain visible, module tables have scrollbars, Available is renamed to New modules, and the first row is selected automatically."
     },
     {
       "package_id": "camt.cve.research_correlation",
