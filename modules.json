@@ -5,18 +5,6 @@
   "repository": "https://github.com/agebrander-def/CAMT-Updates",
   "modules": [
     {
-      "package_id": "camt.core.update_manager",
-      "name": "CAMT Update Manager",
-      "channel": "Beta",
-      "version": "1.2.1",
-      "category": "Core",
-      "description": "CAMT Update Manager and Module Repository with Network Resilience: requests primary HTTPS, urllib fallback, retries, cache and atomic downloads.",
-      "download_url": "https://raw.githubusercontent.com/agebrander-def/CAMT-Updates/main/modules/CAMT_Update_Manager_v1_2_1_Network_Resilience.camtmodule",
-      "sha256": "461d254c13af180b9af4fcbe39d50a6fb55e0ebc2114e47716db0d04102efcdb",
-      "release_notes_url": "https://github.com/agebrander-def/CAMT-Updates/blob/main/release-notes/update-manager-1.2.1.md",
-      "release_notes": "Network Resilience: requests primary HTTPS, urllib fallback, three retry rounds, short back-off, cached valid update/catalog data, atomic .part downloads and user-friendly handling of temporary connection resets such as WinError 10054."
-    },
-    {
       "package_id": "camt.evidence.integrity",
       "name": "CAMT Evidence Integrity",
       "channel": "Beta",
