@@ -1,11 +1,16 @@
 {
   "schema": "CAMT.UpdateManifest.1",
   "product": "CAMT",
+  "edition": "Professional Edition",
+  "version": "1.1.0 Beta 4",
+  "build": "110B4-LIC-20260826",
+  "release_seq": 4,
   "channel": "Beta",
-  "version": "1.1.0 Beta 3",
-  "build": "110B3-RCF-20260826",
-  "download_url": "https://github.com/agebrander-def/CAMT-Updates/releases/download/v1.1.0-beta3/CAMT-1.1.0-Beta3-Core-Update-Setup.exe",
-  "sha256": "D7F56A6989A29DA717D71499497AD798DFDE950527D0B722CC189A8C9233425B",
-  "release_notes": "CAMT 1.1.0 Beta 3 core update test.",
-  "mandatory": false
+  "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta4/CAMT_Professional_Edition_1.1.0_Beta4_Core_Update.exe",
+  "sha256": "EAFD75F6BA0A5A9247362FE868A11DE6CE2B6BE7CDDB61B6F29F100F4FBB274F",
+  "release_notes": "CAMT Professional Edition 1.1.0 Beta 4 core update. Updates an existing CAMT installation to Beta 4. Use the Complete installer for new installations.",
+  "signing": {
+    "algorithm": "ed25519",
+    "signature": ""
+  }
 }
