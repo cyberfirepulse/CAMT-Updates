@@ -7,7 +7,7 @@
   "release_seq": 5,
   "channel": "Beta",
   "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta5/CAMT_Professional_Edition_1.1.0_Beta5_Setup_core.exe",
-  "sha256": "DBA6771D65392A09984C827438EDD18B6B805B4C48A14CB7D59AA03936C7AEA9",
+  "sha256": "483ED707CA340CC33D32260984F9C87229DB68614A7B3A01B49C0D7ADC51433E",
   "release_notes": "CAMT Professional Edition 1.1.0 Beta 5 core update. Includes CAMT-wide UI and screen-fit improvements for smaller displays and updates an existing CAMT installation to Beta 5. Use the Complete installer for new installations.",
   "signing": {
     "algorithm": "ed25519",
