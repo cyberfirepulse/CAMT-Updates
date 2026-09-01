@@ -41,13 +41,16 @@
       "release_notes": "NetMap Baseline Comparator 1.0.1: service/vulnerability delta detection and detailed JSON diff export."
     },
     {
-  "package_id": "camt.core.update_manager",
-  "name": "CAMT Update Manager",
-  "version": "1.2.3",
-  "channel": "Beta",
-  "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta4/CAMT_Update_Manager_v1_2_3.camtmodule",
-  "sha256": "C33D981F1B3985C39772512CEF1D2AEE7749F72B3197538F179337892FC4AAEA"
-},
+      "package_id": "camt.core.update_manager",
+      "name": "CAMT Update Manager",
+      "channel": "Beta",
+      "version": "1.2.3",
+      "category": "Core",
+      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse repository migration, and explicit installed-versus-repository version handling.",
+      "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta4/CAMT_Update_Manager_v1_2_3.camtmodule",
+      "sha256": "C33D981F1B3985C39772512CEF1D2AEE7749F72B3197538F179337892FC4AAEA",
+      "release_notes": "Update Manager 1.2.3: repository version is clearly distinguished from the installed version; older repository versions are not offered as updates."
+    },
   ],
   "signing": {
     "algorithm": "ed25519",
