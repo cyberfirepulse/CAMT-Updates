@@ -1,16 +1,17 @@
 {
-  "schema": "CAMT.UpdateManifest.1",
-  "product": "CAMT",
-  "edition": "Professional Edition",
   "version": "1.1.0 Beta 6",
   "build": "110B6-LIC-20260902",
   "release_seq": 6,
-  "channel": "Beta",
-  "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta6/CAMT_Professional_Edition_1.1.0_Beta6_Setup_core.exe",
-  "sha256": "5F479A8292B3FB1DECE0740320BACC070D9D06CD388A53732B4F981B33E80D6B",
-  "release_notes": "CAMT Professional Edition 1.1.0 Beta 6. Maximized startup after splash and improved license entitlement enforcement/UX.",
-  "signing": {
-    "algorithm": "ed25519",
-    "signature": ""
+  "channel": "beta",
+  "tag": "v1.1.0-beta6",
+  "core": {
+    "filename": "CAMT_Professional_Edition_1.1.0_Beta6_Setup_core.exe",
+    "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta6/CAMT_Professional_Edition_1.1.0_Beta6_Setup_core.exe",
+    "sha256": "3A369EF72DF59A990AD166F0DC7DA50156F5DD6D36B5F4221B203B5CF4C55F0D"
+  },
+  "complete": {
+    "filename": "CAMT_Professional_Edition_1.1.0_Beta6_Setup.exe",
+    "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta6/CAMT_Professional_Edition_1.1.0_Beta6_Setup.exe",
+    "sha256": "301ECEE071F2BD70B3BE62490AAA321F504715CF4A22A7DC6586252D3686BD3D"
   }
 }
