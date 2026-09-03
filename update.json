@@ -7,11 +7,11 @@
   "core": {
     "filename": "CAMT_Professional_Edition_1.1.0_Beta6_Setup_core.exe",
     "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta6/CAMT_Professional_Edition_1.1.0_Beta6_Setup_core.exe",
-    "sha256": "3A369EF72DF59A990AD166F0DC7DA50156F5DD6D36B5F4221B203B5CF4C55F0D"
+    "sha256": "D9DE30913ABFCD433EE92524C5800365DB7B4B5C2DEE7CC004E6DF243EAE1DF9"
   },
   "complete": {
     "filename": "CAMT_Professional_Edition_1.1.0_Beta6_Setup.exe",
     "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta6/CAMT_Professional_Edition_1.1.0_Beta6_Setup.exe",
-    "sha256": "301ECEE071F2BD70B3BE62490AAA321F504715CF4A22A7DC6586252D3686BD3D"
+    "sha256": "0C059DE7CA660C99D41DA79F13B0452C56E3CF2AB63DE11892A9BA89E31F6C22"
   }
 }
