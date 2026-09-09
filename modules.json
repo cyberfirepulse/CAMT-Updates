@@ -1,7 +1,7 @@
 {
   "schema": "CAMT.ModuleUpdateCatalog.1",
   "channel": "Beta",
-  "generated": "2026-09-09T09:15:00+02:00",
+  "generated": "2026-09-09T09:45:00+02:00",
   "repository": "https://github.com/cyberfirepulse/CAMT-Updates",
   "modules": [
     {
@@ -88,11 +88,11 @@
       "package_id": "camt.quicksheet.analyzer",
       "name": "CAMT QuickSheet Analyzer",
       "channel": "Beta",
-      "version": "1.1.2",
+      "version": "1.1.3",
       "category": "Intelligence",
-      "description": "Fixes sparse primary actor context, preserves source-grounded relationships, excludes TAT references as actors, and suppresses sector-only discovery matches.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_QuickSheet_Analyzer_v1_1_2.camtmodule",
-      "sha256": "BDC6A92269036346B3BFC25773325B98AA7963FA23195052783BCD3F68AEB5B6"
+      "description": "QuickSheet Analyzer 1.1.3 adds actor-aware technique attribution, consistent tactic/TTP labels, and management-safe similarity evidence gating.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_QuickSheet_Analyzer_v1_1_3.camtmodule",
+      "sha256": "426765F6C72670A11B56B3CFB30CCFFA41B7EB012F81B3AC763BE7A669253721"
     }
   ],
   "signing": {
