@@ -88,11 +88,11 @@
       "package_id": "camt.quicksheet.analyzer",
       "name": "CAMT QuickSheet Analyzer",
       "channel": "Beta",
-      "version": "1.1.5",
+      "version": "1.1.6",
       "category": "Intelligence",
-      "description": "Separates direct actor behavior from handoff/relationship evidence to prevent false ATT&CK attribution.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_QuickSheet_Analyzer_v1_1_5.camtmodule",
-      "sha256": "4254B447E414B6B617F892566037CED6A7AB3B7213758355A2CA134084F80A12"
+      "description": "Actor-owned mapping with source-role guard; verified on actual Dragos report.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_QuickSheet_Analyzer_v1_1_6.camtmodule",
+      "sha256": "0201421C46DC7433081EBD736405F6D644B383F5C72FB655E4120AB4BCEFC18B"
     }
   ],
   "signing": {
