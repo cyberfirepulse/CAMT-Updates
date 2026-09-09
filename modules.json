@@ -88,11 +88,11 @@
       "package_id": "camt.quicksheet.analyzer",
       "name": "CAMT QuickSheet Analyzer",
       "channel": "Beta",
-      "version": "1.1.6",
+      "version": "1.1.7",
       "category": "Intelligence",
-      "description": "Actor-owned mapping with source-role guard; verified on actual Dragos report.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_QuickSheet_Analyzer_v1_1_6.camtmodule",
-      "sha256": "0201421C46DC7433081EBD736405F6D644B383F5C72FB655E4120AB4BCEFC18B"
+      "description": "Complete TTP display, source technical-overlap labeling and conservative similarity confidence.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_QuickSheet_Analyzer_v1_1_7.camtmodule",
+      "sha256": "2B0D2684C8F1426679279A99A46594CA50D2E85C5A62F55DFCF944DD65C32F87"
     }
   ],
   "signing": {
