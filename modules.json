@@ -1,7 +1,7 @@
 {
   "schema": "CAMT.ModuleUpdateCatalog.1",
   "channel": "Beta",
-  "generated": "2026-09-01T07:45:00+02:00",
+  "generated": "2026-09-09T12:21:00+02:00",
   "repository": "https://github.com/cyberfirepulse/CAMT-Updates",
   "modules": [
     {
@@ -93,6 +93,16 @@
       "description": "Complete TTP display, source technical-overlap labeling and conservative similarity confidence.",
       "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_QuickSheet_Analyzer_v1_1_7.camtmodule",
       "sha256": "2B0D2684C8F1426679279A99A46594CA50D2E85C5A62F55DFCF944DD65C32F87"
+    },
+    {
+      "package_id": "camt.behavioral.engine.fix",
+      "name": "CAMT Behavioral Match Engine Fix",
+      "channel": "Beta",
+      "version": "1.0.0",
+      "category": "Intelligence",
+      "description": "CAMT 1.2.0 Beta 1 behavioral evidence fix: insufficient-evidence handling, duplicate actor consolidation, readable candidate assessment and analyst-friendly observed-behavior input.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Behavioral_Engine_Fix_v1_0_0.camtmodule",
+      "sha256": "A491951254ED122C7232AF5AFFF7C18B78855C3E1E51795CB01F4C32C1FE2FCA"
     }
   ],
   "signing": {
