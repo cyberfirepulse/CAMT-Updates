@@ -1,19 +1,18 @@
 {
   "schema": "CAMT.ModuleUpdateCatalog.1",
   "channel": "Beta",
-  "generated": "2026-09-01T07:55:00+02:00",
+  "generated": "2026-09-09T08:45:00+02:00",
   "repository": "https://github.com/cyberfirepulse/CAMT-Updates",
   "modules": [
     {
       "package_id": "camt.core.update_manager",
       "name": "CAMT Update Manager",
       "channel": "Beta",
-      "version": "1.2.4",
+      "version": "1.2.3",
       "category": "Other",
-      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse repository migration, explicit version handling, and laptop-safe Module Repository layout.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Update_Manager_v1_2_4.camtmodule",
-      "sha256": "5F0445C14EDB65F84A761B7D68996EE07843E49327AA58E8E37EB5BAE1319C79",
-      "release_notes": "Update Manager 1.2.4: laptop-safe Module Repository layout, bottom action buttons remain visible, module tables have scrollbars, Available is renamed to New modules, and the first row is selected automatically."
+      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse migration, and explicit installed-versus-repository version handling.",
+      "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta4/CAMT_Update_Manager_v1_2_3.camtmodule",
+      "sha256": "C33D981F1B3985C39772512CEF1D2AEE7749F72B3197538F179337892FC4AAEA"
     },
     {
       "package_id": "camt.cve.research_correlation",
@@ -84,6 +83,16 @@
       "description": "OT/ICS-focused investigation workbench for free text, Purdue/asset context, operational impact and handoff to CAMT scenario/twin/risk workspaces.",
       "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/OT_ICS_Investigation.camtmodule",
       "sha256": "A36218320FBEFEEBF6751133356343906B5467917067027D0C8EB6D45670B649"
+    },
+    {
+      "package_id": "camt.quicksheet.analyzer",
+      "name": "CAMT QuickSheet Analyzer",
+      "channel": "Beta",
+      "version": "1.1.1",
+      "category": "Intelligence",
+      "description": "QuickSheet Analyzer 1.1.1 with section-bounded actor context, primary-anchored relationship extraction, source-safe actor labeling and OT/ICS Impact mappings.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_QuickSheet_Analyzer_v1_1_1.camtmodule",
+      "sha256": "DC9FBD45622458FBD7F4B063E89B99BD97CB8CCA384445B668499377DB6B15D1"
     }
   ],
   "signing": {
