@@ -3,11 +3,11 @@
   "build": "120B7-LIC-20260910",
   "release_seq": 7,
   "channel": "beta",
-  "tag": "v1.2.0-beta7",
+  "tag": "v.1.2.0-beta7",
 
   "core": {
     "filename": "CAMT_Professional_Edition_1.2.0_Beta7_Setup_core.exe",
-    "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.2.0-beta7/CAMT_Professional_Edition_1.2.0_Beta7_Setup_core.exe",
+    "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v.1.2.0-beta7/CAMT_Professional_Edition_1.2.0_Beta7_Setup_core.exe",
     "sha256": "CA8BE37B9FC5F2871562CC969423CE891713E8A305D61A27C2138C09FD1CEF45"
   },
 
