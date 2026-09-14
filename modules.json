@@ -5,15 +5,15 @@
   "repository": "https://github.com/cyberfirepulse/CAMT-Updates",
   "modules": [
     {
-      "package_id": "camt.core.update_manager",
-      "name": "CAMT Update Manager",
-      "channel": "Beta",
-      "version": "1.2.3",
-      "category": "Other",
-      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse migration, and explicit installed-versus-repository version handling.",
-      "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.1.0-beta4/CAMT_Update_Manager_v1_2_3.camtmodule",
-      "sha256": "C33D981F1B3985C39772512CEF1D2AEE7749F72B3197538F179337892FC4AAEA"
-    },
+  "package_id": "camt.core.update_manager",
+  "name": "CAMT Update Manager",
+  "channel": "Beta",
+  "version": "1.2.3",
+  "category": "Other",
+  "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse migration, and explicit installed-versus-repository version handling.",
+  "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v.1.2.0-beta7/CAMT_Update_Manager_v1_2_3.camtmodule",
+  "sha256": "C33D981F1B3985C39772512CEF1D2AEE7749F72B3197538F179337892FC4AAEA"
+},
     {
       "package_id": "camt.cve.research_correlation",
       "name": "CVE Research & Correlation",
