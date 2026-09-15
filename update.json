@@ -3,7 +3,7 @@
   "build": "120B8-LIC-20260915",
   "release_seq": 8,
   "channel": "beta",
-  "tag": "v.1.2.0-beta8",
+  "tag": "v1.2.0-beta8",
 
   "core": {
     "filename": "CAMT_Professional_Edition_1.2.0_Beta8_Setup_core.exe",
