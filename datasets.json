@@ -1,0 +1,12 @@
+{
+  "schema": "CAMT.CTIDatasetCatalog.1",
+  "datasets": [
+    {
+      "name": "CAMT Offline CTI Bootstrap",
+      "version": "2026.09.1",
+      "published": "2026-09-16",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/datasets/CAMT_CTI_Dataset_2026_09_1.camtdata",
+      "sha256": "38561EE786FC78E13572E3B417F213BF6E557AF106D263D8AA6564F4C3B890A8"
+    }
+  ]
+}
