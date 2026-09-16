@@ -278,11 +278,11 @@
       "package_id": "camt.cache.image_forensics",
       "name": "CAMT Cache Image Forensics",
       "channel": "Beta",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "category": "Forensics",
-      "description": "Browser-cache image forensics with preview, metadata/timestamps, SHA-256 evidence, analysis objects and report/evidence export.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Cache_Image_Forensics_v1_1_0.camtmodule",
-      "sha256": "49AE3CB11F31F39241162A0B448816ED2CF512F1E17E00AA68994E2279697035"
+      "description": "Browser-cache image forensics with fixed resizable results/preview layout, metadata/timestamps, SHA-256 evidence, analysis objects and report/evidence export.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Cache_Image_Forensics_v1_1_1.camtmodule",
+      "sha256": "DF978FD9D456B7E30A4B9C949BE92F80D40948D369F0372F15793CD593F186CA"
     }
   ],
   "signing": {
