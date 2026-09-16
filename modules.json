@@ -210,7 +210,7 @@
       "channel": "Beta",
       "version": "1.1.1",
       "category": "Other",
-      "description": "Extracts observable MITRE ATT&CK techniques from CAMT Traffic Insight and CAMT Process & Persistence Watch evidence, and feeds them into CAMT's own offline_intelligence.ThreatAttributionMatcher to rank known threat-actor/campaign profiles by technique/sector/region overlap. Does not implement its own similarity scoring — it is a producer for the attribution engine that already exists in CAMT Core, so results are ranked and explained the same way as anywhere else in CAMT (CTI Center, actor similarity).",
+      "description": "Extracts observable MITRE ATT&CK techniques from CAMT Traffic Insight and CAMT Process & Persistence Watch evidence, and feeds them into CAMT's own offline_intelligence.ThreatAttributionMatcher to rank known threat-actor/campaign profiles by technique/sector/region overlap. Does not implement its own similarity scoring \u2014 it is a producer for the attribution engine that already exists in CAMT Core, so results are ranked and explained the same way as anywhere else in CAMT (CTI Center, actor similarity).",
       "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Attribution_Bridge_v1_1_1.camtmodule",
       "sha256": "BD489E8288D8EC39FD950D41427DCCE24D83EF20250BFC698B49CEA223CB1879"
     },
@@ -230,7 +230,7 @@
       "channel": "Beta",
       "version": "1.3.3",
       "category": "Other",
-      "description": "Extracts nation-state origin and geographic-activity signals for threat actors from any CTI source text (report, article, quicksheet output) using generic pattern matching — not a fixed per-actor lookup table — so results follow whatever document is fed in rather than being hard-coded to one vendor's report. Shows the findings as a colour-coded Actor × Region heatmap for review, and can push accepted origin/region values into CAMT's own CTI actor library (origin/regions fields on ThreatActor), the same records used by CTI Center's Actor Compare, Trend Watch and the offline_intelligence.ThreatAttributionMatcher region-overlap factor.",
+      "description": "Extracts nation-state origin and geographic-activity signals for threat actors from any CTI source text (report, article, quicksheet output) using generic pattern matching \u2014 not a fixed per-actor lookup table \u2014 so results follow whatever document is fed in rather than being hard-coded to one vendor's report. Shows the findings as a colour-coded Actor \u00d7 Region heatmap for review, and can push accepted origin/region values into CAMT's own CTI actor library (origin/regions fields on ThreatActor), the same records used by CTI Center's Actor Compare, Trend Watch and the offline_intelligence.ThreatAttributionMatcher region-overlap factor.",
       "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Geo_Origin_Mapper_v1_3_3.camtmodule",
       "sha256": "E120F5EBFB0D8721395E847127B025101B521B137DBEEE6DC8F0FDCF77039E76"
     },
@@ -273,6 +273,16 @@
       "description": "Resolve structured case evidence and export normalized evidence sets.",
       "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Evidence_Resolver_v1_0_0.camtmodule",
       "sha256": "C9ABE4E1EE0BBC4BC1257C0186621EC47E2E51F75909EE57808CEFBA0E0D08B4"
+    },
+    {
+      "package_id": "camt.cache.image_forensics",
+      "name": "CAMT Cache Image Forensics",
+      "channel": "Beta",
+      "version": "1.0.0",
+      "category": "Forensics",
+      "description": "Local forensic scanner for browser-cached and filesystem images. Detects image signatures, records hashes and source URL hints, exports evidence copies and supports explicit selected-item cleanup.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Cache_Image_Forensics_v1_0_0.camtmodule",
+      "sha256": "97D9F708464686ACBA40740F3BF1F0D93CA9D33501CF941E36EBB2E7C2882524"
     }
   ],
   "signing": {
