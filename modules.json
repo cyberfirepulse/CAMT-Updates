@@ -278,11 +278,11 @@
       "package_id": "camt.cache.image_forensics",
       "name": "CAMT Cache Image Forensics",
       "channel": "Beta",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Forensics",
-      "description": "Local forensic scanner for browser-cached and filesystem images. Detects image signatures, records hashes and source URL hints, exports evidence copies and supports explicit selected-item cleanup.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Cache_Image_Forensics_v1_0_0.camtmodule",
-      "sha256": "97D9F708464686ACBA40740F3BF1F0D93CA9D33501CF941E36EBB2E7C2882524"
+      "description": "Browser-cache image forensics with preview, metadata/timestamps, SHA-256 evidence, analysis objects and report/evidence export.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Cache_Image_Forensics_v1_1_0.camtmodule",
+      "sha256": "49AE3CB11F31F39241162A0B448816ED2CF512F1E17E00AA68994E2279697035"
     }
   ],
   "signing": {
