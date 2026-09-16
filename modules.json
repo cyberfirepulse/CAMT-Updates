@@ -1,18 +1,18 @@
 {
   "schema": "CAMT.ModuleUpdateCatalog.1",
   "channel": "Beta",
-  "generated": "2026-09-09T12:21:00+02:00",
+  "generated": "2026-09-16T08:00:00+02:00",
   "repository": "https://github.com/cyberfirepulse/CAMT-Updates",
   "modules": [
     {
-     "package_id": "camt.core.update_manager",
-     "name": "CAMT Update Manager",
-     "channel": "Beta",
-     "version": "1.2.5",
-     "category": "Other",
-     "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse migration, and explicit installed-versus-repository version handling.",
-     "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Update_Manager_v1_2_5.camtmodule",
-     "sha256": "30B0D4C90CD10E01828CF1D2E977A36F7760564812308B2B0B350736768AB51F"
+      "package_id": "camt.core.update_manager",
+      "name": "CAMT Update Manager",
+      "channel": "Beta",
+      "version": "1.2.5",
+      "category": "Other",
+      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse migration, and explicit installed-versus-repository version handling.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Update_Manager_v1_2_5.camtmodule",
+      "sha256": "30B0D4C90CD10E01828CF1D2E977A36F7760564812308B2B0B350736768AB51F"
     },
     {
       "package_id": "camt.cve.research_correlation",
@@ -68,11 +68,11 @@
       "package_id": "camt.network.visualisation",
       "name": "Network Visualisation Professional",
       "channel": "Beta",
-      "version": "3.4.2",
+      "version": "3.6.1",
       "category": "Other",
-      "description": "CAMT Network Visualisation Professional with persistent Inspector editing, direct Network Mapper import/synchronisation, observed/inferred topology links, link metadata, preservation of manual enrichment, and conservative verified gateway inference.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Network_Visualisation_Professional_v3_4_2.camtmodule",
-      "sha256": "1BF14D3F47669A22DAC681E143AA6E80F2E4CFE70D73509DA973FD71292E1979"
+      "description": "CAMT Network Visualisation Professional with relationship-first Network Mapper topology import, gateway anchored layout, subnet/network grouping, observed/inferred link preservation, live Mapper sync, and persistent Inspector editing.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Network_Visualisation_Professional_v3_6_1.camtmodule",
+      "sha256": "12DC98F5CB4120A904611BCFD5B77604761FAB42CEDCA71C44D86D26941B53A1"
     },
     {
       "package_id": "camt.ot_ics.investigation",
@@ -103,6 +103,36 @@
       "description": "CAMT 1.2.0 Beta 1 behavioral evidence fix: insufficient-evidence handling, duplicate actor consolidation, readable candidate assessment and analyst-friendly observed-behavior input.",
       "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Behavioral_Engine_Fix_v1_0_0.camtmodule",
       "sha256": "A491951254ED122C7232AF5AFFF7C18B78855C3E1E51795CB01F4C32C1FE2FCA"
+    },
+    {
+      "package_id": "camt.exercise.network_assessment",
+      "name": "Exercise Network Assessment",
+      "channel": "Beta",
+      "version": "1.1.15",
+      "category": "Other",
+      "description": "Persistent analyst-guided IT/OT exercise assessment with save/resume workflow, context-rich evidence reporting, section-linked PNG visuals and explicit observed/inferred/analyst-validation context.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Exercise_Network_Assessment_v1_1_15.camtmodule",
+      "sha256": "A8932E79219BF706BCB61712C08B91028C80D3574CEF40ABF7C3B4BD9556D675"
+    },
+    {
+      "package_id": "camt.exercise.cti_correlation_assessment",
+      "name": "CTI Correlation Assessment",
+      "channel": "Beta",
+      "version": "1.2.0",
+      "category": "Other",
+      "description": "Analyst-guided CTI correlation workflow with corrected CAMT Framework v2 context/manager entrypoint handling and reliable module-to-module Network Assessment launch.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_CTI_Correlation_Assessment_v1_2_0.camtmodule",
+      "sha256": "EED8CBE540F46D924FB36D926C4517AF4CAC427F7E49DC5CEC39E0A3D1BF3A60"
+    },
+    {
+      "package_id": "camt.report.studio_professional",
+      "name": "Report Studio Professional",
+      "channel": "Beta",
+      "version": "2.6.2",
+      "category": "Other",
+      "description": "Report Studio Professional with reliable CAMT handoff loading, structured report-project open validation, PDF/DOCX/HTML/TXT export, and visual artifact support.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Report_Studio_Professional_v2_6_2.camtmodule",
+      "sha256": "C0FCDB0F4B2D57E8B6E033FFDFCC5D73ABDBF6A3C45F489DCC9280842BE60695"
     }
   ],
   "signing": {
