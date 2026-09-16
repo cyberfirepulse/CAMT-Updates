@@ -1,7 +1,7 @@
 {
   "schema": "CAMT.ModuleUpdateCatalog.1",
   "channel": "Beta",
-  "generated": "2026-09-16T08:00:00+02:00",
+  "generated": "2026-09-16T00:00:00+02:00",
   "repository": "https://github.com/cyberfirepulse/CAMT-Updates",
   "modules": [
     {
@@ -10,9 +10,29 @@
       "channel": "Beta",
       "version": "1.2.5",
       "category": "Other",
-      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse migration, and explicit installed-versus-repository version handling.",
+      "description": "CAMT core update manager and Module Repository with resilient HTTPS networking, CyberFirePulse repository migration, explicit version handling, laptop-safe Module Repository layout, and nested core update manifest support.",
       "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Update_Manager_v1_2_5.camtmodule",
       "sha256": "30B0D4C90CD10E01828CF1D2E977A36F7760564812308B2B0B350736768AB51F"
+    },
+    {
+      "package_id": "camt.traffic.insight",
+      "name": "CAMT Traffic Insight",
+      "channel": "Beta",
+      "version": "1.3.0",
+      "category": "Other",
+      "description": "Passive live traffic visibility for this PC. Shows every local flow (protocol, port, destination, TLS SNI hostname, DNS lookups) linked to the local process that owns it, plus decoded content for cleartext protocols (HTTP, Telnet, FTP, SMTP, POP3, IMAP) and cleartext-credential detection. Includes a collapsible flow/process tree, a process-destination baseline/allowlist that flags new combinations, and a flag for destinations reached without a matching local DNS lookup. Helps spot applications that silently send or receive data.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Traffic_Insight_v1_3_0.camtmodule",
+      "sha256": "9D87D5059BAB1AFEE9E07AD20613BAD31CFB609FB1EDDC856494766C26706C4F"
+    },
+    {
+      "package_id": "camt.network.visualisation",
+      "name": "Network Visualisation Professional",
+      "channel": "Beta",
+      "version": "3.6.1",
+      "category": "Other",
+      "description": "CAMT Network Visualisation Professional with relationship-first Network Mapper topology import, gateway anchored layout, subnet/network grouping, observed/inferred link preservation, live Mapper sync, and persistent Inspector editing.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Network_Visualisation_Professional_v3_6_1_1_.camtmodule",
+      "sha256": "12DC98F5CB4120A904611BCFD5B77604761FAB42CEDCA71C44D86D26941B53A1"
     },
     {
       "package_id": "camt.cve.research_correlation",
@@ -35,24 +55,124 @@
       "sha256": "08086AE43F8CB705709540A04E7B483066037395E8882E8F6FDFDB553B3FBC6C"
     },
     {
+      "package_id": "camt.ot_ics.investigation",
+      "name": "OT/ICS Investigation",
+      "channel": "Beta",
+      "version": "1.0.0",
+      "category": "Other",
+      "description": "OT/ICS-focused investigation workbench for free text, Purdue/asset context, operational impact and handoff to CAMT scenario/twin/risk workspaces.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/OT_ICS_Investigation.camtmodule",
+      "sha256": "A36218320FBEFEEBF6751133356343906B5467917067027D0C8EB6D45670B649"
+    },
+    {
+      "package_id": "camt.report.studio_professional",
+      "name": "Report Studio Professional",
+      "channel": "Beta",
+      "version": "2.6.2",
+      "category": "Other",
+      "description": "Report Studio Professional with reliable CAMT handoff loading, structured report-project open validation, PDF/DOCX/HTML/TXT export, and visual artifact support.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Report_Studio_Professional_v2_6_2.camtmodule",
+      "sha256": "C0FCDB0F4B2D57E8B6E033FFDFCC5D73ABDBF6A3C45F489DCC9280842BE60695"
+    },
+    {
+      "package_id": "camt.quicksheet.analyzer",
+      "name": "CAMT QuickSheet Analyzer",
+      "channel": "Beta",
+      "version": "1.1.5",
+      "category": "Other",
+      "description": "QuickSheet Analyzer with separate direct-behavior and relationship evidence sets, preventing handoff impact inheritance while restoring actor-local TTP detection.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_QuickSheet_Analyzer_v1_1_5.camtmodule",
+      "sha256": "4254B447E414B6B617F892566037CED6A7AB3B7213758355A2CA134084F80A12"
+    },
+    {
+      "package_id": "camt.research.investigation_assistant",
+      "name": "CAMT Research & Investigation Assistant",
+      "channel": "Beta",
+      "version": "1.3.0",
+      "category": "Other",
+      "description": "Compositional Native Research Query Planner: free-form questions are decomposed into operation, entity, scope, filters and output shape; COUNT/TOP/RANK/LIST work without AI while source-grounded actor/TTP research remains available.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Research_Investigation_Assistant_v1_3_0.camtmodule",
+      "sha256": "5AE604E7F0720504B681F48331BD64A90A2457FC51F15EF230FD555192172A83"
+    },
+    {
+      "package_id": "camt.cookie.forensics",
+      "name": "Cookie Forensics",
+      "channel": "Beta",
+      "version": "0.3.2",
+      "category": "Other",
+      "description": "Browser cookie forensic review and evidence export.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Cookie_Forensics_v0_3_2.camtmodule",
+      "sha256": "26E15953E30AD2CDACA6B9DEA7BFF86FB99483DE688B010D6B593234F17CE3B4"
+    },
+    {
+      "package_id": "camt.evidence.timeline_casebook",
+      "name": "Evidence Timeline & Casebook",
+      "channel": "Beta",
+      "version": "1.1.1",
+      "category": "Other",
+      "description": "Case evidence timeline and casebook workspace.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Evidence_Timeline_Casebook_v1_1_1.camtmodule",
+      "sha256": "B75181DEFB64383A5520DA0A205361A0CCC3A0719AD3EA5FA183AC0B78DE6596"
+    },
+    {
+      "package_id": "camt.detection.coverage_gap_analyzer",
+      "name": "Detection Coverage & Gap Analyzer",
+      "channel": "Beta",
+      "version": "1.1.1",
+      "category": "Other",
+      "description": "Detection coverage mapping and gap analysis.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Detection_Coverage_Gap_Analyzer_v1_1_1.camtmodule",
+      "sha256": "F8D35F04A16B0DB47352E1CC627154DDD0D855506F1F7E8D3228F4277C8CC834"
+    },
+    {
+      "package_id": "camt.ioc.pivot_correlation_workbench",
+      "name": "IOC Pivot & Correlation Workbench",
+      "channel": "Beta",
+      "version": "1.1.1",
+      "category": "Other",
+      "description": "IOC pivoting and correlation workbench.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/IOC_Pivot_Correlation_Workbench_v1_1_1.camtmodule",
+      "sha256": "7D9F6E5C63F6BFCD0367FBB7885011C56320B09FE7DFB1B9BC87F53EF91B2BD7"
+    },
+    {
+      "package_id": "camt.attack_surface.exposure_analyzer",
+      "name": "Attack Surface & Exposure Analyzer",
+      "channel": "Beta",
+      "version": "1.1.1",
+      "category": "Other",
+      "description": "Attack surface and exposure analysis.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Attack_Surface_Exposure_Analyzer_v1_1_1.camtmodule",
+      "sha256": "DF78296601D157149F3041E4429E12B27C0EC96754AA8EEC67DEC00D59FC4892"
+    },
+    {
+      "package_id": "camt.hypothesis.evidence_matrix",
+      "name": "Hypothesis & Evidence Matrix",
+      "channel": "Beta",
+      "version": "1.1.1",
+      "category": "Other",
+      "description": "Structured hypothesis and evidence assessment.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Hypothesis_Evidence_Matrix_v1_1_1.camtmodule",
+      "sha256": "40707C4E1CFB1E7B7B4F4A165E232EBB6AC2CF8651892279485F82AD7CEDF54E"
+    },
+    {
       "package_id": "camt.evidence.integrity",
       "name": "CAMT Evidence Integrity",
       "channel": "Beta",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "category": "Other",
-      "description": "Evidence hashing, integrity verification and chain-of-custody manifest workspace.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Evidence_Integrity_v1_0_1.camtmodule",
-      "sha256": "0EEC817CF99D681FE83517730D507B106969B5CA71E06A712E6C7062BBF25A19"
+      "description": "Evidence hashing, integrity verification and chain-of-custody.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Evidence_Integrity_v1_0_2.camtmodule",
+      "sha256": "DFA0BAEAD8AAE35F3A7418DE2D3BCC7BD3C07A3CAC48AD383F7DFDA08AC0CE10"
     },
     {
       "package_id": "camt.log.timeline_explorer",
       "name": "CAMT Log Timeline Explorer",
       "channel": "Beta",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "category": "Other",
-      "description": "Generic log normalization, filtering, statistics and forensic timeline export.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Log_Timeline_Explorer_v1_0_1.camtmodule",
-      "sha256": "7A9364E9B85D0FAF02A8A2B23A06B27AD0A4350076CBF668F417E6AB02E6489C"
+      "description": "Log normalization and forensic timeline exploration.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Log_Timeline_Explorer_v1_0_2.camtmodule",
+      "sha256": "E79FB57E13F3967D564E37E456A480F0BCCB3E42C0A3C93EDD54C66E7465A885"
     },
     {
       "package_id": "camt.netmap.baseline_comparator",
@@ -65,44 +185,54 @@
       "sha256": "91A0B92252F97EF267E848CA425C00FF18137B72D30AE55A4850C58683071041"
     },
     {
-      "package_id": "camt.network.visualisation",
-      "name": "Network Visualisation Professional",
-      "channel": "Beta",
-      "version": "3.6.1",
-      "category": "Other",
-      "description": "CAMT Network Visualisation Professional with relationship-first Network Mapper topology import, gateway anchored layout, subnet/network grouping, observed/inferred link preservation, live Mapper sync, and persistent Inspector editing.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Network_Visualisation_Professional_v3_6_1.camtmodule",
-      "sha256": "12DC98F5CB4120A904611BCFD5B77604761FAB42CEDCA71C44D86D26941B53A1"
-    },
-    {
-      "package_id": "camt.ot_ics.investigation",
-      "name": "OT/ICS Investigation",
+      "package_id": "camt.scan.watch",
+      "name": "CAMT Scan Watch",
       "channel": "Beta",
       "version": "1.0.0",
       "category": "Other",
-      "description": "OT/ICS-focused investigation workbench for free text, Purdue/asset context, operational impact and handoff to CAMT scenario/twin/risk workspaces.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/OT_ICS_Investigation.camtmodule",
-      "sha256": "A36218320FBEFEEBF6751133356343906B5467917067027D0C8EB6D45670B649"
+      "description": "Defensive scan detection and forensic review module for CAMT. Detects network-scan patterns from firewall, Suricata, Zeek and generic network logs, highlights protocols and intensively scanned ports, and exports evidence.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Scan_Watch_v1_0_0.camtmodule",
+      "sha256": "A04E691A2D9EF74A6413C44C387B79BFB72EAE279AF4D5E1A095167830F52239"
     },
     {
-      "package_id": "camt.quicksheet.analyzer",
-      "name": "CAMT QuickSheet Analyzer",
+      "package_id": "camt.process.persistence.watch",
+      "name": "CAMT Process & Persistence Watch",
       "channel": "Beta",
-      "version": "1.1.7",
-      "category": "Intelligence",
-      "description": "Complete TTP display, source technical-overlap labeling and conservative similarity confidence.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_QuickSheet_Analyzer_v1_1_7.camtmodule",
-      "sha256": "2B0D2684C8F1426679279A99A46594CA50D2E85C5A62F55DFCF944DD65C32F87"
+      "version": "1.3.0",
+      "category": "Other",
+      "description": "Local persistence and process-lineage risk analysis. Snapshots autostart mechanisms (Run keys, Startup folder, Scheduled Tasks, Services), running processes with parent/child lineage, and file integrity on chosen paths; scores every item on Authenticode signature validity, execution location and cross-references between newly-seen persistence entries and newly-seen processes (chokepoints), producing a LOW/MEDIUM/HIGH/CRITICAL severity per finding ready for Report Studio, with an optional cross-module CVE/CTI lookup hook.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Process_Persistence_Watch_v1_3_0.camtmodule",
+      "sha256": "B545724B9082DF44A81DB7E35F219AA63954165C8059C1C5157C5E0350EBDBFE"
+    },
+    {
+      "package_id": "camt.attribution.bridge",
+      "name": "CAMT Attribution Bridge",
+      "channel": "Beta",
+      "version": "1.1.1",
+      "category": "Other",
+      "description": "Extracts observable MITRE ATT&CK techniques from CAMT Traffic Insight and CAMT Process & Persistence Watch evidence, and feeds them into CAMT's own offline_intelligence.ThreatAttributionMatcher to rank known threat-actor/campaign profiles by technique/sector/region overlap. Does not implement its own similarity scoring — it is a producer for the attribution engine that already exists in CAMT Core, so results are ranked and explained the same way as anywhere else in CAMT (CTI Center, actor similarity).",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Attribution_Bridge_v1_1_1.camtmodule",
+      "sha256": "BD489E8288D8EC39FD950D41427DCCE24D83EF20250BFC698B49CEA223CB1879"
     },
     {
       "package_id": "camt.behavioral.engine.fix",
       "name": "CAMT Behavioral Match Engine Fix",
       "channel": "Beta",
-      "version": "1.0.0",
-      "category": "Intelligence",
-      "description": "CAMT 1.2.0 Beta 1 behavioral evidence fix: insufficient-evidence handling, duplicate actor consolidation, readable candidate assessment and analyst-friendly observed-behavior input.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Behavioral_Engine_Fix_v1_0_0.camtmodule",
-      "sha256": "A491951254ED122C7232AF5AFFF7C18B78855C3E1E51795CB01F4C32C1FE2FCA"
+      "version": "1.0.1",
+      "category": "Other",
+      "description": "Behavioral match engine integration and validation module.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Behavioral_Match_Engine_Fix_v1_0_1.camtmodule",
+      "sha256": "A809586F33FF3067603FAA69BD0652663FBD58D5ECBE200081D3A1A6B48C858D"
+    },
+    {
+      "package_id": "camt.geo.origin_mapper",
+      "name": "CAMT Geo & Origin Mapper",
+      "channel": "Beta",
+      "version": "1.3.3",
+      "category": "Other",
+      "description": "Extracts nation-state origin and geographic-activity signals for threat actors from any CTI source text (report, article, quicksheet output) using generic pattern matching — not a fixed per-actor lookup table — so results follow whatever document is fed in rather than being hard-coded to one vendor's report. Shows the findings as a colour-coded Actor × Region heatmap for review, and can push accepted origin/region values into CAMT's own CTI actor library (origin/regions fields on ThreatActor), the same records used by CTI Center's Actor Compare, Trend Watch and the offline_intelligence.ThreatAttributionMatcher region-overlap factor.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Geo_Origin_Mapper_v1_3_3.camtmodule",
+      "sha256": "E120F5EBFB0D8721395E847127B025101B521B137DBEEE6DC8F0FDCF77039E76"
     },
     {
       "package_id": "camt.exercise.network_assessment",
@@ -125,14 +255,24 @@
       "sha256": "EED8CBE540F46D924FB36D926C4517AF4CAC427F7E49DC5CEC39E0A3D1BF3A60"
     },
     {
-      "package_id": "camt.report.studio_professional",
-      "name": "Report Studio Professional",
+      "package_id": "camt.actor.time_lapse",
+      "name": "CAMT Actor Time-Lapse",
       "channel": "Beta",
-      "version": "2.6.2",
+      "version": "1.1.3",
       "category": "Other",
-      "description": "Report Studio Professional with reliable CAMT handoff loading, structured report-project open validation, PDF/DOCX/HTML/TXT export, and visual artifact support.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Report_Studio_Professional_v2_6_2.camtmodule",
-      "sha256": "C0FCDB0F4B2D57E8B6E033FFDFCC5D73ABDBF6A3C45F489DCC9280842BE60695"
+      "description": "Replays how a threat actor's profile (origin, regions, techniques, sectors) actually evolved across the CTI reports fed into CAMT over time, instead of only showing its current state. Reads the shared actor_history.jsonl log that CAMT Geo & Origin Mapper's \"Push accepted rows\" writes to (one snapshot per push, deduplicated), and scrubs or animates between snapshots: a real coastline map (same data as Geo & Origin Mapper) fades regions in and out as they appear in the record, and a tactic radar chart morphs shape as the actor's technique profile changes. Needs at least two pushed snapshots for a given actor to show a time-lapse; with only one, it shows that single snapshot statically.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Actor_Time_Lapse_v1_1_3.camtmodule",
+      "sha256": "11DF92E83A95EDF3BAABE775FC1080DA4C863109E8FC52C9388A06B04C1CA332"
+    },
+    {
+      "package_id": "camt.case.evidence_resolver",
+      "name": "CAMT Evidence Resolver",
+      "channel": "Beta",
+      "version": "1.0.0",
+      "category": "Other",
+      "description": "Resolve structured case evidence and export normalized evidence sets.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Evidence_Resolver_v1_0_0.camtmodule",
+      "sha256": "C9ABE4E1EE0BBC4BC1257C0186621EC47E2E51F75909EE57808CEFBA0E0D08B4"
     }
   ],
   "signing": {
