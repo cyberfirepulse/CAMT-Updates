@@ -1,19 +1,17 @@
 {
-  "version": "1.2.0 Beta 8",
-  "build": "120B8-LIC-20260915",
-  "release_seq": 8,
-  "channel": "beta",
-  "tag": "v1.2.0-beta8",
-
-  "core": {
-    "filename": "CAMT_Professional_Edition_1.2.0_Beta8_Setup_core.exe",
-    "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v.1.2.0-beta8/CAMT_Professional_Edition_1.2.0_Beta8_Setup_core.exe",
-    "sha256": "17339694E62CF29A0AACFF36EC0AE329C60DC0EFC1CBD80E5A95AAB64BFA4F9C"
-  },
-
-  "complete": {
-    "filename": "CAMT_Professional_Edition_1.2.0_Beta8_Setup.exe",
-    "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.2.0-beta8/CAMT_Professional_Edition_1.2.0_Beta8_Setup.exe",
-    "sha256": "5DEEBB2576C62751C06E994E78F7E36845A6D390268E6555FE65C56FECD8B924"
-  }
+    "version":  "1.2.0 Beta 9",
+    "build":  "120B9-LIC-20260916",
+    "release_seq":  9,
+    "channel":  "beta",
+    "tag":  "v1.2.0-beta9",
+    "core":  {
+                 "filename":  "CAMT_Professional_Edition_1.2.0_Beta9_Setup_core.exe",
+                 "download_url":  "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.2.0-beta9/CAMT_Professional_Edition_1.2.0_Beta9_Setup_core.exe",
+                 "sha256":  "C9FE7AD82CA4B5B07F6E946046CE1FEBE9689BA94B45312D38064ADDED7E7906"
+             },
+    "complete":  {
+                     "filename":  "CAMT_Professional_Edition_1.2.0_Beta9_Setup.exe",
+                     "download_url":  "https://github.com/cyberfirepulse/CAMT-Updates/releases/download/v1.2.0-beta9/CAMT_Professional_Edition_1.2.0_Beta9_Setup.exe",
+                     "sha256":  "59D6E5F6C9A5C30804F7968E64E1BEF767287E72738074A35154E1D2A74E9779"
+                 }
 }
