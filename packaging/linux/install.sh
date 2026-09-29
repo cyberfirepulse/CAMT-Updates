@@ -3,7 +3,9 @@
 set -euo pipefail
 
 CAMT_HOME="/opt/camt"
-CAMT_PYTHON="/usr/bin/python3"
+CAMT_PYTHON=""
+MIN_PYTHON_MAJOR=3
+MIN_PYTHON_MINOR=12
 CAMT_PACKAGES="$CAMT_HOME/python-packages"
 CAMT_LAUNCHER="/usr/local/bin/camt"
 
@@ -81,15 +83,64 @@ case "$PACKAGE_MANAGER" in
         ;;
 esac
 
-[ -x "$CAMT_PYTHON" ] || die "System Python is missing: $CAMT_PYTHON"
-"$CAMT_PYTHON" -I -c 'import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)' || \
-    die "CAMT requires system Python >= 3.12; found $("$CAMT_PYTHON" --version 2>&1). Upgrade your distribution/Python packages before installing CAMT."
+echo "Detecting Python >= 3.12..."
 
-# Tk bindings must match the system interpreter used by the launcher.
-if ! "$CAMT_PYTHON" -I -c 'import tkinter, _tkinter' >/dev/null 2>&1; then
-    echo "Installing Tk support: $TK_PACKAGE"
+find_camt_python() {
+    local candidate
+    for candidate in python3.14 python3.13 python3.12 python3; do
+        if command -v "$candidate" >/dev/null 2>&1; then
+            local path
+            path="$(command -v "$candidate")"
+            if "$path" -I -c 'import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)' >/dev/null 2>&1; then
+                CAMT_PYTHON="$path"
+                return 0
+            fi
+        fi
+    done
+    return 1
+}
+
+install_python312_apt() {
+    echo "Python >= 3.12 not found. Installing Python 3.12 for CAMT..."
+    apt-get update
+    if apt-cache show python3.12 >/dev/null 2>&1; then
+        apt-get install -y python3.12 python3.12-dev python3.12-venv python3.12-tk
+    else
+        die "This APT repository does not provide Python 3.12. CAMT requires Python >= 3.12."
+    fi
+}
+
+if ! find_camt_python; then
     case "$PACKAGE_MANAGER" in
-        apt-get) apt-get install -y "$TK_PACKAGE" ;;
+        apt-get) install_python312_apt ;;
+        dnf|yum)
+            "$PACKAGE_MANAGER" install -y python3.12 python3.12-pip python3.12-devel python3.12-tkinter || \
+                die "Could not install Python 3.12 automatically."
+            ;;
+        pacman)
+            pacman -Syu --needed --noconfirm python tk || die "Could not install Python >= 3.12 automatically."
+            ;;
+        zypper)
+            zypper --non-interactive install python312 python312-pip python312-devel python312-tk || \
+                die "Could not install Python 3.12 automatically."
+            ;;
+    esac
+    find_camt_python || die "Python >= 3.12 installation completed but no suitable interpreter was found."
+fi
+
+echo "Using CAMT Python: $CAMT_PYTHON ($("$CAMT_PYTHON" --version 2>&1))"
+
+# Tk bindings must match the exact interpreter selected above.
+if ! "$CAMT_PYTHON" -I -c 'import tkinter, _tkinter' >/dev/null 2>&1; then
+    echo "Installing Tk support for selected Python..."
+    case "$PACKAGE_MANAGER" in
+        apt-get)
+            if [[ "$CAMT_PYTHON" == *python3.12 ]]; then
+                apt-get install -y python3.12-tk
+            else
+                apt-get install -y "$TK_PACKAGE"
+            fi
+            ;;
         dnf|yum) "$PACKAGE_MANAGER" install -y "$TK_PACKAGE" ;;
         pacman) pacman -S --needed --noconfirm "$TK_PACKAGE" ;;
         zypper) zypper --non-interactive install "$TK_PACKAGE" ;;
@@ -97,6 +148,9 @@ if ! "$CAMT_PYTHON" -I -c 'import tkinter, _tkinter' >/dev/null 2>&1; then
 fi
 "$CAMT_PYTHON" -I -c 'import tkinter, _tkinter; print("System Python: Tkinter OK", tkinter.TkVersion)' || \
     die "System Python cannot import tkinter/_tkinter after installing $TK_PACKAGE. Install matching Tk bindings for $CAMT_PYTHON."
+if ! "$CAMT_PYTHON" -I -m pip --version >/dev/null 2>&1; then
+    "$CAMT_PYTHON" -m ensurepip --upgrade >/dev/null 2>&1 || true
+fi
 "$CAMT_PYTHON" -I -m pip --version || die "pip is missing for $CAMT_PYTHON."
 
 echo "[2/6] Installing CAMT source..."
