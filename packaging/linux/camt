@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -e
+
+CAMT_HOME="/opt/camt"
+CAMT_PYTHON="$CAMT_HOME/.venv/bin/python"
+
+if [ ! -x "$CAMT_PYTHON" ]; then
+    echo "CAMT Python environment not found: $CAMT_PYTHON" >&2
+    exit 1
+fi
+
+export CAMT_HOME
+export PYTHONPATH="$CAMT_HOME/src${PYTHONPATH:+:$PYTHONPATH}"
+
+cd "$CAMT_HOME"
+
+exec "$CAMT_PYTHON" -m projectmanager "$@"

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=CAMT
+GenericName=Cyber Analysis and Management Toolkit
+Comment=Cyber Analysis and Management Toolkit
+Exec=/usr/local/bin/camt
+Icon=/opt/camt/CAMT.ico
+Terminal=false
+Categories=Network;Security;
+StartupNotify=true
