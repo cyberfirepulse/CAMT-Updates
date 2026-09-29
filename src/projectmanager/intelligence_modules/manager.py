@@ -42,13 +42,12 @@ class IntelligenceModuleManager:
         self._ensure_bundled_update_manager()
 
     def _ensure_bundled_update_manager(self):
-        """Register the shipped Linux update UI for each user on first use."""
-        if not sys.platform.startswith("linux"):
-            return
+        """Register the shipped update UI for each user on first use."""
         package_id = "camt.core.update_manager"
         if package_id in self._registry().get("packages", {}):
             return  # Preserve installed versions and deliberate enable/disable choices.
-        package = Path(__file__).resolve().parents[3] / "modules" / "CAMT_Update_Manager_v1_2_5.camtmodule"
+        bundle_root = Path(sys._MEIPASS) if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS") else Path(__file__).resolve().parents[3]
+        package = bundle_root / "modules" / "CAMT_Update_Manager_v1_2_5.camtmodule"
         if not package.is_file():
             return  # Other distributions can still install it through Module Manager.
         meta = self.inspect_package(package)

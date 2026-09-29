@@ -31,7 +31,7 @@
 #define MyAppExeName "CAMT.exe"
 
 ; Use the directory containing this .iss file as the build root.
-#define BaseDir "D:\scripts\scan\CAMT_B5_FIX_v3\CAMT_B5_FIX"
+#define BaseDir SourcePath
 
 ; Keep the long-lived CAMT installer identity.
 #define MyAppId "{{AE34C930-D943-4FB7-B8D4-A4F2F1969A3C}"

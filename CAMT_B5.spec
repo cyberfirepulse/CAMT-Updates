@@ -14,6 +14,7 @@ binaries = []
 for rel in (
     "assets",
     "plugins",
+    "modules",
     "intelligence_module_examples",
     "reference_modules",
 ):

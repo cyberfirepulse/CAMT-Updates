@@ -3,7 +3,7 @@
 #define MyAppBuild "120B9-LIC-20260916"
 #define MyAppPublisher "CyberFirePulse"
 #define MyAppExeName "CAMT.exe"
-#define BaseDir "D:\scripts\scan\CAMT_B5_FIX_v3\CAMT_B5_FIX"
+#define BaseDir SourcePath
 
 ; Same long-lived installer identity as the Complete installer.
 #define MyAppId "{{AE34C930-D943-4FB7-B8D4-A4F2F1969A3C}"
