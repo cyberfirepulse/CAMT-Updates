@@ -1,27 +1,46 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-export CAMT_HOME="/opt/camt"
-CAMT_PYTHON="/usr/bin/python3"
+CAMT_HOME="/opt/camt"
 CAMT_PACKAGES="$CAMT_HOME/python-packages"
+CAMT_RUNTIME_CONFIG="$CAMT_HOME/.camt-runtime"
 
-if [ ! -x "$CAMT_PYTHON" ] || [ ! -d "$CAMT_PACKAGES" ]; then
-    echo "CAMT system-Python installation is incomplete. Run packaging/linux/install.sh." >&2
+die() {
+    echo "ERROR: $*" >&2
     exit 1
-fi
-cd "$CAMT_HOME"
-# Isolated mode prevents an activated venv or user PYTHONPATH from changing
-# the interpreter's package selection. No virtual environment is used.
-exec "$CAMT_PYTHON" -I -c '
-import runpy
+}
+
+[ -r "$CAMT_RUNTIME_CONFIG" ] || \
+    die "CAMT runtime configuration is missing. Rerun the CAMT installer."
+
+# This file is root-written by install.sh and contains only CAMT_PYTHON=<shell-escaped path>.
+# shellcheck disable=SC1090
+source "$CAMT_RUNTIME_CONFIG"
+
+[ -n "${CAMT_PYTHON:-}" ] || \
+    die "CAMT Python is not recorded. Rerun the CAMT installer."
+[ -x "$CAMT_PYTHON" ] || \
+    die "Configured CAMT Python is unavailable: $CAMT_PYTHON. Rerun the CAMT installer."
+
+"$CAMT_PYTHON" -I -c 'import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)' || \
+    die "Configured CAMT Python must be version 3.12 or newer: $CAMT_PYTHON."
+
+[ -d "$CAMT_HOME/src/projectmanager" ] || \
+    die "CAMT source is missing from $CAMT_HOME/src."
+[ -d "$CAMT_PACKAGES" ] || \
+    die "CAMT Python packages are missing from $CAMT_PACKAGES."
+
+if [ "${1:-}" = "--camt-launcher-check" ]; then
+    exec "$CAMT_PYTHON" -I - "$CAMT_HOME/src" "$CAMT_PACKAGES" <<'PY'
 import sys
-if sys.version_info < (3, 12):
-    raise SystemExit("CAMT requires system Python >= 3.12. Rerun the installer after upgrading Python.")
-sys.path[:0] = ["/opt/camt/src", "/opt/camt/python-packages"]
-try:
-    import tkinter, _tkinter
-    from PIL import ImageTk
-except ImportError as exc:
-    raise SystemExit(f"CAMT dependency missing: {exc}. Rerun packaging/linux/install.sh.") from exc
-runpy.run_module("projectmanager", run_name="__main__", alter_sys=True)
-' "$@"
+sys.path[:0] = sys.argv[1:]
+import projectmanager, tkinter, _tkinter
+from PIL import ImageTk
+print(f"CAMT launcher: OK ({sys.executable}, Python {sys.version.split()[0]})")
+PY
+fi
+
+export CAMT_HOME
+export PYTHONPATH="$CAMT_HOME/src:$CAMT_PACKAGES${PYTHONPATH:+:$PYTHONPATH}"
+cd "$CAMT_HOME"
+exec "$CAMT_PYTHON" -m projectmanager "$@"

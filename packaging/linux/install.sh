@@ -8,6 +8,7 @@ MIN_PYTHON_MAJOR=3
 MIN_PYTHON_MINOR=12
 CAMT_PACKAGES="$CAMT_HOME/python-packages"
 CAMT_LAUNCHER="/usr/local/bin/camt"
+CAMT_RUNTIME_CONFIG="$CAMT_HOME/.camt-runtime"
 
 die() {
     echo "ERROR: $*" >&2
@@ -206,6 +207,11 @@ echo "[5/6] Installing CAMT launcher..."
 
 install -d /usr/local/bin /usr/share/applications
 
+# Persist the exact interpreter that passed all installer checks.
+printf 'CAMT_PYTHON=%q\n' "$CAMT_PYTHON" > "$CAMT_RUNTIME_CONFIG"
+chmod 0644 "$CAMT_RUNTIME_CONFIG"
+
+# Install a launcher that uses that exact interpreter and CAMT package paths.
 install -m 0755 \
     "$CAMT_HOME/packaging/linux/camt" \
     "$CAMT_LAUNCHER"
@@ -224,6 +230,8 @@ import projectmanager, tkinter, _tkinter
 from PIL import ImageTk
 print("CAMT installation: OK (system Python, no venv)")
 PY
+
+"$CAMT_LAUNCHER" --camt-launcher-check
 
 echo
 echo "========================================"
