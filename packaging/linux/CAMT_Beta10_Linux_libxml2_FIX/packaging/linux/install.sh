@@ -30,7 +30,7 @@ case "$PM" in
    DEBIAN_FRONTEND=noninteractive apt-get install -y \
      ca-certificates curl git rsync build-essential pkg-config \
      python3 python3-pip python3-venv python3-dev python3-tk \
-     libssl-dev libffi-dev libpcap-dev libxml2-dev libxslt1-dev zlib1g-dev \
+     libssl-dev libffi-dev libpcap-dev zlib1g-dev \
      libjpeg-dev libpng-dev libfreetype6-dev \
      nmap iproute2 net-tools traceroute dnsutils openssh-client \
      rustc cargo
@@ -39,14 +39,14 @@ case "$PM" in
    "$PM" install -y \
      ca-certificates curl git rsync gcc gcc-c++ make pkgconf-pkg-config \
      python3 python3-pip python3-devel python3-tkinter \
-     openssl-devel libffi-devel libpcap-devel libxml2-devel libxslt-devel zlib-devel \
+     openssl-devel libffi-devel libpcap-devel zlib-devel \
      libjpeg-turbo-devel libpng-devel freetype-devel \
      nmap iproute net-tools traceroute bind-utils openssh-clients rust cargo
    ;;
  pacman)
    pacman -Syu --needed --noconfirm \
      ca-certificates curl git rsync base-devel pkgconf python python-pip tk \
-     openssl libffi libpcap libxml2 libxslt zlib libjpeg-turbo libpng freetype2 \
+     openssl libffi libpcap zlib libjpeg-turbo libpng freetype2 \
      nmap iproute2 net-tools traceroute bind openssh rust
    ;;
  zypper)
@@ -54,7 +54,7 @@ case "$PM" in
    zypper --non-interactive install \
      ca-certificates curl git rsync gcc gcc-c++ make pkg-config \
      python3 python3-pip python3-devel python3-tk \
-     libopenssl-devel libffi-devel libpcap-devel libxml2-devel libxslt-devel zlib-devel \
+     libopenssl-devel libffi-devel libpcap-devel zlib-devel \
      libjpeg8-devel libpng16-devel freetype2-devel \
      nmap iproute2 net-tools traceroute bind-utils openssh rust cargo
    ;;
@@ -127,11 +127,15 @@ echo "[5/8] Installing complete CAMT Python runtime"
 
 # Runtime families used by CAMT core, bundled plugins/modules and reporting/analysis.
 # pip resolves transitive dependencies (cffi/pycparser, attrs, etc.) inside this venv.
+# Binary-only packages: never compile these against the host's libxml2/OpenSSL stack.
+"$VPY" -m pip install --upgrade --only-binary=:all: \
+  lxml cryptography cffi Pillow "psycopg[binary]"
+
+# Remaining CAMT runtime packages are installed inside the same isolated venv.
 "$VPY" -m pip install --upgrade \
-  "Pillow>=10.4" python-docx pypdf PyPDF2 "psycopg[binary]" \
+  python-docx pypdf PyPDF2 \
   ropper capstone filebytes keystone-engine \
-  scapy requests cryptography cffi \
-  reportlab matplotlib networkx psutil beautifulsoup4 lxml tqdm \
+  scapy requests reportlab matplotlib networkx psutil beautifulsoup4 tqdm \
   python-dateutil pyyaml sqlalchemy pandas rich websocket-client colorama \
   jinja2 aiohttp
 
@@ -164,8 +168,10 @@ PY
 "$VPY" - <<'PY'
 from scapy.all import IP, TCP, Ether, ARP, conf
 from cryptography.hazmat.primitives import hashes
+from lxml import etree
 print("Scapy full load: OK")
 print("Cryptography primitives: OK")
+print("lxml binary runtime: OK", etree.LIBXML_VERSION)
 PY
 
 echo "[7/8] Installing launcher and desktop integration"
