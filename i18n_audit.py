@@ -129,7 +129,7 @@ def main():
     if active_legacy_rows: errors.append(f'Legacy/backup Python source is still referenced and contains Dutch UI strings: {len(active_legacy_rows)}')
     if residual: errors.append(f'Dutch-looking text remains in EN locale: {len(residual)}')
     report=[
-      'CAMT 1.2.0 Beta 9 — NL/EN SOURCE-LEVEL I18N AUDIT','='*72,
+      'CAMT 1.2.0 Beta 10 — NL/EN SOURCE-LEVEL I18N AUDIT','='*72,
       f'Locale keys NL: {len(nl)}',f'Locale keys EN: {len(en)}',
       f'Help Center topics NL/EN: {len(help_nl)}/{len(help_en)}',
       f'NetMap help topics NL/EN: {len(nm_nl)}/{len(nm_en)}',

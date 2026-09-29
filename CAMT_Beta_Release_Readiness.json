@@ -2,8 +2,8 @@
   "manifest": {
     "app": "CAMT",
     "edition": "",
-    "version": "1.2.0 Beta 9",
-    "build_id": "120B9-LIC-20260916",
+    "version": "1.2.0 Beta 10",
+    "build_id": "120B10-LIC-20260929",
     "channel": "Beta",
     "python": "3.12.9",
     "platform": "Windows-11-10.0.26200-SP0",
@@ -12,9 +12,9 @@
     "schema_manifest_version": 1
   },
   "migrations": {
-    "version": "1.2.0 Beta 9",
-    "build_id": "120B9-LIC-20260916",
-    "ran_at": "2026-09-18T10:46:03",
+    "version": "1.2.0 Beta 10",
+    "build_id": "120B10-LIC-20260929",
+    "ran_at": "2026-09-29T08:26:55",
     "checks": [
       {
         "name": "Offline Intelligence / CVE schema",
@@ -24,7 +24,7 @@
       {
         "name": "Intelligence Module Framework",
         "ok": true,
-        "detail": "framework v2; 38 packages/modules"
+        "detail": "framework v2; 37 packages/modules"
       },
       {
         "name": "Team local schema",
@@ -34,7 +34,7 @@
       {
         "name": "Asset Repository",
         "ok": true,
-        "detail": "247 assets; 22 relations"
+        "detail": "249 assets; 22 relations"
       },
       {
         "name": "Report Studio storage",
@@ -80,31 +80,31 @@
       "name": "help_center",
       "required": true,
       "exists": true,
-      "path": "D:\\Scripts\\scan\\CAMT_B5_FIX_v3\\CAMT_B5_FIX\\src\\projectmanager\\help_center.py"
+      "path": "D:\\Scripts\\scan\\module\\CAMT_B5_FIX\\src\\projectmanager\\help_center.py"
     },
     {
       "name": "intelligence framework",
       "required": true,
       "exists": true,
-      "path": "D:\\Scripts\\scan\\CAMT_B5_FIX_v3\\CAMT_B5_FIX\\src\\projectmanager\\intelligence_modules"
+      "path": "D:\\Scripts\\scan\\module\\CAMT_B5_FIX\\src\\projectmanager\\intelligence_modules"
     },
     {
       "name": "example intelligence packs",
       "required": true,
       "exists": true,
-      "path": "D:\\Scripts\\scan\\CAMT_B5_FIX_v3\\CAMT_B5_FIX\\intelligence_module_examples"
+      "path": "D:\\Scripts\\scan\\module\\CAMT_B5_FIX\\intelligence_module_examples"
     },
     {
       "name": "Team Server launcher",
       "required": false,
       "exists": true,
-      "path": "D:\\Scripts\\scan\\CAMT_B5_FIX_v3\\CAMT_B5_FIX\\run_team_server.bat"
+      "path": "D:\\Scripts\\scan\\module\\CAMT_B5_FIX\\run_team_server.bat"
     },
     {
       "name": "Team Server config example",
       "required": false,
       "exists": true,
-      "path": "D:\\Scripts\\scan\\CAMT_B5_FIX_v3\\CAMT_B5_FIX\\team_server_config.example.json"
+      "path": "D:\\Scripts\\scan\\module\\CAMT_B5_FIX\\team_server_config.example.json"
     }
   ],
   "writable": [
@@ -171,5 +171,5 @@
   ],
   "passed": true,
   "failures": [],
-  "checked_at": "2026-09-18T10:46:03"
+  "checked_at": "2026-09-29T08:26:55"
 }

@@ -33,7 +33,7 @@ Collect -> Normalize -> Correlate -> Assess -> Explain -> Report
 
 See `QuickStart.pdf` for a short operational introduction.
 
-For Beta-specific information, see `README_BETA.md` and the Beta 9 release notes.
+For Beta-specific information, see `README_BETA.md` and the Beta 10 release notes.
 
-Version: 1.2.0 Beta 9
-Build: 120B9-LIC-20260916
+Version: 1.2.0 Beta 10
+Build: 120B10-LIC-20260929

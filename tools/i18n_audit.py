@@ -43,7 +43,7 @@ def main(root):
         for ln,s in scan_file(p,nl,en):py.append((str(p.relative_to(root)),ln,s))
     mixed=[(k,v) for k,v in en.items() if isinstance(v,str) and DUTCH_RE.search(v)]
     parity=set(en)^set(nl)
-    print("CAMT 1.2.0 Beta 9 i18n release gate")
+    print("CAMT 1.2.0 Beta 10 i18n release gate")
     print("Unlocalized Dutch presentation sinks:",len(py))
     print("Mixed Dutch in EN locale:",len(mixed))
     print("EN/NL key parity differences:",len(parity))

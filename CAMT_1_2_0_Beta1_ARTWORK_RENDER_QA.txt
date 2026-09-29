@@ -1,4 +1,4 @@
-CAMT 1.2.0 Beta 9 — v11.2 Artwork Render Fix
+CAMT 1.2.0 Beta 10 — v11.2 Artwork Render Fix
 
 Root cause found:
 - v11.1 assigned artwork to core/menu capabilities in workspace_registry.json.

@@ -5,13 +5,13 @@ https://github.com/agebrander-def/CAMT-Updates
 
 Upload/replace:
 1. Replace repository-root update.json with the update.json in this package.
-2. Add release-notes/1.1.0-beta1-test-20260824.md.
+2. Add release-notes/1.1.0-Beta10-test-20260824.md.
 3. Commit to branch main.
 4. In CAMT Update Manager click 'Nu controleren'.
 
 Expected result:
-Installed:  1.1.0 Beta 1 | 110B1-RCF-20260818
-Available:  1.1.0 Beta 1 | 110B1-RCF-20260824
+Installed:  1.2.0 Beta 10 | 120B10-LIC-20260929
+Available:  1.2.0 Beta 10 | 120B10-LIC-20260929
 Status:     Update available / nieuwere CAMT-build beschikbaar
 
 Download remains unavailable by design because this is only a detection test.

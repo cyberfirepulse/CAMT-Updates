@@ -3,7 +3,7 @@ setlocal
 cd /d "%~dp0"
 
 echo ================================================================
-echo CAMT Professional Edition 1.2.0 Beta 9
+echo CAMT Professional Edition 1.2.0 Beta 10
 echo Runtime Import Hardening - PyInstaller Build
 echo ================================================================
 echo.

@@ -1,10 +1,10 @@
-# CAMT Professional Edition 1.2.0 Beta 9
+# CAMT Professional Edition 1.2.0 Beta 10
 
 This is a beta release of CAMT Professional Edition.
 
 ## Purpose of the Beta
 
-Beta 9 is intended to validate the integrated CAMT workflow across network assessment, threat intelligence, evidence correlation, analyst review and professional reporting.
+Beta 10 is intended to validate the integrated CAMT workflow across network assessment, threat intelligence, evidence correlation, analyst review and professional reporting.
 
 ## Important Beta guidance
 
@@ -27,6 +27,6 @@ Beta 9 is intended to validate the integrated CAMT workflow across network asses
 7. Complete analyst review and disposition.
 8. Generate the professional report.
 
-Version: 1.2.0 Beta 9
-Build: 120B9-LIC-20260916
+Version: 1.2.0 Beta 10
+Build: 120B10-LIC-20260929
 Channel: beta

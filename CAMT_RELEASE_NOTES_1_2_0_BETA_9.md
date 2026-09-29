@@ -1,13 +1,13 @@
-# CAMT Professional Edition 1.2.0 Beta 9 - Release Notes
+# CAMT Professional Edition 1.2.0 Beta 10 - Release Notes
 
-**Version:** 1.2.0 Beta 9  
-**Build:** 120B9-LIC-20260916  
+**Version:** 1.2.0 Beta 10  
+**Build:** 120B10-LIC-20260929  
 **Channel:** beta  
 **Release sequence:** 8
 
 ## Release focus
 
-Beta 9 further integrates CAMT's analyst-driven workflow from technical network evidence through threat-intelligence correlation and professional reporting.
+Beta 10 further integrates CAMT's analyst-driven workflow from technical network evidence through threat-intelligence correlation and professional reporting.
 
 ## Network and assessment workflow
 
@@ -45,6 +45,6 @@ Beta 9 further integrates CAMT's analyst-driven workflow from technical network 
 
 ## Beta notice
 
-CAMT 1.2.0 Beta 9 is pre-release software. Validate significant findings independently before operational use.
+CAMT 1.2.0 Beta 10 is pre-release software. Validate significant findings independently before operational use.
 
-Build: 120B9-LIC-20260916
+Build: 120B10-LIC-20260929

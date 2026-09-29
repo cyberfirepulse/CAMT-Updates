@@ -1,6 +1,6 @@
 #define MyAppName "CAMT Professional Edition"
-#define MyAppVersion "1.2.0 Beta 9"
-#define MyAppBuild "120B9-LIC-20260916"
+#define MyAppVersion "1.2.0 Beta 10"
+#define MyAppBuild "120B10-LIC-20260929"
 #define MyAppPublisher "CyberFirePulse"
 #define MyAppExeName "CAMT.exe"
 #define BaseDir SourcePath
@@ -64,7 +64,7 @@ dutch.DesktopShortcut=Bureaublad-snelkoppeling
 dutch.ExtraShortcuts=Extra snelkoppelingen:
 
 [Files]
-// Always package the current Beta 9 PyInstaller distribution.
+// Always package the current Beta 10 PyInstaller distribution.
 Source: "{#BaseDir}\dist\CAMT\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 // portable.flag is not installed; installed CAMT uses its normal central app-data directory.
 

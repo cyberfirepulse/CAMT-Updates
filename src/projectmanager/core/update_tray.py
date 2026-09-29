@@ -78,7 +78,7 @@ class WindowsTrayUpdateNotifier:
         remote_build = str(manifest.get("build") or manifest.get("build_id") or "")
 
         # release_seq is authoritative for the Beta channel when present.
-        # Beta 9 must never announce Beta 9 again after the update completed.
+        # Beta 10 must never announce Beta 10 again after the update completed.
         remote_seq = manifest.get("release_seq")
         local_beta = re.search(r"\bBeta\s+(\d+)\b", APP_VERSION, re.IGNORECASE)
         if remote_seq is not None and local_beta:

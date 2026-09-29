@@ -1,3 +1,3 @@
-CAMT Professional Edition 1.2.0 Beta 9 — UI fit status
-Build: 120B9-LIC-20260916
-The existing screen-fit and resizable-workspace corrections are retained in this source tree. This file records the active Beta 9 release identity only.
+CAMT Professional Edition 1.2.0 Beta 10 — UI fit status
+Build: 120B10-LIC-20260929
+The existing screen-fit and resizable-workspace corrections are retained in this source tree. This file records the active Beta 10 release identity only.

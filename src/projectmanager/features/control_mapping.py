@@ -10,7 +10,7 @@ from projectmanager.control_mapping import (
 )
 
 class ControlMappingMixin:
-    """Control Mapping and integration workspace for 1.2.0 Beta 9."""
+    """Control Mapping and integration workspace for 1.2.0 Beta 10."""
 
     def _control_mapping_repo(self):
         return ControlMappingRepository(get_app_home_dir())

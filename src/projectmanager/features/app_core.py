@@ -1471,7 +1471,7 @@ class AppCoreMixin:
             add("Python-versie", sys.version_info >= (3, 11), sys.version.split()[0])
             add("Tkinter-alias tk", "tk" in globals() and hasattr(tk, "Label"), "import tkinter as tk")
             add("ttk beschikbaar", hasattr(ttk, "Treeview") and hasattr(ttk, "Notebook"), "")
-            add("Applicatieversie", APP_VERSION == "1.2.0 Beta 9", f"{APP_VERSION} / {APP_BUILD_ID}")
+            add("Applicatieversie", APP_VERSION == "1.2.0 Beta 10", f"{APP_VERSION} / {APP_BUILD_ID}")
 
             # 2. Broncode en AST-controle.
             source_path = Path(__file__).resolve()
@@ -1612,7 +1612,7 @@ class AppCoreMixin:
             except Exception as exc:
                 add("Secure Development Studio-engine", False, str(exc))
 
-            # Beta 9 release-hardening checks.
+            # Beta 10 release-hardening checks.
             try:
                 from projectmanager.core.release_hardening import run_readiness_checks
                 readiness=run_readiness_checks()

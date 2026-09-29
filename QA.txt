@@ -1,4 +1,4 @@
-CAMT Professional Edition 1.2.0 Beta 9 — current source QA
-Build: 120B9-LIC-20260916
+CAMT Professional Edition 1.2.0 Beta 10 — current source QA
+Build: 120B10-LIC-20260929
 
-Current release identity is Beta 9. Runtime source, help resources and NL/EN presentation resources are audited as part of the Beta 9 i18n correction package.
+Current release identity is Beta 10. Runtime source, help resources and NL/EN presentation resources are audited as part of the Beta 10 i18n correction package.

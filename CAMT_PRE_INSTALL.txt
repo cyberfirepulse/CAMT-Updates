@@ -1,9 +1,9 @@
-CAMT PROFESSIONAL EDITION 1.2.0 Beta 9
+CAMT PROFESSIONAL EDITION 1.2.0 Beta 10
 PRE-INSTALLATION INFORMATION
 
 Product
-CAMT Professional Edition 1.2.0 Beta 9
-Build: 120B9-LIC-20260916
+CAMT Professional Edition 1.2.0 Beta 10
+Build: 120B10-LIC-20260929
 Publisher: CyberFirePulse
 
 Before continuing

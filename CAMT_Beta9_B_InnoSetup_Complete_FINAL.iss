@@ -1,6 +1,6 @@
 ; ================================================================
-; CAMT Professional Edition 1.2.0 Beta 9
-; Build: 120B9-LIC-20260916
+; CAMT Professional Edition 1.2.0 Beta 10
+; Build: 120B10-LIC-20260929
 ; Full / extended installer
 ; ================================================================
 ;
@@ -24,8 +24,8 @@
 ;   prerequisites\photorec_win.exe
 ;
 #define MyAppName "CAMT"
-#define MyAppVersion "1.2.0 Beta 9"
-#define MyAppBuild "120B9-LIC-20260916"
+#define MyAppVersion "1.2.0 Beta 10"
+#define MyAppBuild "120B10-LIC-20260929"
 #define MyAppPublisher "CyberFirePulse"
 #define MyAppURL "https://github.com/cyberfirepulse/CAMT-Updates"
 #define MyAppExeName "CAMT.exe"

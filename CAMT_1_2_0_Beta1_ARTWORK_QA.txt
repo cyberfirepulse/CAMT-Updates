@@ -1,4 +1,4 @@
-CAMT 1.2.0 Beta 9 — v11.1 Artwork QA
+CAMT 1.2.0 Beta 10 — v11.1 Artwork QA
 
 Generated consistent artwork files: 11
 Artwork dimensions: 640x360 PNG

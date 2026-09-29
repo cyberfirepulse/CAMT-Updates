@@ -1,13 +1,13 @@
-CAMT PROFESSIONAL EDITION 1.2.0 Beta 9
+CAMT PROFESSIONAL EDITION 1.2.0 Beta 10
 POST-INSTALLATION INFORMATION
 
 Installation completed
-CAMT Professional Edition 1.2.0 Beta 9
-Build: 120B9-LIC-20260916
+CAMT Professional Edition 1.2.0 Beta 10
+Build: 120B10-LIC-20260929
 
 Recommended first start
 1. Start CAMT from the Start Menu or Desktop shortcut, if selected.
-2. Confirm that CAMT opens normally and shows the expected Beta 9 version/build.
+2. Confirm that CAMT opens normally and shows the expected Beta 10 version/build.
 3. Confirm that the active license is recognized.
 4. Open the Module Manager and verify that installed modules are present.
 5. Open CAMT Update Manager and confirm that the update interface loads.

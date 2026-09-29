@@ -199,7 +199,7 @@ class BuildGitMixin:
             except Exception:
                 pass
         def _build_menu_bar(self) -> None:
-            """Build the unified Beta 9 menu from one central navigation registry."""
+            """Build the unified Beta 10 menu from one central navigation registry."""
             from projectmanager.core.navigation_registry import NavigationRegistry
 
             nav = NavigationRegistry()
@@ -618,7 +618,7 @@ class BuildGitMixin:
             self.main_paned.add(self.center_panel, weight=3)
             self.main_paned.add(self.right_panel, weight=2)
 
-            # 1.2.0 Beta 9: CAMT opens on a functional, module-driven landing page.
+            # 1.2.0 Beta 10: CAMT opens on a functional, module-driven landing page.
             # Persistent workspace navigation. This remains available in both
             # Home and Projects and does not replace any existing CAMT menu structure.
             self.workspace_nav = ttk.Frame(self.center_panel)

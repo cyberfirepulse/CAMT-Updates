@@ -1,6 +1,6 @@
 {
   "schema": "CAMT.RuntimeImports.1",
-  "release": "1.2.0 Beta 9",
+  "release": "1.2.0 Beta 10",
   "purpose": "Single source of truth for PyInstaller dynamic imports and runtime preflight.",
   "hiddenimports": [
     "projectmanager.team.server",

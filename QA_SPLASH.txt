@@ -1,3 +1,3 @@
-CAMT Professional Edition 1.2.0 Beta 9 — splash QA
-Build: 120B9-LIC-20260916
-Startup splash defaults and visible release-channel label are aligned with Beta 9.
+CAMT Professional Edition 1.2.0 Beta 10 — splash QA
+Build: 120B10-LIC-20260929
+Startup splash defaults and visible release-channel label are aligned with Beta 10.

@@ -1,5 +1,5 @@
-CAMT 1.2.0 Beta 9 UPDATE QA
-Build: 120B9-LIC-20260916
+CAMT 1.2.0 Beta 10 UPDATE QA
+Build: 120B10-LIC-20260929
 
 Python compile changed files: PASS
 NL/EN locale key parity: PASS (2709 keys each)

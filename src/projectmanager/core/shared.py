@@ -242,8 +242,8 @@ def _install_treeview_sorting(root) -> None:
 
 
 APP_NAME = "CAMT"
-APP_VERSION = "1.2.0 Beta 9"
-APP_BUILD_ID = "120B9-LIC-20260916"
+APP_VERSION = "1.2.0 Beta 10"
+APP_BUILD_ID = "120B10-LIC-20260929"
 APP_EDITION = ""
 APP_RELEASE_CHANNEL = "Beta"
 

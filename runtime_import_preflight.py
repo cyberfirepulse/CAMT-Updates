@@ -193,7 +193,7 @@ def main() -> int:
         print(f"[FAIL] Runtime manifest: {exc}")
         return 2
 
-    print("CAMT 1.2.0 Beta 9 - Runtime Import Preflight")
+    print("CAMT 1.2.0 Beta 10 - Runtime Import Preflight")
     print("=" * 58)
     check_source_compile(errors)
     check_spec_manifest(manifest, errors)

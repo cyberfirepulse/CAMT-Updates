@@ -5,8 +5,8 @@ names remain stable for backward compatibility.
 """
 PRODUCT_NAME = "CAMT"
 PRODUCT_FULL_NAME = "Cyber Advanced Threat Modeling Tool"
-VERSION = "1.2.0 Beta 9"
-BUILD_ID = "120B9-LIC-20260916"
+VERSION = "1.2.0 Beta 10"
+BUILD_ID = "120B10-LIC-20260929"
 
 def edition_label(edition: str | None) -> str:
     value = str(edition or "").strip()

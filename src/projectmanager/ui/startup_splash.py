@@ -16,8 +16,8 @@ class StartupSplash:
         *,
         app_name: str = "CAMT",
         edition: str = "",
-    version: str = "v1.2.0 Beta 9",
-        build_id: str = "120B9-LIC-20260916",
+    version: str = "v1.2.0 Beta 10",
+        build_id: str = "120B10-LIC-20260929",
         minimum_visible_ms: int = 8000,
     ) -> None:
         self.root = root
@@ -169,7 +169,7 @@ class StartupSplash:
         ).pack(fill="x")
         tk.Label(
             content,
-            text="Beta 9 • CyberFirePulse update channel",
+            text="Beta 10 • CyberFirePulse update channel",
             font=("Segoe UI", 9),
             fg="#73808c",
             bg="#f3f6fa",

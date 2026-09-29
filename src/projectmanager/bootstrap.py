@@ -7,8 +7,8 @@ from projectmanager.ui.startup_splash import StartupSplash
 
 APP_NAME = "CAMT"
 APP_EDITION = ""
-APP_VERSION = "1.2.0 Beta 9"
-APP_BUILD_ID = "120B9-LIC-20260916"
+APP_VERSION = "1.2.0 Beta 10"
+APP_BUILD_ID = "120B10-LIC-20260929"
 
 
 def run() -> None:
@@ -115,7 +115,7 @@ def run() -> None:
 
                 root.after(350, app._beta_first_run_check)
 
-            splash.step(100, "CAMT 1.2.0 Beta 9 ready", CORE_APP_BUILD_ID)
+            splash.step(100, "CAMT 1.2.0 Beta 10 ready", CORE_APP_BUILD_ID)
             splash.close_when_ready(450, on_closed=show_main)
 
         except Exception:

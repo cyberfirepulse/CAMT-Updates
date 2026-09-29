@@ -1,4 +1,4 @@
-CAMT 1.2.0 Beta 9 — Help Audit Report
+CAMT 1.2.0 Beta 10 — Help Audit Report
 
 Core Help topics EN/NL: 33 / 33
 Locale topic parity: PASS

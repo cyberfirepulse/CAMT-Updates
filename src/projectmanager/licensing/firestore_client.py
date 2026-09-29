@@ -30,7 +30,7 @@ def _request(method: str, url: str, payload: dict | None = None,
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "User-Agent": "CAMT-License-Manager/1.1.0-Beta9",
+        "User-Agent": "CAMT-License-Manager/1.1.0-Beta10",
         "X-Goog-Api-Key": API_KEY,
     }
     last_error = None

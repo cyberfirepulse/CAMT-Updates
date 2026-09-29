@@ -1,4 +1,4 @@
-ProjectManager Suite 10.0 Beta 9 - Unified Workspace Edition
+ProjectManager Suite 10.0 Beta 10 - Unified Workspace Edition
 
 - Menu's gereorganiseerd in tien duidelijke hoofdgroepen.
 - Versienummers uit menu-items en ontwikkellabels verwijderd.

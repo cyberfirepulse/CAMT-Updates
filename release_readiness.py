@@ -12,7 +12,7 @@ if __name__=="__main__":
     out=ROOT/"CAMT_Beta_Release_Readiness.json"
     out.write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding="utf-8")
     print("="*78)
-    print("CAMT 1.2.0 Beta 9 — Release Readiness")
+    print("CAMT 1.2.0 Beta 10 — Release Readiness")
     print("="*78)
     print("PASS" if report["passed"] else "ATTENTION REQUIRED")
     for failure in report["failures"]:

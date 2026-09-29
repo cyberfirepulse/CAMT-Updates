@@ -1,6 +1,6 @@
 {
   "overview": [
-    "CAMT 1.2.0 Beta 9",
+    "CAMT 1.2.0 Beta 10",
     "CAMT — Cyber Advanced Threat Modeling Tool\n\nDoel\nCAMT combineert cyberbeveiligingsanalyse, CTI, netwerkdiscovery, Digital Twin, forensics, evidence-afhandeling, rapportage en modulaire onderzoeksworkflows.\n\nCAMT Workspace\nHome is de primaire landingspagina. Daar staan de belangrijkste capabilities: Netwerkanalyse, Intelligence & Research, Forensics & Evidence, Security-analyse, Rapportage & Presentatie en Projecten & Cases.\n\nModules en plugins\nBeschikbare capabilities worden dynamisch gevonden. Modules en plugins kunnen categorie-, beschrijvings- en artworkmetadata leveren. Repository/Module Manager is de beheerlaag voor geïnstalleerde, beschikbare en updatebare pakketten.\n\nAanbevolen werkwijze\n1. Start op Home en kies een capability.\n2. Open een corefunctie of geïnstalleerde module.\n3. Maak of laad onderzoeksgegevens.\n4. Correleer bevindingen tussen Netwerk, Intelligence, Security en Forensics.\n5. Gebruik Projecten & Cases voor projectgebonden context.\n6. Genereer technische of managementoutput via Rapportage.\n\nBelangrijk\nThreat Actor- en similarityscores zijn analytische indicatoren, geen attributie. Leg evidence, confidence, negatieve evidence en bronkwaliteit vast."
   ],
   "quickstart": [
@@ -9,7 +9,7 @@
   ],
   "workspace": [
     "CAMT Workspace en navigatie",
-    "CAMT Workspace\nHome is de primaire landingspagina van 1.2.0 Beta 9. De opzet is capability-first en niet projectdashboard-first.\n\nPrimaire capabilitygebieden\n- Netwerkanalyse\n- Intelligence & Research\n- Forensics & Evidence\n- Security-analyse\n- Rapportage & Presentatie\n- Projecten & Cases\n\nNavigatie\nDe normale CAMT-menubalk blijft beschikbaar in de hoofdapplicatie. Capabilitypagina's horen binnen het hoofdvenster te openen. Gebruik Home of Ctrl+Home om terug te keren.\n\nDynamische inhoud\nHome combineert core navigation contributions met geïnstalleerde modulemetadata. Nieuwe modules horen categorie, beschrijving en artwork te declareren in plaats van hardcoded in CAMT-core te staan.\n\nProjecten\nProjectboom, projectdetails en projectspecifieke bediening horen bij de Projecten-weergave en zijn bewust gescheiden van Home."
+    "CAMT Workspace\nHome is de primaire landingspagina van 1.2.0 Beta 10. De opzet is capability-first en niet projectdashboard-first.\n\nPrimaire capabilitygebieden\n- Netwerkanalyse\n- Intelligence & Research\n- Forensics & Evidence\n- Security-analyse\n- Rapportage & Presentatie\n- Projecten & Cases\n\nNavigatie\nDe normale CAMT-menubalk blijft beschikbaar in de hoofdapplicatie. Capabilitypagina's horen binnen het hoofdvenster te openen. Gebruik Home of Ctrl+Home om terug te keren.\n\nDynamische inhoud\nHome combineert core navigation contributions met geïnstalleerde modulemetadata. Nieuwe modules horen categorie, beschrijving en artwork te declareren in plaats van hardcoded in CAMT-core te staan.\n\nProjecten\nProjectboom, projectdetails en projectspecifieke bediening horen bij de Projecten-weergave en zijn bewust gescheiden van Home."
   ],
   "scenario": [
     "Scenario Intelligence",
@@ -112,8 +112,8 @@
     "Dataconsistentie\n\nCAMT bevat meerdere workspaces die dezelfde onderzoeksgegevens gebruiken. Het\nuitgangspunt is één canonieke bron per datacategorie.\n\nNetwerk\nDe actuele NetMap / Asset Repository is leidend voor netwerkobservaties. Asset\nIntelligence, Digital Twin en rapportage horen dezelfde assets en relaties te lezen.\n\nCVE\nDe lokale Offline Intelligence SQLite-database is leidend voor standalone CVE\ncorrelatie. Team CVE Repository Sync maakt een gecontroleerde centrale kopie; het\noverschrijft de lokale database niet.\n\nTeam\nCase objects zijn revisioned op de Team Server. Lokale brondata wordt niet stil\nvervangen door een centrale save.\n\nRapporten\nDiagrammen en tabellen horen uit hetzelfde analysis snapshot te komen. Bij verschillen\ntussen schermen eerst de actieve case, scan, scenario en modus controleren."
   ],
   "beta_release": [
-    "1.2.0 Beta 9 — Workspace-generatie",
-    "CAMT 1.2.0 Beta 9\n\nReleasefocus\n- capability-first Workspace\n- dynamische module/plugin-presentatie\n- repositorygericht package discovery\n- artwork voor modules en capabilities\n- licentiegestuurde Edition-identiteit\n- NL/EN i18n-correcties\n- uitlijning van Network Digital Twin- en NetMap-vertalingen\n- screen-aware pakketbeheer\n\nVersie\n1.2.0 Beta 9\nBuild 120B9-LIC-20260916"
+    "1.2.0 Beta 10 — Workspace-generatie",
+    "CAMT 1.2.0 Beta 10\n\nReleasefocus\n- capability-first Workspace\n- dynamische module/plugin-presentatie\n- repositorygericht package discovery\n- artwork voor modules en capabilities\n- licentiegestuurde Edition-identiteit\n- NL/EN i18n-correcties\n- uitlijning van Network Digital Twin- en NetMap-vertalingen\n- screen-aware pakketbeheer\n\nVersie\n1.2.0 Beta 10\nBuild 120B10-LIC-20260929"
   ],
   "troubleshooting": [
     "Diagnostiek en probleemoplossing",
