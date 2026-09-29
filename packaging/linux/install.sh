@@ -3,7 +3,8 @@
 set -euo pipefail
 
 CAMT_HOME="/opt/camt"
-CAMT_VENV="$CAMT_HOME/.venv"
+CAMT_PYTHON="/usr/bin/python3"
+CAMT_PACKAGES="$CAMT_HOME/python-packages"
 CAMT_LAUNCHER="/usr/local/bin/camt"
 
 die() {
@@ -33,7 +34,7 @@ fi
 
 SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
-for required_file in requirements-runtime.txt packaging/linux/camt packaging/linux/camt.desktop; do
+for required_file in pyproject.toml requirements-runtime.txt packaging/linux/camt packaging/linux/camt.desktop; do
     [ -f "$SOURCE_DIR/$required_file" ] || \
         die "Missing source file: $SOURCE_DIR/$required_file. Run this installer from packaging/linux/install.sh in the complete CAMT source tree."
 done
@@ -54,7 +55,7 @@ echo "[1/6] Installing Linux dependencies ($PACKAGE_MANAGER)..."
 case "$PACKAGE_MANAGER" in
     apt-get)
         apt-get update
-        apt-get install -y python3 python3-venv python3-pip python3-dev \
+        apt-get install -y python3 python3-pip python3-dev \
             build-essential nmap iproute2 net-tools traceroute dnsutils \
             openssh-client libpcap-dev git rsync
         TK_PACKAGE="python3-tk"
@@ -80,12 +81,12 @@ case "$PACKAGE_MANAGER" in
         ;;
 esac
 
-command -v python3 >/dev/null 2>&1 || die "python3 is missing after dependency installation."
-python3 -c 'import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)' || \
-    die "CAMT requires Python >= 3.12; found $(python3 --version 2>&1). Install a supported python3 with matching venv and Tk support, then rerun this installer."
+[ -x "$CAMT_PYTHON" ] || die "System Python is missing: $CAMT_PYTHON"
+"$CAMT_PYTHON" -I -c 'import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)' || \
+    die "CAMT requires system Python >= 3.12; found $("$CAMT_PYTHON" --version 2>&1). Upgrade your distribution/Python packages before installing CAMT."
 
-# Import both modules without requiring a graphical display.
-if ! python3 -c 'import tkinter, _tkinter' >/dev/null 2>&1; then
+# Tk bindings must match the system interpreter used by the launcher.
+if ! "$CAMT_PYTHON" -I -c 'import tkinter, _tkinter' >/dev/null 2>&1; then
     echo "Installing Tk support: $TK_PACKAGE"
     case "$PACKAGE_MANAGER" in
         apt-get) apt-get install -y "$TK_PACKAGE" ;;
@@ -94,20 +95,9 @@ if ! python3 -c 'import tkinter, _tkinter' >/dev/null 2>&1; then
         zypper) zypper --non-interactive install "$TK_PACKAGE" ;;
     esac
 fi
-python3 -c 'import tkinter, _tkinter' || \
-    die "python3 cannot import tkinter/_tkinter. Install Tk bindings matching the active python3 interpreter, then rerun."
-
-# Test actual venv creation and pip bootstrapping before touching CAMT.
-PREFLIGHT_DIR="$(mktemp -d)"
-trap 'rm -rf -- "$PREFLIGHT_DIR"' EXIT
-python3 -m venv "$PREFLIGHT_DIR/venv" || \
-    die "python3 cannot create a venv with pip. Install matching venv/ensurepip support for Python >= 3.12, then rerun."
-"$PREFLIGHT_DIR/venv/bin/python" -m pip --version || \
-    die "pip is unavailable in the preflight virtual environment."
-"$PREFLIGHT_DIR/venv/bin/python" -c 'import tkinter, _tkinter' || \
-    die "Tk support is unavailable inside the Python virtual environment."
-rm -rf -- "$PREFLIGHT_DIR"
-trap - EXIT
+"$CAMT_PYTHON" -I -c 'import tkinter, _tkinter; print("System Python: Tkinter OK", tkinter.TkVersion)' || \
+    die "System Python cannot import tkinter/_tkinter after installing $TK_PACKAGE. Install matching Tk bindings for $CAMT_PYTHON."
+"$CAMT_PYTHON" -I -m pip --version || die "pip is missing for $CAMT_PYTHON."
 
 echo "[2/6] Installing CAMT source..."
 
@@ -116,21 +106,40 @@ mkdir -p "$CAMT_HOME"
 rsync -a --delete \
     --exclude '.git' \
     --exclude '.venv' \
+    --exclude 'python-packages' \
+    --exclude '.python-packages.*' \
     --exclude 'dist' \
     --exclude 'build' \
     "$SOURCE_DIR/" "$CAMT_HOME/"
 
-echo "[3/6] Creating Python virtual environment..."
+echo "[3/6] Preparing CAMT packages for system Python..."
 
-rm -rf "$CAMT_VENV"
-python3 -m venv "$CAMT_VENV"
+# This is a package directory, not a virtual environment. Build a fresh set
+# so removed dependencies and old binary extensions cannot survive an update.
+PACKAGE_STAGE="$(mktemp -d "$CAMT_HOME/.python-packages.XXXXXX")"
+trap 'rm -rf -- "$PACKAGE_STAGE"' EXIT
 
-"$CAMT_VENV/bin/python" -m pip install --upgrade pip setuptools wheel
+echo "[4/6] Installing and verifying CAMT Python dependencies..."
 
-echo "[4/6] Installing CAMT Python dependencies..."
-
-"$CAMT_VENV/bin/pip" install -r "$CAMT_HOME/requirements-runtime.txt"
-"$CAMT_VENV/bin/pip" install "$CAMT_HOME"
+# --target leaves distribution-managed Python packages untouched.
+"$CAMT_PYTHON" -I -m pip --isolated install --ignore-installed \
+    --target "$PACKAGE_STAGE" \
+    -r "$CAMT_HOME/requirements-runtime.txt" "$CAMT_HOME"
+"$CAMT_PYTHON" -I - "$PACKAGE_STAGE" "$CAMT_HOME/src" <<'PY'
+import sys
+sys.path[:0] = [sys.argv[2], sys.argv[1]]
+import tkinter, _tkinter
+from PIL import Image, ImageTk
+import docx, pypdf, PyPDF2, psycopg, ropper, capstone, filebytes
+import keystone, scapy, requests
+from projectmanager.application import ProjectManagerApp
+print("CAMT system-Python dependencies and Tkinter: OK")
+PY
+rm -rf -- "$CAMT_PACKAGES"
+mv -- "$PACKAGE_STAGE" "$CAMT_PACKAGES"
+trap - EXIT
+# mktemp creates a private directory; CAMT must also run as an ordinary user.
+chmod -R a+rX "$CAMT_PACKAGES"
 
 echo "[5/6] Installing CAMT launcher..."
 
@@ -147,7 +156,13 @@ install -m 0644 \
     "/usr/share/applications/camt.desktop"
 echo "[6/6] Verifying CAMT installation..."
 
-"$CAMT_VENV/bin/python" -c "import projectmanager; print('CAMT Python package: OK')"
+"$CAMT_PYTHON" -I - "$CAMT_HOME/src" "$CAMT_PACKAGES" <<'PY'
+import sys
+sys.path[:0] = sys.argv[1:]
+import projectmanager, tkinter, _tkinter
+from PIL import ImageTk
+print("CAMT installation: OK (system Python, no venv)")
+PY
 
 echo
 echo "========================================"
@@ -155,7 +170,7 @@ echo " CAMT installation completed"
 echo "========================================"
 echo
 echo "Installation : $CAMT_HOME"
-echo "Python       : $CAMT_VENV/bin/python"
+echo "Python       : $CAMT_PYTHON (system Python, no venv)"
 echo "Launcher     : $CAMT_LAUNCHER"
 echo
 echo "Start CAMT with:"

@@ -1,18 +1,27 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-set -e
+export CAMT_HOME="/opt/camt"
+CAMT_PYTHON="/usr/bin/python3"
+CAMT_PACKAGES="$CAMT_HOME/python-packages"
 
-CAMT_HOME="/opt/camt"
-CAMT_PYTHON="$CAMT_HOME/.venv/bin/python"
-
-if [ ! -x "$CAMT_PYTHON" ]; then
-    echo "CAMT Python environment not found: $CAMT_PYTHON" >&2
+if [ ! -x "$CAMT_PYTHON" ] || [ ! -d "$CAMT_PACKAGES" ]; then
+    echo "CAMT system-Python installation is incomplete. Run packaging/linux/install.sh." >&2
     exit 1
 fi
-
-export CAMT_HOME
-export PYTHONPATH="$CAMT_HOME/src${PYTHONPATH:+:$PYTHONPATH}"
-
 cd "$CAMT_HOME"
-
-exec "$CAMT_PYTHON" -m projectmanager "$@"
+# Isolated mode prevents an activated venv or user PYTHONPATH from changing
+# the interpreter's package selection. No virtual environment is used.
+exec "$CAMT_PYTHON" -I -c '
+import runpy
+import sys
+if sys.version_info < (3, 12):
+    raise SystemExit("CAMT requires system Python >= 3.12. Rerun the installer after upgrading Python.")
+sys.path[:0] = ["/opt/camt/src", "/opt/camt/python-packages"]
+try:
+    import tkinter, _tkinter
+    from PIL import ImageTk
+except ImportError as exc:
+    raise SystemExit(f"CAMT dependency missing: {exc}. Rerun packaging/linux/install.sh.") from exc
+runpy.run_module("projectmanager", run_name="__main__", alter_sys=True)
+' "$@"

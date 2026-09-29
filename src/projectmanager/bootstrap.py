@@ -61,7 +61,10 @@ def run() -> None:
                 pass
 
             splash.step(86, "Validating CAMT license…")
+            # Release the always-on-top splash before any modal license UI.
+            splash.close()
             root.deiconify()
+            root.update_idletasks()
             try:
                 if not app._beta4_license_startup_check():
                     splash.close()
@@ -83,18 +86,10 @@ def run() -> None:
             except Exception:
                 app.camt_edition = ""
                 app.camt_display_name = f"{CORE_APP_NAME} {CORE_APP_VERSION}"
-            root.withdraw()
-
-            splash.step(92, "Starting Windows update notification service…")
             try:
                 app._core_update_notifier = start_core_update_notifier(app)
             except Exception:
                 app._core_update_notifier = None
-
-            try:
-                root.after(350, app._beta_first_run_check)
-            except Exception:
-                pass
 
             def show_main() -> None:
                 root.deiconify()
@@ -116,8 +111,9 @@ def run() -> None:
                 except Exception:
                     pass
 
-            splash.step(100, "CAMT 1.2.0 Beta 9 ready", CORE_APP_BUILD_ID)
-            splash.close_when_ready(450, on_closed=show_main)
+            show_main()
+            # First-run dialogs must also wait until the splash is gone.
+            root.after(350, app._beta_first_run_check)
 
         except Exception:
             splash.close()
