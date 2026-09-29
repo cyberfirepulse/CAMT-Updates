@@ -3259,6 +3259,8 @@ class NetworkMapGUI:
 
     def _resolve_nmap(self):
         """Resolve packaged CAMT Nmap first; PATH is only a fallback."""
+        if not sys.platform.startswith("win"):
+            return shutil.which("nmap") or ""
         here=Path(__file__).resolve()
         candidates=[]
         try: candidates.append(here.parents[2] / "tools" / "nmap" / "nmap.exe")
@@ -3728,6 +3730,8 @@ class NetworkMapGUI:
         self.status_label.config(text=_tr('ui.source.discovery.gestart.p0.gevonden.hosts.verschijne.785c5d2b',p0=net))
 
         method=self.method_var.get()
+        detail=self._selected_interface_detail(self.iface_var.get())
+        self._scan_interface_name=(detail or {}).get("name", "")
         self.scan_worker=threading.Thread(target=self._scan_worker_entry,args=(method,net),daemon=True)
         self.scan_worker.start()
         # GUI polling is started on the Tk thread. Worker threads never call Tk.
@@ -3749,10 +3753,8 @@ class NetworkMapGUI:
                 devices=self.scan_with_windows_active_discovery(net)
             elif method=="netdiscover":
                 devices=self.scan_with_netdiscover()
-            elif shutil.which("netdiscover"):
-                devices=self.scan_with_netdiscover()
             else:
-                devices=self.scan_with_arp()
+                devices=self.scan_with_linux_active_discovery(net)
 
             devices=self._clean_discovered_devices(devices)
             stopped=self.scan_stop_event.is_set()
@@ -3866,6 +3868,50 @@ class NetworkMapGUI:
             self.draw_network_map()
         except Exception as exc:
             print("Live map render error:",exc)
+
+    def scan_with_linux_active_discovery(self, net):
+        """Probe the selected subnet instead of treating the ARP cache as a scan."""
+        if net.version != 4 or net.num_addresses > 65536:
+            raise ValueError("Select an IPv4 subnet of /16 or smaller for interactive discovery.")
+        nmap = self._resolve_nmap()
+        if not nmap:
+            raise RuntimeError("Nmap is missing. Rerun the CAMT Linux installer.")
+        cmd = [nmap, "-sn", "-n", "-oX", "-"]
+        iface = getattr(self, "_scan_interface_name", "")
+        if iface and iface != "auto":
+            cmd.extend(["-e", iface])
+        cmd.extend(["--", str(net)])
+        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        deadline = time.monotonic() + 180
+        try:
+            while True:
+                if self.scan_stop_event.is_set():
+                    proc.terminate()
+                    try:
+                        proc.communicate(timeout=3)
+                    except subprocess.TimeoutExpired:
+                        proc.kill()
+                        proc.communicate()
+                    return []
+                if time.monotonic() >= deadline:
+                    raise RuntimeError("Network discovery timed out. Select a smaller subnet and retry.")
+                try:
+                    stdout, stderr = proc.communicate(timeout=0.25)
+                    break
+                except subprocess.TimeoutExpired:
+                    continue
+            if proc.returncode != 0:
+                raise RuntimeError("Nmap discovery failed: " + (stderr.strip() or str(proc.returncode)))
+            devices = self._devices_from_nmap_xml(stdout)
+            for device in devices:
+                self._queue_live_host(device.ip)
+            self.scan_done = self.scan_total
+            self.scan_found = len(devices)
+            return devices
+        finally:
+            if proc.poll() is None:
+                proc.kill()
+                proc.communicate()
 
     def scan_with_windows_active_discovery(self, net=None):
         """Windows active CIDR sweep, batched, cancellable and progress-aware."""

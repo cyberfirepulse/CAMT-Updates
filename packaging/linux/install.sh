@@ -34,7 +34,7 @@ fi
 
 SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
-for required_file in pyproject.toml requirements-runtime.txt packaging/linux/camt packaging/linux/camt.desktop; do
+for required_file in modules/CAMT_Update_Manager_v1_2_5.camtmodule pyproject.toml requirements-runtime.txt packaging/linux/camt packaging/linux/camt.desktop; do
     [ -f "$SOURCE_DIR/$required_file" ] || \
         die "Missing source file: $SOURCE_DIR/$required_file. Run this installer from packaging/linux/install.sh in the complete CAMT source tree."
 done

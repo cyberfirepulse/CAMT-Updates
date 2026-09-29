@@ -24,6 +24,7 @@ def run() -> None:
         build_id=APP_BUILD_ID,
         minimum_visible_ms=8000,
     )
+    root._camt_startup_splash = splash
     splash.step(8, "Starting CAMT core…", APP_BUILD_ID)
 
     def initialize_camt() -> None:
@@ -61,8 +62,6 @@ def run() -> None:
                 pass
 
             splash.step(86, "Validating CAMT license…")
-            # Release the always-on-top splash before any modal license UI.
-            splash.close()
             root.deiconify()
             root.update_idletasks()
             try:
@@ -111,9 +110,10 @@ def run() -> None:
                 except Exception:
                     pass
 
-            show_main()
-            # First-run dialogs must also wait until the splash is gone.
-            root.after(350, app._beta_first_run_check)
+                root.after(350, app._beta_first_run_check)
+
+            splash.step(100, "CAMT 1.2.0 Beta 9 ready", CORE_APP_BUILD_ID)
+            splash.close_when_ready(450, on_closed=show_main)
 
         except Exception:
             splash.close()

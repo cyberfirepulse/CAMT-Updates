@@ -138,4 +138,21 @@ class LicenseManagerMixin:
             manager.verify(allow_grace=True)
             return True
         except LicenseError:
-            return self._show_license_manager(modal=True)
+            # Only hide the startup animation when user input is required.
+            splash = getattr(self.root, "_camt_startup_splash", None)
+            restore_splash = False
+            if splash is not None:
+                try:
+                    restore_splash = bool(splash.window.winfo_viewable())
+                    splash.window.withdraw()
+                except tk.TclError:
+                    pass
+            try:
+                return self._show_license_manager(modal=True)
+            finally:
+                if restore_splash:
+                    try:
+                        splash.window.deiconify()
+                        splash.window.lift()
+                    except tk.TclError:
+                        pass

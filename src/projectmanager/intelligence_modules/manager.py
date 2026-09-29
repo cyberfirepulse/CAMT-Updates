@@ -39,6 +39,22 @@ class IntelligenceModuleManager:
             p.mkdir(parents=True, exist_ok=True)
         self.registry_path = self.root / "registry.json"
         self._ensure_defaults()
+        self._ensure_bundled_update_manager()
+
+    def _ensure_bundled_update_manager(self):
+        """Register the shipped Linux update UI for each user on first use."""
+        if not sys.platform.startswith("linux"):
+            return
+        package_id = "camt.core.update_manager"
+        if package_id in self._registry().get("packages", {}):
+            return  # Preserve installed versions and deliberate enable/disable choices.
+        package = Path(__file__).resolve().parents[3] / "modules" / "CAMT_Update_Manager_v1_2_5.camtmodule"
+        if not package.is_file():
+            return  # Other distributions can still install it through Module Manager.
+        meta = self.inspect_package(package)
+        if meta.get("package_id") != package_id or meta.get("package_type") != "code_module":
+            raise ModulePackageError("Invalid bundled CAMT Update Manager package.")
+        self.install_package(package, trust_code=True)
 
     def _ensure_defaults(self):
         if not self.registry_path.exists():
