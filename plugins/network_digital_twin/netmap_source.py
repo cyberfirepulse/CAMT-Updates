@@ -3576,7 +3576,7 @@ class NetworkMapGUI:
 
     def open_scan_wizard(self):
         """Three-mode Scan Wizard: local, routed/VPN, or remote Nmap through SSH."""
-        win=tk.Toplevel(self.root); win.title("NetMap Scan Wizard"); win.geometry("760x610"); win.transient(self.root); win.grab_set()
+        win=tk.Toplevel(self.root); win.title("NetMap Scan Wizard"); win.geometry("760x710"); win.transient(self.root); win.grab_set()
         _apply_camt_window_icon(win)
         body=ttk.Frame(win,padding=12); body.pack(fill="both",expand=True)
         mode=tk.StringVar(value="Local Interface")
@@ -3637,10 +3637,27 @@ class NetworkMapGUI:
             win.destroy()
             if selected=="Jump Host/SSH": self._start_jump_host_scan(target.get().strip())
             else: self.scan_network()
-        buttons=ttk.Frame(body); buttons.grid(row=7,column=0,columnspan=3,sticky="ew",pady=8)
+        is_nl = str(_get_language()).lower().startswith("nl")
+        scope_text = (
+            "Deze wizard zoekt apparaten in het gekozen IP-bereik. "
+            "Er wordt geen poort-, service-, versie- of kwetsbaarheidsscan uitgevoerd.\n"
+            "Vervolg: kies in het Discover-menu stap 2 (service/version) om de gevonden hosts "
+            "op poorten en services te scannen. Controleer daar eerst de poorten en het protocol. "
+            "Bij Jump Host/SSH wordt alleen apparaatdetectie op afstand uitgevoerd; "
+            "de aparte servicescan draait vanaf deze computer."
+            if is_nl else
+            "This wizard discovers devices in the selected IP range. "
+            "It does not scan ports, services, versions or vulnerabilities.\n"
+            "Next: choose step 2 (service/version) in the Discover menu to scan the discovered hosts. "
+            "Check the ports and protocol there first. With Jump Host/SSH, only device discovery "
+            "runs remotely; the separate service scan runs from this computer."
+        )
+        ttk.Label(body, text=scope_text, wraplength=690, justify="left").grid(
+            row=7, column=0, columnspan=3, sticky="ew", pady=(8, 4))
+        buttons=ttk.Frame(body); buttons.grid(row=8,column=0,columnspan=3,sticky="ew",pady=8)
         ttk.Button(buttons,text="Auto-detect subnet/routes",command=autodetect).pack(side="left")
         ttk.Button(buttons,text="Preflight",command=preflight).pack(side="left",padx=6)
-        ttk.Button(buttons,text="Start scan",command=start).pack(side="right")
+        ttk.Button(buttons,text=("Zoek apparaten" if is_nl else "Discover devices"),command=start).pack(side="right")
         ttk.Button(buttons,text="Cancel",command=win.destroy).pack(side="right",padx=6)
         autodetect()
 

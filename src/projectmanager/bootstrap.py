@@ -92,21 +92,24 @@ def run() -> None:
 
             def show_main() -> None:
                 root.deiconify()
-                try:
-                    root.update_idletasks()
-                    root.state("zoomed")
-                except Exception:
+                def maximize():
                     try:
-                        root.attributes("-zoomed", True)
-                    except Exception:
-                        pass
+                        root.update_idletasks()
+                        try:
+                            root.state("zoomed")
+                        except tk.TclError:
+                            root.attributes("-zoomed", True)
+                    except tk.TclError:
+                        pass  # Some Linux window managers do not support maximization.
+
+                maximize()
                 try:
                     root.lift()
                     root.focus_force()
                 except Exception:
                     pass
                 try:
-                    root.after(120, lambda: root.state("zoomed"))
+                    root.after(120, maximize)
                 except Exception:
                     pass
 
