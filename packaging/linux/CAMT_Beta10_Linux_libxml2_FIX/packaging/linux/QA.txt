@@ -1,9 +1,0 @@
-install.sh: bash -n OK
-camt: bash -n OK
-no apt libxml2-dev: OK
-no rpm libxml2-devel: OK
-binary-only lxml: OK
-lxml runtime gate: OK
-Scapy runtime gate: OK
-cryptography runtime gate: OK
-isolated venv: OK

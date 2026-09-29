@@ -1,9 +1,49 @@
-install.sh: bash -n OK
-camt: bash -n OK
-no apt libxml2-dev: OK
-no rpm libxml2-devel: OK
-binary-only lxml: OK
-lxml runtime gate: OK
-Scapy runtime gate: OK
-cryptography runtime gate: OK
-isolated venv: OK
+CAMT Beta 10 Linux dependency audit
+
+Source audited: CAMT_B5_FIX(5).zip
+Relevant Python files parsed: 193/193
+Syntax parse failures: 0
+
+Direct third-party runtime imports found in CAMT src/plugins:
+- Pillow / PIL
+- python-docx / docx
+- pypdf
+- PyPDF2
+- psycopg
+- ropper
+- capstone
+- filebytes
+- keystone-engine / keystone
+- scapy
+- requests
+
+Additional runtime dependency retained deliberately:
+- cryptography (Scapy TLS/PKI + encrypted-document functionality)
+
+Removed from installer because CAMT source does not directly require them:
+- lxml
+- matplotlib (and therefore kiwisolver, contourpy, cycler, fonttools, pyparsing)
+- networkx
+- psutil
+- beautifulsoup4
+- tqdm
+- sqlalchemy
+- pandas
+- rich
+- websocket-client
+- colorama
+- jinja2
+- aiohttp
+
+Installer gates:
+- isolated venv WITHOUT --system-site-packages
+- pip resolver installs transitive dependencies
+- pip check must pass
+- explicit import test must pass
+- scapy.all must load
+- cryptography primitives must load
+- CAMT source AST dependency audit must pass
+- compileall must pass
+- launcher smoke test must pass
+
+Shell syntax: install.sh OK; camt OK

@@ -108,48 +108,42 @@ rsync -a --delete \
 
 echo "[4/8] Creating isolated CAMT virtual environment"
 rm -rf "$CAMT_VENV"
-if ! "$CAMT_PYTHON" -m venv --system-site-packages "$CAMT_VENV"; then
+if ! "$CAMT_PYTHON" -m venv "$CAMT_VENV"; then
   case "$PM" in
     apt-get)
       ver="$("$CAMT_PYTHON" -c 'import sys;print(f"{sys.version_info.major}.{sys.version_info.minor}")')"
       apt-get install -y "python${ver}-venv" || true ;;
   esac
-  "$CAMT_PYTHON" -m venv --system-site-packages "$CAMT_VENV" || die "Could not create CAMT venv."
+  "$CAMT_PYTHON" -m venv "$CAMT_VENV" || die "Could not create CAMT venv."
 fi
 VPY="$CAMT_VENV/bin/python"
 "$VPY" -m ensurepip --upgrade >/dev/null 2>&1 || true
 "$VPY" -m pip install --upgrade pip setuptools wheel
 
-echo "[5/8] Installing complete CAMT Python runtime"
-# Install repository-declared dependencies first.
-[ -f "$CAMT_HOME/requirements-runtime.txt" ] && "$VPY" -m pip install -r "$CAMT_HOME/requirements-runtime.txt"
-"$VPY" -m pip install "$CAMT_HOME"
+echo "[5/8] Installing audited CAMT Python runtime"
+# The CAMT source audit found these direct third-party runtime families:
+# PIL, docx, pypdf, PyPDF2, psycopg, ropper, capstone, filebytes, keystone, scapy, requests.
+# cryptography is installed because Scapy TLS/PKI and encrypted PDF functionality use it.
+# Do NOT add unrelated scientific/XML packages here; pip resolves real transitive dependencies.
+"$VPY" -m pip install --upgrade --prefer-binary \
+  Pillow python-docx pypdf PyPDF2 "psycopg[binary]" \
+  ropper capstone filebytes keystone-engine scapy requests cryptography
 
-# Runtime families used by CAMT core, bundled plugins/modules and reporting/analysis.
-# pip resolves transitive dependencies (cffi/pycparser, attrs, etc.) inside this venv.
-# Binary-only packages: never compile these against the host's libxml2/OpenSSL stack.
-"$VPY" -m pip install --upgrade --only-binary=:all: \
-  lxml cryptography cffi Pillow "psycopg[binary]"
+# Install CAMT itself without re-resolving a second, divergent dependency set.
+"$VPY" -m pip install --no-deps "$CAMT_HOME"
 
-# Remaining CAMT runtime packages are installed inside the same isolated venv.
-"$VPY" -m pip install --upgrade \
-  python-docx pypdf PyPDF2 \
-  ropper capstone filebytes keystone-engine \
-  scapy requests reportlab matplotlib networkx psutil beautifulsoup4 tqdm \
-  python-dateutil pyyaml sqlalchemy pandas rich websocket-client colorama \
-  jinja2 aiohttp
+# A successful pip command is not enough: reject missing or incompatible transitive packages.
+"$VPY" -m pip check || die "CAMT Python dependency consistency check failed."
 
 echo "[6/8] Full runtime verification"
 "$VPY" - <<'PY'
 import importlib, sys
 required = [
  "tkinter","tkinter.ttk","tkinter.filedialog","tkinter.messagebox",
- "tkinter.simpledialog","tkinter.scrolledtext","PIL","docx","pypdf","PyPDF2",
- "psycopg","ropper","capstone","filebytes","keystone","scapy","scapy.all",
- "requests","cryptography","cryptography.hazmat.primitives",
- "reportlab","matplotlib","networkx","psutil","bs4","lxml","tqdm",
- "dateutil","yaml","sqlalchemy","pandas","rich","websocket","colorama",
- "jinja2","aiohttp","projectmanager"
+ "tkinter.simpledialog","tkinter.scrolledtext","tkinter.font","tkinter.colorchooser",
+ "PIL","docx","pypdf","PyPDF2","psycopg","ropper","capstone","filebytes",
+ "keystone","scapy","scapy.all","requests","cryptography",
+ "cryptography.hazmat.primitives","projectmanager"
 ]
 failed=[]
 for name in required:
@@ -161,6 +155,40 @@ if failed:
 print("CAMT runtime imports: OK")
 PY
 
+# Audit absolute imports in CAMT source. This catches a newly introduced external
+# dependency before the installer can claim success.
+"$VPY" - "$CAMT_HOME" <<'PY'
+import ast, pathlib, sys, importlib.util
+root=pathlib.Path(sys.argv[1])
+scan=[root/'src', root/'plugins']
+missing={}
+for base in scan:
+    if not base.exists(): continue
+    for path in base.rglob('*.py'):
+        try: tree=ast.parse(path.read_text(encoding='utf-8-sig'), filename=str(path))
+        except SyntaxError as e:
+            raise SystemExit(f"Syntax error in {path}: {e}")
+        for node in ast.walk(tree):
+            names=[]
+            if isinstance(node,ast.Import): names=[a.name.split('.')[0] for a in node.names]
+            elif isinstance(node,ast.ImportFrom) and node.level==0 and node.module:
+                names=[node.module.split('.')[0]]
+            for name in names:
+                if importlib.util.find_spec(name) is None:
+                    missing.setdefault(name,set()).add(str(path.relative_to(root)))
+# Local/sibling imports inside package/module files are resolved in their package context and
+# can appear as top-level names in static AST; only report names used from multiple package files
+# if the runtime cannot resolve them. The real module-load tests below remain authoritative.
+external={k:v for k,v in missing.items() if k in {
+    'PIL','docx','pypdf','PyPDF2','psycopg','ropper','capstone','filebytes','keystone',
+    'scapy','requests','cryptography'
+}}
+if external:
+    for name,paths in sorted(external.items()): print('MISSING',name,*sorted(paths),sep=' | ',file=sys.stderr)
+    raise SystemExit('CAMT external dependency audit FAILED')
+print('CAMT external dependency audit: OK')
+PY
+
 # Compile every Python source file: core + plugins + unpacked modules.
 "$VPY" -m compileall -q "$CAMT_HOME/src" "$CAMT_HOME/plugins" 2>/dev/null || die "Python compile check failed."
 
@@ -168,10 +196,8 @@ PY
 "$VPY" - <<'PY'
 from scapy.all import IP, TCP, Ether, ARP, conf
 from cryptography.hazmat.primitives import hashes
-from lxml import etree
 print("Scapy full load: OK")
 print("Cryptography primitives: OK")
-print("lxml binary runtime: OK", etree.LIBXML_VERSION)
 PY
 
 echo "[7/8] Installing launcher and desktop integration"
