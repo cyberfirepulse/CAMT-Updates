@@ -59,7 +59,7 @@ case "$PACKAGE_MANAGER" in
         apt-get update
         apt-get install -y python3 python3-pip python3-dev \
             build-essential nmap iproute2 net-tools traceroute dnsutils \
-            openssh-client libpcap-dev git rsync
+            openssh-client libpcap-dev git rsync curl ca-certificates
         TK_PACKAGE="python3-tk"
         ;;
     dnf|yum)
@@ -149,7 +149,14 @@ fi
 "$CAMT_PYTHON" -I -c 'import tkinter, _tkinter; print("System Python: Tkinter OK", tkinter.TkVersion)' || \
     die "System Python cannot import tkinter/_tkinter after installing $TK_PACKAGE. Install matching Tk bindings for $CAMT_PYTHON."
 if ! "$CAMT_PYTHON" -I -m pip --version >/dev/null 2>&1; then
+    echo "Installing pip for selected Python..."
     "$CAMT_PYTHON" -m ensurepip --upgrade >/dev/null 2>&1 || true
+fi
+if ! "$CAMT_PYTHON" -I -m pip --version >/dev/null 2>&1; then
+    GETPIP="$(mktemp)"
+    curl -fsSL https://bootstrap.pypa.io/get-pip.py -o "$GETPIP" || die "Could not download pip bootstrap."
+    "$CAMT_PYTHON" "$GETPIP" --break-system-packages
+    rm -f "$GETPIP"
 fi
 "$CAMT_PYTHON" -I -m pip --version || die "pip is missing for $CAMT_PYTHON."
 
