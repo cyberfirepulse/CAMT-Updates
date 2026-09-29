@@ -1,0 +1,20 @@
+{
+  "scenario": {
+    "name": "Ransomware via kwetsbare webserver",
+    "description": "Voorbeeldscenario voor projectie op een NetMap- of Design-baseline.",
+    "actor": "Cybercriminal Group",
+    "status": "Ready",
+    "timeline": [
+      {"order": 1, "phase": "Reconnaissance", "asset": "Internet", "technique": "T1595", "action": "Active Scanning", "risk": 25, "evidence": "Publieke diensten worden geïnventariseerd."},
+      {"order": 2, "phase": "Initial Access", "asset": "Webserver", "technique": "T1190", "action": "Exploit Public-Facing Application", "risk": 75, "vulnerability": "Ongepatchte webapplicatie."},
+      {"order": 3, "phase": "Execution", "asset": "Applicatieserver", "technique": "T1059", "action": "Command and Scripting Interpreter", "risk": 80},
+      {"order": 4, "phase": "Credential Access", "asset": "Domain Controller", "technique": "T1003", "action": "OS Credential Dumping", "risk": 95},
+      {"order": 5, "phase": "Impact", "asset": "Fileserver", "technique": "T1486", "action": "Data Encrypted for Impact", "risk": 100}
+    ],
+    "recommendations": [
+      "Patch en isoleer publieke webdiensten.",
+      "Beperk beheerverbindingen tussen applicatieservers en domain controllers.",
+      "Controleer herstelbaarheid van fileservers en bewaak massale bestandswijzigingen."
+    ]
+  }
+}

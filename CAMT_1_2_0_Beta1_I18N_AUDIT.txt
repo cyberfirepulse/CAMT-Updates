@@ -1,0 +1,46 @@
+CAMT 1.2.0 Beta 9 — v11.4 Full i18n Cleanup & Enforcement
+
+SCOPE
+- Complete current CAMT source tree with v11.3 overlaid
+- src/projectmanager core
+- bundled plugins
+- all Python files in modules.zip
+- EN/NL core locale catalogs
+- runtime module package metadata
+
+BEFORE (exact counts from the v11.4 build scan)
+- Core/plugin hardcoded Dutch presentation sinks: 35
+- Runtime-module Dutch-looking residual literals outside bilingual TEXT/_TEXT tables and parser regex/comparison data: 59
+- Mixed Dutch/broken-English values in EN locale (strict detector): 59
+- EN/NL key parity differences: 0
+
+AFTER (release gate)
+- Unlocalized Dutch presentation sinks in core/plugins: 0
+- Uncatalogued runtime-module presentation phrases: 0
+- Mixed Dutch/broken-English values in EN locale (strict detector): 0
+- EN/NL key parity differences: 0
+- Modified Python compile errors: 0
+
+INTENTIONAL NON-PRESENTATION DUTCH RETAINED
+Dutch analyst-query vocabulary such as 'volgens het rapport', 'relaties',
+'meeste relaties' and 'kwetsbaar' remains in Native Research parser/matching
+logic. These strings are language-analysis data used to understand Dutch
+questions and are not fixed UI labels/messages.
+
+CHANGES
+- Direct core/plugin UI literals migrated to explicit locale keys where safe.
+- Remaining legacy presentation fragments centrally catalogued in NL/EN.
+- translate_presentation() handles exact catalog translation, including multiline strings.
+- translate_generated() handles catalogued fragments in composed legacy status/module output.
+- Tk Variable.set, Text.insert, Treeview.insert and messagebox presentation paths are enforced centrally.
+- Existing bilingual module TEXT/_TEXT tables remain valid localized resources.
+- Mixed Dutch/English values in the English locale corrected.
+- CVE Research manifest default description changed to English.
+- Technical IDs, paths, package IDs, ATT&CK/CVE/CWE identifiers and internal state values remain canonical.
+- Arbitrary evidence, report text and user content are not machine-translated.
+- Module registry.json is not changed.
+
+RELEASE GATE
+tools/i18n_audit.py is included and APPLY_UPDATE.py runs it after copying the
+update. Verification fails if an unlocalized Dutch presentation sink,
+mixed-Dutch English locale value, or EN/NL key-parity difference remains.

@@ -1,0 +1,95 @@
+{
+  "schema": "CAMT.HelpCategories.1",
+  "categories": [
+    {
+      "id": "start",
+      "title_key": "help.cat.start",
+      "artwork": "assets/workspace/artwork/getting_started.png",
+      "order": 10,
+      "topics": [
+        "overview",
+        "quickstart",
+        "workspace",
+        "shortcuts"
+      ]
+    },
+    {
+      "id": "network",
+      "title_key": "help.cat.network",
+      "artwork": "assets/workspace/artwork/digital_twin.png",
+      "order": 20,
+      "topics": [
+        "guided_network_analysis",
+        "network_mapper",
+        "asset_intelligence",
+        "digital_twin",
+        "attack_path",
+        "visual_reports",
+        "simulation_lab"
+      ]
+    },
+    {
+      "id": "intelligence",
+      "title_key": "help.cat.intelligence",
+      "artwork": "assets/workspace/artwork/intelligence.png",
+      "order": 30,
+      "topics": [
+        "scenario",
+        "cti",
+        "actor_discovery_wizard",
+        "actor_fingerprint",
+        "data_consistency"
+      ]
+    },
+    {
+      "id": "modules",
+      "title_key": "help.cat.modules",
+      "artwork": "assets/workspace/artwork/repository.png",
+      "order": 40,
+      "topics": [
+        "intelligence_modules",
+        "module_packages",
+        "repository",
+        "cve_dataset",
+        "cve_sync"
+      ]
+    },
+    {
+      "id": "team",
+      "title_key": "help.cat.team",
+      "artwork": "assets/workspace/artwork/licensing.png",
+      "order": 50,
+      "topics": [
+        "team",
+        "team_server",
+        "team_cases",
+        "collaboration",
+        "delete_restore",
+        "evidence_store",
+        "licensing"
+      ]
+    },
+    {
+      "id": "reporting",
+      "title_key": "help.cat.reporting",
+      "artwork": "assets/workspace/artwork/reporting.png",
+      "order": 60,
+      "topics": [
+        "workflow",
+        "reports",
+        "storage",
+        "airgap"
+      ]
+    },
+    {
+      "id": "support",
+      "title_key": "help.cat.support",
+      "artwork": "assets/workspace/artwork/troubleshooting.png",
+      "order": 70,
+      "topics": [
+        "beta_release",
+        "troubleshooting"
+      ]
+    }
+  ]
+}

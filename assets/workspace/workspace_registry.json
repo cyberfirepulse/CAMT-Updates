@@ -1,0 +1,158 @@
+{
+  "schema": "CAMT.WorkspaceRegistry.1",
+  "categories": {
+    "network": {
+      "nav_prefixes": [
+        "twin."
+      ],
+      "legacy_module_ids": [
+        "camt.netmap.baseline_comparator",
+        "camt.network.visualisation",
+        "camt.ot_ics.investigation"
+      ],
+      "nav_artwork": {
+        "twin.workspace": "assets/workspace/artwork/capabilities/twin_workspace.png",
+        "twin.live": "assets/workspace/artwork/capabilities/twin_live.png",
+        "twin.netmap": "assets/workspace/artwork/capabilities/twin_netmap.png",
+        "twin.assets": "assets/workspace/artwork/capabilities/twin_assets.png",
+        "twin.cyber": "assets/workspace/artwork/capabilities/twin_cyber.png",
+        "twin.scenario_import": "assets/workspace/artwork/capabilities/twin_scenario_import.png",
+        "twin.scenario_scan": "assets/workspace/artwork/capabilities/twin_scenario_scan.png",
+        "twin.scenario_analysis": "assets/workspace/artwork/capabilities/twin_scenario_analysis.png",
+        "twin.scenario_bridge": "assets/workspace/artwork/capabilities/twin_scenario_bridge.png",
+        "twin.scenario_visual": "assets/workspace/artwork/capabilities/twin_scenario_visual.png",
+        "twin.attack_paths": "assets/workspace/artwork/capabilities/twin_attack_paths.png",
+        "twin.timeline": "assets/workspace/artwork/capabilities/twin_timeline.png",
+        "twin.coverage": "assets/workspace/artwork/capabilities/twin_coverage.png",
+        "twin.risk": "assets/workspace/artwork/capabilities/twin_risk.png",
+        "_default": "assets/workspace/artwork/digital_twin.png"
+      }
+    },
+    "intelligence": {
+      "nav_prefixes": [
+        "intel."
+      ],
+      "legacy_module_ids": [
+        "camt.research.investigation_assistant",
+        "camt.actor.fingerprint_similarity",
+        "camt.actor.similarity_profile",
+        "camt.dragos.actor_pack"
+      ],
+      "nav_artwork": {
+        "_default": "assets/workspace/artwork/intelligence.png",
+        "intel.cti": "assets/workspace/artwork/capabilities/intel_cti.png",
+        "intel.modules": "assets/workspace/artwork/capabilities/intel_modules.png",
+        "intel.actor_similarity": "assets/workspace/artwork/capabilities/intel_actor_similarity.png",
+        "intel.actor_discovery": "assets/workspace/artwork/capabilities/intel_actor_discovery.png",
+        "intel.supported_latest": "assets/workspace/artwork/capabilities/intel_supported_latest.png",
+        "intel.heatmap": "assets/workspace/artwork/capabilities/intel_heatmap.png",
+        "intel.attack": "assets/workspace/artwork/capabilities/intel_attack.png",
+        "intel.scenario": "assets/workspace/artwork/capabilities/intel_scenario.png"
+      }
+    },
+    "forensics": {
+      "nav_prefixes": [
+        "telemetry."
+      ],
+      "nav_ids": [
+        "security.remote",
+        "security.forensic"
+      ],
+      "legacy_module_ids": [
+        "camt.cookie.forensics",
+        "camt.log.timeline_explorer",
+        "camt.evidence.integrity",
+        "camt.evidence.timeline_casebook"
+      ],
+      "nav_artwork": {
+        "_default": "assets/workspace/artwork/forensics.png",
+        "security.remote": "assets/workspace/artwork/capabilities/forensics_security_remote.png",
+        "security.forensic": "assets/workspace/artwork/capabilities/forensics_security_forensic.png",
+        "telemetry.workspace": "assets/workspace/artwork/capabilities/forensics_telemetry_workspace.png",
+        "telemetry.database": "assets/workspace/artwork/capabilities/forensics_telemetry_database.png",
+        "telemetry.import": "assets/workspace/artwork/capabilities/forensics_telemetry_import.png",
+        "telemetry.correlate": "assets/workspace/artwork/capabilities/forensics_telemetry_correlate.png"
+      }
+    },
+    "security": {
+      "nav_prefixes": [
+        "security."
+      ],
+      "exclude_nav_ids": [
+        "security.remote",
+        "security.forensic"
+      ],
+      "legacy_module_ids": [
+        "camt.cve.research_correlation",
+        "camt.attack_surface.exposure",
+        "camt.detection.coverage_gap"
+      ],
+      "nav_artwork": {
+        "_default": "assets/workspace/artwork/security.png",
+        "security.dashboard": "assets/workspace/artwork/capabilities/security_dashboard.png",
+        "security.vulnerability": "assets/workspace/artwork/capabilities/security_vulnerability.png",
+        "security.coverage": "assets/workspace/artwork/capabilities/security_coverage.png",
+        "security.risk": "assets/workspace/artwork/capabilities/security_risk.png",
+        "security.compliance": "assets/workspace/artwork/capabilities/security_compliance.png",
+        "security.mapping": "assets/workspace/artwork/capabilities/security_mapping.png",
+        "security.memory": "assets/workspace/artwork/capabilities/security_memory.png",
+        "security.remote": "assets/workspace/artwork/capabilities/security_remote.png",
+        "security.forensic": "assets/workspace/artwork/capabilities/security_forensic.png",
+        "security.selftest": "assets/workspace/artwork/capabilities/security_selftest.png"
+      }
+    },
+    "reporting": {
+      "nav_prefixes": [
+        "reports."
+      ],
+      "legacy_module_ids": [
+        "camt.report.studio_professional",
+        "camt.quicksheet.analyzer",
+        "camt.dataset.exchange"
+      ],
+      "nav_artwork": {
+        "_default": "assets/workspace/artwork/reporting.png",
+        "reports.studio": "assets/workspace/artwork/capabilities/reports_studio.png",
+        "reports.new": "assets/workspace/artwork/capabilities/reports_new.png",
+        "reports.open": "assets/workspace/artwork/capabilities/reports_open.png",
+        "reports.supported_match": "assets/workspace/artwork/capabilities/reports_supported_match.png",
+        "reports.project": "assets/workspace/artwork/capabilities/reports_project.png",
+        "reports.release": "assets/workspace/artwork/capabilities/reports_release.png",
+        "reports.quality": "assets/workspace/artwork/capabilities/reports_quality.png",
+        "reports.portfolio": "assets/workspace/artwork/capabilities/reports_portfolio.png",
+        "reports.csv": "assets/workspace/artwork/capabilities/reports_csv.png",
+        "reports.case": "assets/workspace/artwork/capabilities/reports_case.png",
+        "reports.evidence": "assets/workspace/artwork/capabilities/reports_evidence.png",
+        "reports.templates": "assets/workspace/artwork/capabilities/reports_templates.png"
+      }
+    },
+    "projects": {
+      "nav_prefixes": [
+        "projects."
+      ],
+      "nav_artwork": {
+        "_default": "assets/workspace/artwork/getting_started.png",
+        "projects.open": "assets/workspace/artwork/capabilities/projects_open.png",
+        "projects.folder": "assets/workspace/artwork/capabilities/projects_folder.png",
+        "projects.terminal": "assets/workspace/artwork/capabilities/projects_terminal.png",
+        "projects.architect": "assets/workspace/artwork/capabilities/projects_architect.png",
+        "projects.portfolio": "assets/workspace/artwork/capabilities/projects_portfolio.png",
+        "projects.library": "assets/workspace/artwork/capabilities/projects_library.png",
+        "projects.copy": "assets/workspace/artwork/capabilities/projects_copy.png",
+        "projects.move": "assets/workspace/artwork/capabilities/projects_move.png",
+        "projects.favorite": "assets/workspace/artwork/capabilities/projects_favorite.png",
+        "projects.workflow": "assets/workspace/artwork/capabilities/projects_workflow.png",
+        "projects.compare_mark": "assets/workspace/artwork/capabilities/projects_compare_mark.png",
+        "projects.compare": "assets/workspace/artwork/capabilities/projects_compare.png",
+        "projects.duplicates": "assets/workspace/artwork/capabilities/projects_duplicates.png",
+        "projects.family": "assets/workspace/artwork/capabilities/projects_family.png",
+        "projects.validate": "assets/workspace/artwork/capabilities/projects_validate.png",
+        "projects.repair": "assets/workspace/artwork/capabilities/projects_repair.png",
+        "projects.reanalyse": "assets/workspace/artwork/capabilities/projects_reanalyse.png",
+        "projects.backup": "assets/workspace/artwork/capabilities/projects_backup.png",
+        "projects.archive": "assets/workspace/artwork/capabilities/projects_archive.png",
+        "projects.cleanup": "assets/workspace/artwork/capabilities/projects_cleanup.png"
+      }
+    }
+  }
+}

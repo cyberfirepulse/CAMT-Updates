@@ -1,0 +1,7 @@
+{
+  "package_type": "intelligence_pack",
+  "package_id": "dragos_actor_pack_example",
+  "name": "Dragos Actor Pack Example",
+  "version": "1.0",
+  "description": "Template for source-specific actor fingerprint enrichment. Populate with validated source-derived data."
+}

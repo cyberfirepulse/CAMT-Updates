@@ -1,0 +1,42 @@
+{
+  "overview": {
+    "title": "Network Mapper — overzicht",
+    "text": [
+      "Hybride Windows/Linux discovery- en NetMap-baselinecapability.",
+      "Aanbevolen flow: Discovery → hostcontrole → service/version scan → CVE-correlatie → baseline opslaan/gebruiken.",
+      "Gebruik de baseline in Digital Twin, baseline comparison en visualisatieworkflows."
+    ]
+  },
+  "discovery": {
+    "title": "Discovery",
+    "text": [
+      "Auto is aanbevolen.",
+      "Windows en Linux behouden platformspecifieke discovery-paden.",
+      "Controleer gevonden hosts vóór diepere scans."
+    ]
+  },
+  "analysis": {
+    "title": "Services, versies en kwetsbaarheden",
+    "text": [
+      "Service/version scanning draait op gevonden hosts.",
+      "Vulnerability Analysis correleert servicedata met beschikbare lokale signatures/CVE-data.",
+      "Behandel matches als kandidaten totdat applicability en evidence zijn beoordeeld."
+    ]
+  },
+  "map": {
+    "title": "Map en presentatie",
+    "text": [
+      "Gebruik nodegrootte, stijl, Fit en zoek/filterfuncties voor presentatie.",
+      "Nederlands gebruikt Afdrukken, Verzenden en Stijl.",
+      "Network Mapper ontdekt; Digital Twin modelleert; Network Visualisation presenteert relaties."
+    ]
+  },
+  "handoff": {
+    "title": "Handoff naar andere CAMT-capabilities",
+    "text": [
+      "Sla/exporteer een NetMap-baseline vóór comparison of vervolganalyse.",
+      "Digital Twin kan netwerkcontext gebruiken voor scenarioprojectie en what-if-analyse.",
+      "NetMap Baseline Comparator identificeert toegevoegde, verwijderde en gewijzigde assets."
+    ]
+  }
+}

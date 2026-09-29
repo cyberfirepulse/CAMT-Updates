@@ -1,0 +1,11 @@
+Pillow
+python-docx
+pypdf
+PyPDF2
+psycopg[binary]
+ropper
+capstone
+filebytes
+keystone-engine
+scapy
+requests

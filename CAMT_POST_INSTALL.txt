@@ -1,0 +1,30 @@
+CAMT PROFESSIONAL EDITION 1.2.0 Beta 9
+POST-INSTALLATION INFORMATION
+
+Installation completed
+CAMT Professional Edition 1.2.0 Beta 9
+Build: 120B9-LIC-20260916
+
+Recommended first start
+1. Start CAMT from the Start Menu or Desktop shortcut, if selected.
+2. Confirm that CAMT opens normally and shows the expected Beta 9 version/build.
+3. Confirm that the active license is recognized.
+4. Open the Module Manager and verify that installed modules are present.
+5. Open CAMT Update Manager and confirm that the update interface loads.
+6. If used, open Network Visualisation and Cookie Forensics once to confirm that their interfaces load normally.
+
+Existing data
+The installer is designed to preserve user data, installed modules, plugins, settings, and application data that are stored outside the installed program directory. Do not manually delete those locations as part of a normal upgrade.
+
+Troubleshooting
+If CAMT does not start after installation:
+- Reboot Windows if a prerequisite requested or required it.
+- Confirm that endpoint protection or application-control software did not quarantine CAMT files.
+- Confirm that the installation folder contains CAMT.exe and its _internal runtime directory.
+- Do not copy individual PyInstaller runtime files between different CAMT builds.
+- Re-run the installer only after confirming that the intended installation path is selected.
+
+Uninstall
+CAMT can be removed through Windows Installed Apps / Apps & Features or through the CAMT uninstall entry. User-created data may remain after uninstall so that investigation and project data is not removed unintentionally.
+
+CyberFirePulse

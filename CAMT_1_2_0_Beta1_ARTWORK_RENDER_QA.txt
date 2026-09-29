@@ -1,0 +1,18 @@
+CAMT 1.2.0 Beta 9 — v11.2 Artwork Render Fix
+
+Root cause found:
+- v11.1 assigned artwork to core/menu capabilities in workspace_registry.json.
+- build_git.py rendered images only when item.kind == 'module'.
+- Therefore Cyber Threat Intelligence, Intelligence Module Framework,
+  Behavioral Actor Fingerprint & Similarity, Threat Actor Discovery Wizard,
+  Latest Supported Behavioral Model, Threat Intelligence & Heatmap,
+  ATT&CK and Threat Actor, Scenario Intelligence and equivalent core cards
+  stayed visually empty.
+
+v11.2 corrections:
+- Core/menu capability artwork rendering: PASS
+- Module artwork rendering: PASS
+- Category fallback for modules without own artwork: PASS
+- Package-provided artwork still preferred: PASS
+- Callback/navigation code unchanged: PASS
+- User module registry unchanged: PASS

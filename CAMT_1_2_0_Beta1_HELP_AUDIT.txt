@@ -1,0 +1,23 @@
+CAMT 1.2.0 Beta 9 — Help Audit Report
+
+Core Help topics EN/NL: 33 / 33
+Locale topic parity: PASS
+Help categories: 7
+NetMap help topics EN/NL: 5 / 5
+Help Center modernization: grouped tree + category artwork + styled text
+
+Module README audit (modules.zip):
+- modules/camt.cookie.forensics/README.md: README says 0.3; current tested package 0.3.1
+- modules/camt.core.update_manager/README.md: README says 1.2.1; current Update Manager 1.2.4
+- modules/camt.cve.research_correlation/README.md: OK
+- modules/camt.dataset.exchange/README.md: OK
+- modules/camt.evidence.integrity/README.md: OK
+- modules/camt.log.timeline_explorer/README.md: OK
+- modules/camt.netmap.baseline_comparator/README.md: OK
+- modules/camt.network.visualisation/README.md: README says 3.5; current package 3.6.1
+- modules/camt.ot_ics.investigation/README.md: OK
+- modules/camt.quicksheet.analyzer/README.md: README title says 1.0.0; current package 1.1.0
+- modules/camt.report.studio_professional/README.md: OK
+- modules/camt.research.investigation_assistant/README.md: OK
+
+Module README files were audited but are NOT written into installed user module directories by this update.

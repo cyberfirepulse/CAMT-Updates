@@ -1,0 +1,29 @@
+CAMT PROFESSIONAL EDITION 1.2.0 Beta 9
+PRE-INSTALLATION INFORMATION
+
+Product
+CAMT Professional Edition 1.2.0 Beta 9
+Build: 120B9-LIC-20260916
+Publisher: CyberFirePulse
+
+Before continuing
+- Save your work and close any running CAMT windows.
+- The installer requires administrative privileges.
+- The installation path will be shown and can be changed.
+- If an existing CAMT installation is detected, verify that the displayed path is the intended target.
+- The installer may need to close CAMT.exe if it is still running.
+- Existing user data under the CAMT application-data location is not intended to be removed by this installer.
+- Existing installed modules and plugins in the user application-data location are not intended to be deleted by this installer.
+- For a Complete installation, bundled prerequisites may be checked or installed when required.
+- Beta software may contain defects. Use appropriate backups before upgrading production or otherwise important environments.
+
+Recommended checks
+1. Confirm that the current CAMT installation starts normally before upgrading.
+2. Confirm that important project and evidence data has been backed up where appropriate.
+3. Confirm that no CAMT investigation, export, scan, or module task is still running.
+4. Continue only when the displayed destination folder is correct.
+
+License
+Installation and use are subject to the CAMT End User License Agreement shown by the installer.
+
+CyberFirePulse

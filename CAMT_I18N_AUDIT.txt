@@ -1,0 +1,12 @@
+CAMT 1.2.0 Beta 9 — NL/EN SOURCE-LEVEL I18N AUDIT
+========================================================================
+Locale keys NL: 3040
+Locale keys EN: 3040
+Help Center topics NL/EN: 33/33
+NetMap help topics NL/EN: 5/5
+Hardcoded Dutch-looking presentation strings: 0
+Unreferenced legacy/archive UI findings (warning only): 0
+Referenced legacy/archive UI findings: 0
+Dutch-looking EN locale residuals: 0
+
+RESULT: PASS

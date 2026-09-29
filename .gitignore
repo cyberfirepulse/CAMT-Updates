@@ -1,0 +1,62 @@
+﻿# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Build output
+build/
+dist/
+*.egg-info/
+
+# CAMT release/build backups
+_release_backup/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.old
+*.dmp
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Packaged/generated archives
+projectmanager_latest.zip
+
+# Runtime/generated CAMT data
+.projectmanager.json
+
+# Local scan/output data
+BI-scan-*.json
+
+# Credentials, keys and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# License runtime files
+*.lic
+
+# Environment/secrets
+.env
+.env.*

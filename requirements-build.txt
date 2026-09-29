@@ -1,0 +1,6 @@
+pyinstaller>=6
+nuitka>=2
+ordered-set
+zstandard
+# Optional Team PostgreSQL backend on Team Server only:
+# psycopg[binary]

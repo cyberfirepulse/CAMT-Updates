@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "projectmanager-suite"
+version = "10.0.0rc3"
+description = "Modulaire Windows ProjectManager Suite"
+requires-python = ">=3.12"
+dependencies = ["Pillow>=10.4"]
+
+[project.scripts]
+projectmanager-suite = "projectmanager.bootstrap:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]

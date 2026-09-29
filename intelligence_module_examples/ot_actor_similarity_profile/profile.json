@@ -1,0 +1,25 @@
+{
+  "profile_id": "ot_actor_similarity",
+  "name": "OT Actor Similarity",
+  "version": "1.0",
+  "weights": {
+    "techniques": 0.2,
+    "ics_techniques": 0.25,
+    "sectors": 0.08,
+    "malware": 0.07,
+    "tools": 0.05,
+    "campaigns": 0.05,
+    "initial_access": 0.08,
+    "target_assets": 0.1,
+    "protocols": 0.06,
+    "it_ot_movement": 0.06
+  },
+  "supported_match": {
+    "similarity_weight": 0.55,
+    "coverage_weight": 0.3,
+    "evidence_quality_weight": 0.15,
+    "contradiction_penalty": 0.14,
+    "minimum_high_confidence_coverage": 0.65,
+    "minimum_medium_confidence_coverage": 0.4
+  }
+}

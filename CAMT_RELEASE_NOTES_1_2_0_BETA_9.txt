@@ -1,0 +1,11 @@
+CAMT Professional Edition v1.0.1.2 — Generic CTI SQLite Ingestion
+
+- Intelligence Ingestion toegevoegd aan CTI Platform.
+- Plak tekst, importeer URL, bestanden of complete map.
+- Ondersteunt TXT, Markdown, JSON, CSV, HTML, DOCX en PDF.
+- Detecteert actors/aliases, ATT&CK IDs, CVEs, URLs, IPv4, domains en hashes; gelabelde malware/tools/campaigns/sectors/regions.
+- Alle staging, bronmetadata, reviewstatus en evidence worden in offline_intelligence.sqlite3 opgeslagen.
+- Review-first workflow: accepted/rejected/review.
+- Commit schrijft geaccepteerde records naar dezelfde SQLite CTI repository.
+- Alias- en objectdeduplicatie tegen bestaande database.
+- Provenance/evidence wordt per gecommit object bewaard.

@@ -1,0 +1,14 @@
+CAMT Professional Edition 1.2.0 Beta 9
+BETA SOFTWARE DISCLAIMER
+
+CAMT Professional Edition 1.2.0 Beta 9 is pre-release software intended for evaluation, testing, research, training and controlled cybersecurity analysis.
+
+Beta software may contain defects, incomplete functionality or behavior that changes before a final release. Validate important findings independently before using them for operational, security, compliance or management decisions.
+
+CAMT supports analyst-driven assessment. Correlation, similarity, confidence scores and generated findings must not be interpreted as automatic attribution or proof of compromise.
+
+Use CAMT only on systems, networks, data and environments for which you have appropriate authorization.
+
+Version: 1.2.0 Beta 9
+Build: 120B9-LIC-20260916
+Channel: beta

@@ -1,0 +1,18 @@
+{
+  "schema": "CAMT.ModuleArtwork.1",
+  "artwork": {
+    "camt.cookie.forensics": "assets/module_artwork/camt_cookie_forensics.png",
+    "camt.netmap.baseline_comparator": "assets/module_artwork/camt_netmap_baseline_comparator.png",
+    "camt.log.timeline_explorer": "assets/module_artwork/camt_log_timeline_explorer.png",
+    "camt.cve.research_correlation": "assets/module_artwork/camt_cve_research_correlation.png",
+    "camt.network.visualisation": "assets/module_artwork/camt_network_visualisation.png",
+    "camt.core.update_manager": "assets/module_artwork/camt_core_update_manager.png",
+    "_default": "assets/module_artwork/default.png",
+    "camt.ot_ics.investigation": "assets/workspace/artwork/digital_twin.png",
+    "camt.evidence.integrity": "assets/workspace/artwork/forensics.png",
+    "camt.attack_surface.exposure": "assets/workspace/artwork/security.png",
+    "camt.report.studio_professional": "assets/workspace/artwork/reporting.png",
+    "camt.quicksheet.analyzer": "assets/workspace/artwork/reporting.png",
+    "camt.research.investigation_assistant": "assets/workspace/artwork/intelligence.png"
+  }
+}

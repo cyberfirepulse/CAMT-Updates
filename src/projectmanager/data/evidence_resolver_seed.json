@@ -1,0 +1,1512 @@
+{
+  "schema": "CAMT evidence resolver v2",
+  "knowledge_version": 2,
+  "description": "General multilingual CTI/OT evidence knowledge pack. Data-driven; importable/extendable through Database Manager.",
+  "rules": [
+    {
+      "phrase": "valid credentials",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "valid accounts",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "legitimate credentials",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "legitimate accounts",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "compromised credentials",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "compromised accounts",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "stolen credentials",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "credential reuse",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "geldige inloggegevens",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "geldige accounts",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "legitieme inloggegevens",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "legitieme accounts",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "gecompromitteerde inloggegevens",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "gecompromitteerde accounts",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "gestolen inloggegevens",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "gültige zugangsdaten",
+      "language": "de",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "kompromittierte zugangsdaten",
+      "language": "de",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "gestohlene zugangsdaten",
+      "language": "de",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "identifiants valides",
+      "language": "fr",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "identifiants compromis",
+      "language": "fr",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "identifiants volés",
+      "language": "fr",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "phrase",
+      "technique": "T1078"
+    },
+    {
+      "phrase": "use of legitimate or compromised credentials to maintain access",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "tokens",
+      "technique": "T1078",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "legitimate or compromised credentials used for access",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "tokens",
+      "technique": "T1078",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "access obtained using compromised credentials",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "tokens",
+      "technique": "T1078",
+      "threshold": 0.6
+    },
+    {
+      "phrase": "toegang met geldige of gecompromitteerde inloggegevens",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "tokens",
+      "technique": "T1078",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "toegang verkregen met gecompromitteerde accounts",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Valid accounts",
+      "match_mode": "tokens",
+      "technique": "T1078",
+      "threshold": 0.6
+    },
+    {
+      "phrase": "exploit public-facing application",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "public-facing application exploitation",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "exploitation of public-facing systems",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "exploitation of internet-facing systems",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "public-facing system exploited",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "internet-facing system exploited",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "externally accessible system exploited",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "externally accessible systems exploited",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "misbruik van internetbereikbare systemen",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "internetbereikbaar systeem misbruikt",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "extern bereikbaar systeem misbruikt",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "publiek bereikbare applicatie misbruikt",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "öffentlich erreichbares system ausgenutzt",
+      "language": "de",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "internet-exponiertes system ausgenutzt",
+      "language": "de",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "système exposé à internet exploité",
+      "language": "fr",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "phrase",
+      "technique": "T1190"
+    },
+    {
+      "phrase": "initial compromise of externally accessible systems",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "tokens",
+      "technique": "T1190",
+      "threshold": 0.6
+    },
+    {
+      "phrase": "initial compromise through externally accessible systems",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "tokens",
+      "technique": "T1190",
+      "threshold": 0.6
+    },
+    {
+      "phrase": "initial compromise of internet facing systems",
+      "language": "en",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "tokens",
+      "technique": "T1190",
+      "threshold": 0.6
+    },
+    {
+      "phrase": "eerste compromittering via extern bereikbare systemen",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "tokens",
+      "technique": "T1190",
+      "threshold": 0.6
+    },
+    {
+      "phrase": "initiële compromittering van internetbereikbare systemen",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "Exploit public-facing application",
+      "match_mode": "tokens",
+      "technique": "T1190",
+      "threshold": 0.6
+    },
+    {
+      "phrase": "external remote services",
+      "language": "en",
+      "field": "initial_access",
+      "value": "External remote services",
+      "match_mode": "phrase",
+      "technique": "T1133"
+    },
+    {
+      "phrase": "remote access service",
+      "language": "en",
+      "field": "initial_access",
+      "value": "External remote services",
+      "match_mode": "phrase",
+      "technique": "T1133"
+    },
+    {
+      "phrase": "remote access services",
+      "language": "en",
+      "field": "initial_access",
+      "value": "External remote services",
+      "match_mode": "phrase",
+      "technique": "T1133"
+    },
+    {
+      "phrase": "extern remote access",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "External remote services",
+      "match_mode": "phrase",
+      "technique": "T1133"
+    },
+    {
+      "phrase": "externe toegangsdiensten",
+      "language": "nl",
+      "field": "initial_access",
+      "value": "External remote services",
+      "match_mode": "phrase",
+      "technique": "T1133"
+    },
+    {
+      "phrase": "fernzugriffsdienste",
+      "language": "de",
+      "field": "initial_access",
+      "value": "External remote services",
+      "match_mode": "phrase",
+      "technique": "T1133"
+    },
+    {
+      "phrase": "services d’accès à distance",
+      "language": "fr",
+      "field": "initial_access",
+      "value": "External remote services",
+      "match_mode": "phrase",
+      "technique": "T1133"
+    },
+    {
+      "phrase": "remote services",
+      "language": "en",
+      "field": "techniques",
+      "value": "T1021",
+      "match_mode": "phrase",
+      "technique": "T1021"
+    },
+    {
+      "phrase": "remote access mechanisms",
+      "language": "en",
+      "field": "techniques",
+      "value": "T1021",
+      "match_mode": "phrase",
+      "technique": "T1021"
+    },
+    {
+      "phrase": "remote administration services",
+      "language": "en",
+      "field": "techniques",
+      "value": "T1021",
+      "match_mode": "phrase",
+      "technique": "T1021"
+    },
+    {
+      "phrase": "diensten voor externe toegang",
+      "language": "nl",
+      "field": "techniques",
+      "value": "T1021",
+      "match_mode": "phrase",
+      "technique": "T1021"
+    },
+    {
+      "phrase": "externe beheerprotocollen",
+      "language": "nl",
+      "field": "techniques",
+      "value": "T1021",
+      "match_mode": "phrase",
+      "technique": "T1021"
+    },
+    {
+      "phrase": "lateral movement using remote access mechanisms",
+      "language": "en",
+      "field": "techniques",
+      "value": "T1021",
+      "match_mode": "tokens",
+      "technique": "T1021",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "lateral movement using remote services",
+      "language": "en",
+      "field": "techniques",
+      "value": "T1021",
+      "match_mode": "tokens",
+      "technique": "T1021",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "laterale beweging via remote services",
+      "language": "nl",
+      "field": "techniques",
+      "value": "T1021",
+      "match_mode": "tokens",
+      "technique": "T1021",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "laterale beweging met externe beheerprotocollen",
+      "language": "nl",
+      "field": "techniques",
+      "value": "T1021",
+      "match_mode": "tokens",
+      "technique": "T1021",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "RDP",
+      "language": "technical",
+      "field": "protocols",
+      "value": "RDP",
+      "match_mode": "phrase",
+      "technique": "T1021.001"
+    },
+    {
+      "phrase": "remote desktop protocol",
+      "language": "en",
+      "field": "protocols",
+      "value": "RDP",
+      "match_mode": "phrase",
+      "technique": "T1021.001"
+    },
+    {
+      "phrase": "Remote Desktop",
+      "language": "en",
+      "field": "protocols",
+      "value": "RDP",
+      "match_mode": "phrase",
+      "technique": "T1021.001"
+    },
+    {
+      "phrase": "extern bureaublad",
+      "language": "en",
+      "field": "protocols",
+      "value": "RDP",
+      "match_mode": "phrase",
+      "technique": "T1021.001"
+    },
+    {
+      "phrase": "SMB",
+      "language": "technical",
+      "field": "protocols",
+      "value": "SMB",
+      "match_mode": "phrase",
+      "technique": "T1021.002"
+    },
+    {
+      "phrase": "Windows Admin Shares",
+      "language": "en",
+      "field": "protocols",
+      "value": "SMB",
+      "match_mode": "phrase",
+      "technique": "T1021.002"
+    },
+    {
+      "phrase": "SSH",
+      "language": "technical",
+      "field": "protocols",
+      "value": "SSH",
+      "match_mode": "phrase",
+      "technique": "T1021.004"
+    },
+    {
+      "phrase": "PowerShell",
+      "language": "technical",
+      "field": "tools",
+      "value": "PowerShell",
+      "match_mode": "phrase",
+      "technique": "T1059.001"
+    },
+    {
+      "phrase": "powershell.exe",
+      "language": "technical",
+      "field": "tools",
+      "value": "PowerShell",
+      "match_mode": "phrase",
+      "technique": "T1059.001"
+    },
+    {
+      "phrase": "Windows PowerShell",
+      "language": "technical",
+      "field": "tools",
+      "value": "PowerShell",
+      "match_mode": "phrase",
+      "technique": "T1059.001"
+    },
+    {
+      "phrase": "PowerShell scripts",
+      "language": "en",
+      "field": "tools",
+      "value": "PowerShell",
+      "match_mode": "phrase",
+      "technique": "T1059.001"
+    },
+    {
+      "phrase": "PowerShell-opdrachten",
+      "language": "nl",
+      "field": "tools",
+      "value": "PowerShell",
+      "match_mode": "phrase",
+      "technique": "T1059.001"
+    },
+    {
+      "phrase": "Modbus/TCP",
+      "language": "technical",
+      "field": "protocols",
+      "value": "Modbus/TCP",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "Modbus TCP",
+      "language": "technical",
+      "field": "protocols",
+      "value": "Modbus/TCP",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "Modbus",
+      "language": "technical",
+      "field": "protocols",
+      "value": "Modbus",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "DNP3",
+      "language": "technical",
+      "field": "protocols",
+      "value": "DNP3",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "OPC UA",
+      "language": "technical",
+      "field": "protocols",
+      "value": "OPC UA",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "OPC-UA",
+      "language": "technical",
+      "field": "protocols",
+      "value": "OPC UA",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "S7comm",
+      "language": "technical",
+      "field": "protocols",
+      "value": "S7comm",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "IEC 60870-5-104",
+      "language": "technical",
+      "field": "protocols",
+      "value": "IEC 60870-5-104",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "IEC 104",
+      "language": "technical",
+      "field": "protocols",
+      "value": "IEC 60870-5-104",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energy sector",
+      "language": "en",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energy infrastructure",
+      "language": "en",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energy company",
+      "language": "en",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "power sector",
+      "language": "en",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "electric utility",
+      "language": "en",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "electricity sector",
+      "language": "en",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "power generation",
+      "language": "en",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energy operator",
+      "language": "en",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energiesector",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energie sector",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energie-infrastructuur",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energiebedrijf",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "elektriciteitssector",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energieproducent",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "nutsbedrijf",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energiesektor",
+      "language": "de",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "energieversorgung",
+      "language": "de",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "secteur énergétique",
+      "language": "fr",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "water sector",
+      "language": "en",
+      "field": "sectors",
+      "value": "Water",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "water utility",
+      "language": "en",
+      "field": "sectors",
+      "value": "Water",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "water treatment",
+      "language": "en",
+      "field": "sectors",
+      "value": "Water",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "watersector",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Water",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "drinkwaterbedrijf",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Water",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "waterzuivering",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Water",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "manufacturing sector",
+      "language": "en",
+      "field": "sectors",
+      "value": "Manufacturing",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "industrial manufacturing",
+      "language": "en",
+      "field": "sectors",
+      "value": "Manufacturing",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "manufacturing plant",
+      "language": "en",
+      "field": "sectors",
+      "value": "Manufacturing",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "productieomgeving",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Manufacturing",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "maakindustrie",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Manufacturing",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "productiebedrijf",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Manufacturing",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "transportation sector",
+      "language": "en",
+      "field": "sectors",
+      "value": "Transportation",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "transport infrastructure",
+      "language": "en",
+      "field": "sectors",
+      "value": "Transportation",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "transportsector",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Transportation",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "transportinfrastructuur",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Transportation",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "healthcare sector",
+      "language": "en",
+      "field": "sectors",
+      "value": "Healthcare",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "hospital network",
+      "language": "en",
+      "field": "sectors",
+      "value": "Healthcare",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "zorgsector",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Healthcare",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "ziekenhuisnetwerk",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Healthcare",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "government sector",
+      "language": "en",
+      "field": "sectors",
+      "value": "Government",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "public sector",
+      "language": "en",
+      "field": "sectors",
+      "value": "Government",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "overheidssector",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Government",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "overheidsorganisatie",
+      "language": "nl",
+      "field": "sectors",
+      "value": "Government",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "externally accessible systems",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Internet-facing system",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "externally accessible system",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Internet-facing system",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "internet-facing systems",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Internet-facing system",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "internet facing systems",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Internet-facing system",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "public-facing systems",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Internet-facing system",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "public-facing system",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Internet-facing system",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "extern bereikbare systemen",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "Internet-facing system",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "internetbereikbare systemen",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "Internet-facing system",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "enterprise IT environment",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Enterprise IT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "enterprise IT environments",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Enterprise IT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "corporate IT environment",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Enterprise IT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "corporate IT network",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Enterprise IT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "enterprise network",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Enterprise IT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "bedrijfs-IT-omgeving",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "Enterprise IT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "bedrijfsnetwerk",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "Enterprise IT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "corporate netwerk",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "Enterprise IT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "operational technology environment",
+      "language": "en",
+      "field": "target_assets",
+      "value": "OT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "operational technology environments",
+      "language": "en",
+      "field": "target_assets",
+      "value": "OT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "OT environment",
+      "language": "en",
+      "field": "target_assets",
+      "value": "OT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "OT environments",
+      "language": "en",
+      "field": "target_assets",
+      "value": "OT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "operationele technologieomgeving",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "OT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "OT-omgeving",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "OT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "OT-omgevingen",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "OT environment",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "industrial control systems",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Industrial control systems",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "industrial systems",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Industrial control systems",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "industrial process systems",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Industrial control systems",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "industriële besturingssystemen",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "Industrial control systems",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "industriële systemen",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "Industrial control systems",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "critical infrastructure",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Critical infrastructure",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "critical infrastructure environments",
+      "language": "en",
+      "field": "target_assets",
+      "value": "Critical infrastructure",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "kritieke infrastructuur",
+      "language": "nl",
+      "field": "target_assets",
+      "value": "Critical infrastructure",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "engineering workstation",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "Engineering workstation",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "engineering workstations",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "Engineering workstation",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "engineering station",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "Engineering workstation",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "jump server",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "Jump server",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "jump host",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "Jump server",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "bastion host",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "Jump server",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "VPN appliance",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "VPN gateway",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "VPN gateway",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "VPN gateway",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "VPN concentrator",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "VPN gateway",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "PLC",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "PLC",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "programmable logic controller",
+      "language": "en",
+      "field": "target_assets",
+      "value": "PLC",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "HMI",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "HMI",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "human machine interface",
+      "language": "en",
+      "field": "target_assets",
+      "value": "HMI",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "SCADA",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "SCADA",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "SCADA server",
+      "language": "technical",
+      "field": "target_assets",
+      "value": "SCADA",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "IT-to-OT movement",
+      "language": "technical",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "IT to OT movement",
+      "language": "en",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "from IT to OT",
+      "language": "en",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "from the corporate IT network toward operational technology",
+      "language": "en",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "tokens",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "progress from the corporate IT network toward operational technology environments",
+      "language": "en",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "tokens",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "movement from enterprise IT to OT",
+      "language": "en",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "tokens",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "IT naar OT",
+      "language": "nl",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "van IT naar OT",
+      "language": "nl",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "beweging van IT naar OT",
+      "language": "nl",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "van bedrijfsnetwerk naar OT-omgeving",
+      "language": "nl",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "IT-zu-OT",
+      "language": "de",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "IT vers OT",
+      "language": "fr",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "persistent access",
+      "language": "en",
+      "field": "campaigns",
+      "value": "Persistent access behavior",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "maintain access",
+      "language": "en",
+      "field": "campaigns",
+      "value": "Persistent access behavior",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "maintained access",
+      "language": "en",
+      "field": "campaigns",
+      "value": "Persistent access behavior",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "persistence in the environment",
+      "language": "en",
+      "field": "campaigns",
+      "value": "Persistent access behavior",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "blijvende toegang",
+      "language": "nl",
+      "field": "campaigns",
+      "value": "Persistent access behavior",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "toegang behouden",
+      "language": "nl",
+      "field": "campaigns",
+      "value": "Persistent access behavior",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "persistente toegang",
+      "language": "nl",
+      "field": "campaigns",
+      "value": "Persistent access behavior",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "operational disruption",
+      "language": "en",
+      "field": "ics_techniques",
+      "value": "Operational disruption",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "disruptive activity against critical infrastructure",
+      "language": "en",
+      "field": "ics_techniques",
+      "value": "Operational disruption",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "disrupt industrial processes",
+      "language": "en",
+      "field": "ics_techniques",
+      "value": "Operational disruption",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "disruption of industrial operations",
+      "language": "en",
+      "field": "ics_techniques",
+      "value": "Operational disruption",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "operationele verstoring",
+      "language": "nl",
+      "field": "ics_techniques",
+      "value": "Operational disruption",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "verstoring van industriële processen",
+      "language": "nl",
+      "field": "ics_techniques",
+      "value": "Operational disruption",
+      "match_mode": "phrase"
+    },
+    {
+      "phrase": "sustained interest in industrial and critical infrastructure environments particularly the energy sector",
+      "language": "en",
+      "field": "sectors",
+      "value": "Energy",
+      "match_mode": "tokens",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "activity may progress from the corporate IT network toward operational technology environments",
+      "language": "en",
+      "field": "it_ot_movement",
+      "value": "it-to-ot",
+      "match_mode": "tokens",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "using common administrative tools and remote access mechanisms",
+      "language": "en",
+      "field": "techniques",
+      "value": "T1021",
+      "match_mode": "tokens",
+      "technique": "T1021",
+      "threshold": 0.55
+    },
+    {
+      "phrase": "the actor is capable of using PowerShell remote services and legitimate system administration functionality",
+      "language": "en",
+      "field": "tools",
+      "value": "PowerShell",
+      "match_mode": "tokens",
+      "technique": "T1059.001",
+      "threshold": 0.45
+    },
+    {
+      "phrase": "operations demonstrate knowledge of industrial environments and disruptive activity against critical infrastructure",
+      "language": "en",
+      "field": "ics_techniques",
+      "value": "Operational disruption",
+      "match_mode": "tokens",
+      "threshold": 0.5
+    }
+  ]
+}

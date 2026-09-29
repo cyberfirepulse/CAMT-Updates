@@ -1,0 +1,9 @@
+{
+  "host": "0.0.0.0",
+  "port": 8765,
+  "backend": "sqlite",
+  "sqlite_path": "team_server/camt_team_server.sqlite3",
+  "dsn": "postgresql://camt_user:CHANGE_ME@127.0.0.1:5432/camt_team",
+  "api_token": "CHANGE-ME",
+  "evidence_root": "team_server/evidence"
+}

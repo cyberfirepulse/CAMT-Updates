@@ -1,0 +1,16 @@
+{
+  "actor_fingerprints": {
+    "ACTOR-ID-HERE": {
+      "source_labels": [
+        "Dragos"
+      ],
+      "ics_techniques": [],
+      "initial_access": [],
+      "target_assets": [],
+      "protocols": [],
+      "it_ot_movement": [],
+      "negative_evidence": []
+    }
+  },
+  "aliases": {}
+}

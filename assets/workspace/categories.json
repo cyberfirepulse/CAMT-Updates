@@ -1,0 +1,91 @@
+{
+  "schema": "CAMT.WorkspaceCategories.2",
+  "categories": [
+    {
+      "id": "network",
+      "title_key": "home.category.network",
+      "description_key": "home.desc.network",
+      "artwork": "assets/workspace/network.png",
+      "order": 10,
+      "always_show": true
+    },
+    {
+      "id": "intelligence",
+      "title_key": "home.category.intelligence",
+      "description_key": "home.desc.intelligence",
+      "artwork": "assets/workspace/intelligence.png",
+      "order": 20,
+      "always_show": true
+    },
+    {
+      "id": "forensics",
+      "title_key": "home.category.forensics",
+      "description_key": "home.desc.forensics",
+      "artwork": "assets/workspace/forensics.png",
+      "order": 30,
+      "always_show": true
+    },
+    {
+      "id": "security",
+      "title_key": "home.category.security",
+      "description_key": "home.desc.security",
+      "artwork": "assets/workspace/security.png",
+      "order": 40,
+      "always_show": true
+    },
+    {
+      "id": "reporting",
+      "title_key": "home.category.reporting",
+      "description_key": "home.desc.reporting",
+      "artwork": "assets/workspace/reporting.png",
+      "order": 50,
+      "always_show": true
+    },
+    {
+      "id": "projects",
+      "title_key": "home.category.projects",
+      "description_key": "home.desc.projects",
+      "artwork": "assets/workspace/projects.png",
+      "order": 60,
+      "always_show": true,
+      "action": "projects"
+    }
+  ],
+  "quick_actions": [
+    {
+      "id": "modules",
+      "title_key": "home.quick.modules",
+      "description_key": "home.quick.modules.desc",
+      "action": "module_manager",
+      "order": 10
+    },
+    {
+      "id": "updates",
+      "title_key": "home.quick.updates",
+      "description_key": "home.quick.updates.desc",
+      "action": "module_manager",
+      "order": 20
+    },
+    {
+      "id": "license",
+      "title_key": "home.quick.license",
+      "description_key": "home.quick.license.desc",
+      "action": "license_manager",
+      "order": 30
+    },
+    {
+      "id": "settings",
+      "title_key": "home.quick.settings",
+      "description_key": "home.quick.settings.desc",
+      "action": "settings",
+      "order": 40
+    },
+    {
+      "id": "help",
+      "title_key": "home.quick.help",
+      "description_key": "home.quick.help.desc",
+      "action": "help",
+      "order": 50
+    }
+  ]
+}

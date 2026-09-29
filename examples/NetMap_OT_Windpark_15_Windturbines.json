@@ -1,0 +1,742 @@
+{
+  "range": "10.44.0.0/16",
+  "devices": [
+    {
+      "ip": "10.44.0.1",
+      "mac": "02:44:00:00:00:01",
+      "hostname": "WF-GW-01",
+      "dev_type": "gateway/router",
+      "note": "OT gateway",
+      "ports_summary": "443/tcp https Industrial Gateway 1.0",
+      "pos_x": 160,
+      "pos_y": 120,
+      "services": [
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Industrial Gateway",
+          "version": "1.0",
+          "product_version": "Industrial Gateway 1.0"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": true,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.0.10",
+      "mac": "02:44:00:00:00:10",
+      "hostname": "WF-SCADA-01",
+      "dev_type": "server",
+      "note": "SCADA/HMI",
+      "ports_summary": "502/tcp modbus SCADA Modbus Service test, 443/tcp https SCADA HMI test",
+      "pos_x": 390,
+      "pos_y": 120,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "SCADA Modbus Service",
+          "version": "test",
+          "product_version": "SCADA Modbus Service test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "SCADA HMI",
+          "version": "test",
+          "product_version": "SCADA HMI test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.0.11",
+      "mac": "02:44:00:00:00:11",
+      "hostname": "WF-HIST-01",
+      "dev_type": "server",
+      "note": "OT Historian",
+      "ports_summary": "443/tcp https Historian Web test",
+      "pos_x": 620,
+      "pos_y": 120,
+      "services": [
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Historian Web",
+          "version": "test",
+          "product_version": "Historian Web test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.0.12",
+      "mac": "02:44:00:00:00:12",
+      "hostname": "WF-ENG-01",
+      "dev_type": "client",
+      "note": "Engineering workstation",
+      "ports_summary": "3389/tcp ms-wbt-server RDP test",
+      "pos_x": 850,
+      "pos_y": 120,
+      "services": [
+        {
+          "port": 3389,
+          "protocol": "tcp",
+          "service": "ms-wbt-server",
+          "name": "ms-wbt-server",
+          "product": "RDP",
+          "version": "test",
+          "product_version": "RDP test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.1",
+      "mac": "02:44:01:00:00:01",
+      "hostname": "WTG-01-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 01 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 160,
+      "pos_y": 300,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.2",
+      "mac": "02:44:01:00:00:02",
+      "hostname": "WTG-02-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 02 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 380,
+      "pos_y": 300,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.3",
+      "mac": "02:44:01:00:00:03",
+      "hostname": "WTG-03-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 03 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 600,
+      "pos_y": 300,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.4",
+      "mac": "02:44:01:00:00:04",
+      "hostname": "WTG-04-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 04 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 820,
+      "pos_y": 300,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.5",
+      "mac": "02:44:01:00:00:05",
+      "hostname": "WTG-05-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 05 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 1040,
+      "pos_y": 300,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.6",
+      "mac": "02:44:01:00:00:06",
+      "hostname": "WTG-06-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 06 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 160,
+      "pos_y": 470,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.7",
+      "mac": "02:44:01:00:00:07",
+      "hostname": "WTG-07-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 07 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 380,
+      "pos_y": 470,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.8",
+      "mac": "02:44:01:00:00:08",
+      "hostname": "WTG-08-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 08 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 600,
+      "pos_y": 470,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.9",
+      "mac": "02:44:01:00:00:09",
+      "hostname": "WTG-09-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 09 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 820,
+      "pos_y": 470,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.10",
+      "mac": "02:44:01:00:00:0a",
+      "hostname": "WTG-10-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 10 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 1040,
+      "pos_y": 470,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.11",
+      "mac": "02:44:01:00:00:0b",
+      "hostname": "WTG-11-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 11 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 160,
+      "pos_y": 640,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.12",
+      "mac": "02:44:01:00:00:0c",
+      "hostname": "WTG-12-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 12 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 380,
+      "pos_y": 640,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.13",
+      "mac": "02:44:01:00:00:0d",
+      "hostname": "WTG-13-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 13 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 600,
+      "pos_y": 640,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.14",
+      "mac": "02:44:01:00:00:0e",
+      "hostname": "WTG-14-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 14 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 820,
+      "pos_y": 640,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    },
+    {
+      "ip": "10.44.1.15",
+      "mac": "02:44:01:00:00:0f",
+      "hostname": "WTG-15-CTRL",
+      "dev_type": "plc",
+      "note": "Windturbine 15 - synthetisch OT testasset",
+      "ports_summary": "502/tcp modbus Wind Turbine Controller test, 44818/tcp ethernet-ip Industrial Controller Interface test, 443/tcp https Turbine Service Interface test",
+      "pos_x": 1040,
+      "pos_y": 640,
+      "services": [
+        {
+          "port": 502,
+          "protocol": "tcp",
+          "service": "modbus",
+          "name": "modbus",
+          "product": "Wind Turbine Controller",
+          "version": "test",
+          "product_version": "Wind Turbine Controller test"
+        },
+        {
+          "port": 44818,
+          "protocol": "tcp",
+          "service": "ethernet-ip",
+          "name": "ethernet-ip",
+          "product": "Industrial Controller Interface",
+          "version": "test",
+          "product_version": "Industrial Controller Interface test"
+        },
+        {
+          "port": 443,
+          "protocol": "tcp",
+          "service": "https",
+          "name": "https",
+          "product": "Turbine Service Interface",
+          "version": "test",
+          "product_version": "Turbine Service Interface test"
+        }
+      ],
+      "vulnerabilities": [],
+      "is_gateway": false,
+      "online_status": "online"
+    }
+  ],
+  "annotations": [],
+  "zones": []
+}

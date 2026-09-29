@@ -1,0 +1,11 @@
+CAMT 1.2.0 Beta 9 — v11.1 Artwork QA
+
+Generated consistent artwork files: 11
+Artwork dimensions: 640x360 PNG
+Help category artwork mapping: PASS
+Workspace core capability artwork mapping: PASS
+Data-driven nav_artwork registry: PASS
+Module fallback artwork registry: PASS
+Missing artwork does not change callback/navigation logic: PASS
+No user module registry changes: PASS
+No installed module directories changed: PASS

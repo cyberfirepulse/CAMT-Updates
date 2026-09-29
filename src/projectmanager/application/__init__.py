@@ -1,0 +1,33 @@
+from __future__ import annotations
+from projectmanager.features.app_core import AppCoreMixin
+from projectmanager.features.ui_shell import UiShellMixin
+from projectmanager.features.settings_theme_i18n import SettingsThemeI18NMixin
+from projectmanager.features.license_manager import LicenseManagerMixin
+from projectmanager.features.project_library import ProjectLibraryMixin
+from projectmanager.features.scanner_analysis import ScannerAnalysisMixin
+from projectmanager.features.project_operations import ProjectOperationsMixin
+from projectmanager.features.build_git import BuildGitMixin
+from projectmanager.features.security import SecurityMixin
+from projectmanager.features.investigation_reports import InvestigationReportsMixin
+from projectmanager.features.script_architect import ScriptArchitectMixin
+from projectmanager.features.threat_heatmap import ThreatHeatmapMixin
+from projectmanager.features.cti_center import CTICenterMixin
+from projectmanager.features.attack_path_designer import AttackPathDesignerMixin
+from projectmanager.features.defensive_coverage import DefensiveCoverageMixin
+from projectmanager.features.scenario_simulator import ScenarioSimulatorMixin
+from projectmanager.features.risk_workspace import RiskWorkspaceMixin
+from projectmanager.features.control_mapping import ControlMappingMixin
+from projectmanager.features.plugin_center import PluginCenterMixin
+from projectmanager.features.network_asset_intelligence import NetworkAssetIntelligenceMixin
+from projectmanager.features.network_scenario_engine import NetworkScenarioEngineMixin
+from projectmanager.features.digital_twin import DigitalTwinMixin
+from projectmanager.features.cyber_digital_twin import CyberDigitalTwinMixin
+from projectmanager.features.scenario_import import ScenarioImportMixin
+from projectmanager.features.scenario_bridge import ScenarioBridgeMixin
+from projectmanager.features.scenario_visual_workspace import ScenarioVisualWorkspaceMixin
+from projectmanager.features.professional_ui import ProfessionalUIMixin
+from projectmanager.features.digital_twin_professional import ProfessionalDigitalTwinMixin
+
+class ProjectManagerApp(AppCoreMixin, UiShellMixin, SettingsThemeI18NMixin, LicenseManagerMixin, ProjectLibraryMixin, ScannerAnalysisMixin, ProjectOperationsMixin, BuildGitMixin, SecurityMixin, InvestigationReportsMixin, ScriptArchitectMixin, ThreatHeatmapMixin, CTICenterMixin, AttackPathDesignerMixin, DefensiveCoverageMixin, ScenarioSimulatorMixin, RiskWorkspaceMixin, ControlMappingMixin, PluginCenterMixin, NetworkAssetIntelligenceMixin, NetworkScenarioEngineMixin, DigitalTwinMixin, CyberDigitalTwinMixin, ScenarioImportMixin, ScenarioBridgeMixin, ScenarioVisualWorkspaceMixin, ProfessionalUIMixin, ProfessionalDigitalTwinMixin):
+    """CAMT 10.0 RC1 Unified Visual Workspace."""
+    pass

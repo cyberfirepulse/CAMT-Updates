@@ -1,0 +1,32 @@
+{
+  "id": "org.projectmanager.network-digital-twin",
+  "name": "Network Digital Twin (NetMap)",
+  "version": "1.1.0",
+  "api_version": "1",
+  "minimum_app_version": "9.5.0-alpha.2",
+  "entry_point": "plugin.py:PluginEntry",
+  "description": "Officiële NetMap-plugin voor netwerkdiscovery, topologie, zones, traceroute, PCAP en attack-path context.",
+  "author": "ProjectManager Suite",
+  "builtin": true,
+  "capabilities": [
+    "asset.publish",
+    "filesystem.read",
+    "filesystem.write",
+    "network.discovery",
+    "process.execute",
+    "security.integration",
+    "ui.window"
+  ],
+  "optional_dependencies": [
+    "scapy",
+    "requests"
+  ],
+  "name_i18n": {
+    "nl": "Network Digital Twin (NetMap)",
+    "en": "Network Digital Twin (NetMap)"
+  },
+  "description_i18n": {
+    "nl": "Officiële NetMap-plugin voor netwerkdiscovery, topologie, zones, traceroute, PCAP en attack-path-context.",
+    "en": "Official NetMap plugin for network discovery, topology, zones, traceroute, PCAP and attack-path context."
+  }
+}

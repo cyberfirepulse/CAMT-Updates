@@ -1,0 +1,96 @@
+CAMT 1.2.0 Beta 9 UPDATE QA
+Build: 120B9-LIC-20260916
+
+Python compile changed files: PASS
+NL/EN locale key parity: PASS (2709 keys each)
+NetMap English Print/Send/Style corrections: PASS
+Settings first-open Save/Cancel explicit runtime translations: PASS
+Dynamic Home source: PASS
+Module contribution category/icon metadata compatibility: PASS
+License-derived runtime edition title: PASS
+
+Design rule:
+- Home reads enabled workspace module contributions dynamically.
+- Existing modules without category/icon remain compatible via fallback.
+- User registry and installed module/plugin directories are not modified by this patch.
+
+Module/Home real PNG icon rendering: PASS
+Fallback category icons included: PASS
+
+V3 primary Workspace: PASS
+Project detail/right pane hidden on Home: PASS
+Workspace categories loaded from categories.json: PASS
+Category titles/descriptions use locale keys: PASS
+Repository CTA uses existing module manager: PASS
+
+V4 module-specific artwork support: PASS
+Module artwork registry externalized: PASS
+Manifest artwork/icon override supported: PASS
+Home capability chooser uses module artwork: PASS
+Module Manager uses module artwork: PASS
+
+V5 STARTUP / VISUAL QA
+Primary Home hides project side panels: PASS
+Primary Home hides project scan/action chrome: PASS
+Home re-sync after legacy layout restore: PASS
+Six capability cards always sourced from categories.json: PASS
+Capability artwork cropped from approved mock-up without embedded labels: PASS
+Module artwork metadata-driven with manifest/repository override: PASS
+Repository/Module Manager screen-aware footer layout: PASS
+Changed Python compile: PASS
+
+V6 MENU / HOME / REPOSITORY FIX
+navigation_contributions artwork isolation: PASS
+Dynamic module menu contributions no longer depend on artwork load: PASS
+Repository Treeview compound insert removed: PASS
+Repository row values set column-by-column: PASS
+Persistent Home button: PASS
+File > Home menu entry: PASS
+Category chooser Home button: PASS
+Existing menu registry preserved: PASS
+Changed Python compile: PASS
+
+V7 STARTUP TRACEBACK FIX
+Exact NameError CENTER at build_git.py Home module strip: FIXED
+Unqualified justify=CENTER occurrences introduced by update: 0
+build_git.py compile: PASS
+No registry/module/plugin data changes: PASS
+
+V8 CAPABILITY NAVIGATION FIX
+Category views render inside main CAMT window: PASS
+Main menu bar remains present in category views: PASS
+Home category counts combine core navigation + modules: PASS
+Digital Twin twin.* functions included under Network: PASS
+Intelligence intel.* functions included: PASS
+Security security.* functions included: PASS
+Telemetry/forensics functions included: PASS
+Reporting reports.* functions included: PASS
+Legacy current modules categorized via external workspace_registry.json: PASS
+Future module manifest category remains authoritative: PASS
+Changed Python compile: PASS
+
+V9 VERIFIED APPLIER
+Post-copy active build_git.py verification: REQUIRED
+Patch/active build_git SHA256 equality check: REQUIRED
+Applier exits non-zero if active source was not actually updated.
+
+V10 DIGITAL TWIN / NETMAP I18N FIX
+Digital Twin source included in update: PASS
+NetMap source/plugin included in update: PASS
+V9 workspace locale keys preserved by merge: PASS
+Digital Twin referenced locale keys present EN/NL: PASS (130 keys)
+EN Print/Send/Style corrections: PASS
+EN Apply Scenario residual correction: PASS
+Changed Python compile: PASS
+Post-copy active locale verification: REQUIRED
+
+V11 HELP AUDIT / MODERNIZATION
+Core Help topic parity EN/NL: PASS (33 topics)
+Help grouped categories metadata: PASS
+Help category artwork: PASS
+Help styled rendering: PASS
+Repository + Licensing help topics added: PASS
+Network Mapper help EN/NL parity: PASS
+Module README audit report included: PASS
+Installed user modules not modified: PASS
+Changed Python compile: PASS

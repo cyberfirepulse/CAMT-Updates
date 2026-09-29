@@ -1,0 +1,14 @@
+{
+  "app.name": "CAMT",
+  "app.full_name": "Cyber Advanced Modeling Tool",
+  "app.edition": "Professional Edition",
+  "workspace.scenario": "Scenario",
+  "workspace.digital_twin": "Digital Twin",
+  "workspace.cti": "CTI",
+  "workspace.attack_path": "Attack Path",
+  "workspace.timeline": "Tijdlijn",
+  "workspace.report": "Rapportage",
+  "action.run": "Uitvoeren",
+  "action.load": "Laden",
+  "action.save": "Opslaan"
+}

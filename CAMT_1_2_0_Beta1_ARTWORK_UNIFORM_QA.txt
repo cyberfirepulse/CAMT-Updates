@@ -1,0 +1,16 @@
+CAMT 1.2.0 Beta 9 — v11.3 Uniform Artwork QA
+
+Observed issue addressed:
+- mixed artwork sizes
+- some cards without artwork
+- source image aspect ratios produced inconsistent visual heights
+
+Corrections:
+- exact displayed artwork size: 220x124 pixels
+- ImageOps.fit center-crop/resize for all source artwork
+- category default artwork for every core capability
+- invalid/missing package artwork falls back to category artwork
+- package-specific artwork remains preferred when valid
+- capability cards use consistent 300x255 geometry
+- navigation callbacks unchanged
+- user module registry unchanged
