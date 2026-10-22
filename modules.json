@@ -1,7 +1,7 @@
 {
   "schema": "CAMT.ModuleUpdateCatalog.1",
   "channel": "Beta",
-  "generated": "2026-09-16T00:00:00+02:00",
+  "generated": "2026-10-22T06:58:41+00:00",
   "repository": "https://github.com/cyberfirepulse/CAMT-Updates",
   "modules": [
     {
@@ -354,6 +354,50 @@
       "filename": "Report_Studio_Professional_v2_6_2.camtmodule",
       "icon": "assets/module_icon.png",
       "artwork": "assets/module_icon.png"
+    },
+    {
+      "package_id": "camt.network.session_forensics",
+      "name": "Network Session Forensics",
+      "version": "2.8.2",
+      "channel": "Beta",
+      "category": "Other",
+      "description": "Network investigation workspace with Host Intelligence, session multifilters, explainable findings and linked timeline, Packet Inspector and stream evidence/export, authentication correlation, DNS indicators, visible TLS ClientHello metadata, SMTP reconstruction, DHCP history and ARP conflict indicators. Uses CAMT/Scapy on Windows and Linux.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Network_Session_Forensics_v2_8_2.camtmodule",
+      "filename": "CAMT_Network_Session_Forensics_v2_8_2.camtmodule",
+      "sha256": "FAACC05105691A181876CEFA48823EA5872B2D7A761415E31238C80F173082B2"
+    },
+    {
+      "package_id": "camt.forensics.data_carrier",
+      "name": "Data Carrier Forensics",
+      "version": "1.7.1",
+      "channel": "Beta",
+      "category": "Other",
+      "description": "Examines a storage device (physical drive or an existing forensic image) for recoverable files, including after the device has been formatted. Supports imaging-first (recommended, read-only, hashed) or direct live-device analysis, and auto-detects The Sleuth Kit / PhotoRec on the host to use as the recovery engine, falling back to a built-in Python signature-based file carver when neither is installed.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Data_Carrier_Forensics_v1_7_1.camtmodule",
+      "filename": "CAMT_Data_Carrier_Forensics_v1_7_1.camtmodule",
+      "sha256": "E1C49B460E40B77BB636B0A13F34B66DF211E4C18EF002C9CF6612ACA4DFCB61"
+    },
+    {
+      "package_id": "camt.source.security_scanner",
+      "name": "Source Security Scanner",
+      "version": "0.4.0",
+      "channel": "Beta",
+      "category": "Other",
+      "description": "Static source review for Python, PHP, JavaScript/TypeScript, Perl and Pike with file/line evidence, CWE references and JSON/CSV/SARIF export.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Source_Security_Scanner_v0_4_0.camtmodule",
+      "filename": "CAMT_Source_Security_Scanner_v0_4_0.camtmodule",
+      "sha256": "C568CF53D4AA81694109D2AF9034C902702F8F0F7E18ECEF8DD1BAD5EC614E0F"
+    },
+    {
+      "package_id": "camt.php.security_check",
+      "name": "PHP Security Check",
+      "version": "1.0.0",
+      "channel": "Beta",
+      "category": "Other",
+      "description": "Controle van PHP-versies op CVE-2026-109618 en CVE-2026-109619 via inventaris, lokale PHP en HTTP-headers.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_PHP_Security_Check_v1_0_0.camtmodule",
+      "filename": "CAMT_PHP_Security_Check_v1_0_0.camtmodule",
+      "sha256": "4B06B1A1525EBC6A767907D74CB4BCA76037B4AC0F7DEC188B152ABDBED17D20"
     }
   ],
   "signing": {
