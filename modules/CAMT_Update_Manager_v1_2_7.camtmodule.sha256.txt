@@ -1,0 +1,1 @@
+f145ce2d39e7a6682cf0ccc3f93f23268775280b2bdc22fafe636fd028ab43d4  CAMT_Update_Manager_v1_2_7.camtmodule
