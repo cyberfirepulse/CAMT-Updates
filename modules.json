@@ -346,12 +346,12 @@
       "package_id": "camt.report.studio_professional",
       "name": "Report Studio Professional",
       "channel": "Beta",
-      "version": "2.6.3",
+      "version": "2.6.6",
       "category": "Other",
-      "description": "Report Studio Professional with reliable CAMT handoff loading, structured report-project open validation, PDF/DOCX/HTML/TXT export, and visual artifact support.",
-      "download_url": "https://github.com/cyberfirepulse/CAMT-Updates/raw/main/modules/Report_Studio_Professional_v2_6_2.camtmodule",
-      "sha256": "C921A33C809ED104E3A13565FC93BD4A568386239D14384DB78A9B2D8C391158",
-      "filename": "Report_Studio_Professional_v2_6_2.camtmodule",
+      "description": "Toont Markdown-tabellen in Visual Editor en in de HTML-preview en -export. De tabelbreedte wordt opnieuw berekend wanneer het editorvenster van formaat verandert.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/Report_Studio_Professional_v2_6_6.camtmodule",
+      "sha256": "B89D411D10DE4A8159E6AFAE74A7B4EDC128159BE920C9DDABC8F5D4334F218B",
+      "filename": "Report_Studio_Professional_v2_6_6.camtmodule",
       "icon": "assets/module_icon.png",
       "artwork": "assets/module_icon.png"
     },
@@ -391,13 +391,13 @@
     {
       "package_id": "camt.php.security_check",
       "name": "PHP Security Check",
-      "version": "1.0.0",
+      "version": "1.10.2",
       "channel": "Beta",
       "category": "Other",
-      "description": "Controle van PHP-versies op CVE-2026-109618 en CVE-2026-109619 via inventaris, lokale PHP en HTTP-headers.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_PHP_Security_Check_v1_0_0.camtmodule",
-      "filename": "CAMT_PHP_Security_Check_v1_0_0.camtmodule",
-      "sha256": "4B06B1A1525EBC6A767907D74CB4BCA76037B4AC0F7DEC188B152ABDBED17D20"
+      "description": "Opent de actuele PHP-resultaten rechtstreeks in de ingebouwde Report Studio. De resultatenlijst ondersteunt meetgeschiedenis, filters, gerichte hercontroles en het corrigeren van handmatige versies.",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_PHP_Security_Check_v1_10_2.camtmodule",
+      "filename": "CAMT_PHP_Security_Check_v1_10_2.camtmodule",
+      "sha256": "85E79211BC021F126A7C1A132C3DE77CDA2BA71F210F99587B742F1C54ED5EEB"
     }
   ],
   "signing": {
