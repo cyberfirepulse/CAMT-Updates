@@ -391,13 +391,13 @@
     {
       "package_id": "camt.php.security_check",
       "name": "PHP Security Check",
-      "version": "1.10.2",
+      "version": "1.10.4",
       "channel": "Beta",
       "category": "Other",
       "description": "Opent de actuele PHP-resultaten rechtstreeks in de ingebouwde Report Studio. De resultatenlijst ondersteunt meetgeschiedenis, filters, gerichte hercontroles en het corrigeren van handmatige versies.",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_PHP_Security_Check_v1_10_2.camtmodule",
-      "filename": "CAMT_PHP_Security_Check_v1_10_2.camtmodule",
-      "sha256": "85E79211BC021F126A7C1A132C3DE77CDA2BA71F210F99587B742F1C54ED5EEB"
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_PHP_Security_Check_v1_10_4.camtmodule",
+      "filename": "CAMT_PHP_Security_Check_v1_10_4.camtmodule",
+      "sha256": "71063B190D3CA4D57E0CE0B29A3520D7CA389FB04FF5E2AF29AD8048298444EF"
     }
   ],
   "signing": {
