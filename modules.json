@@ -413,13 +413,13 @@
     {
       "package_id": "camt.network.trace_route_visualizer",
       "name": "Traceroute Route Visualizer",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "channel": "Beta",
       "category": "Network",
       "description": "Traceroute vanuit CAMT met een ingebouwde OpenStreetMap-routekaart, zoom en verplaatsing.",
-      "filename": "CAMT_Traceroute_Route_Visualizer_v1_2_1.camtmodule",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Traceroute_Route_Visualizer_v1_2_1.camtmodule",
-      "sha256": "BC15117B7A090E8482BBA0FF7F797AEB888AA40D9731CFBB8F7109BBF2226E85"
+      "filename": "CAMT_Traceroute_Route_Visualizer_v1_2_2.camtmodule",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Traceroute_Route_Visualizer_v1_2_2.camtmodule",
+      "sha256": "413EEA694237BA1E7D2C8C96D70460F9C5B901457790B728219D1F030E9FC6E0"
     }
   ],
   "signing": {
