@@ -398,6 +398,28 @@
       "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_PHP_Security_Check_v1_10_4.camtmodule",
       "filename": "CAMT_PHP_Security_Check_v1_10_4.camtmodule",
       "sha256": "71063B190D3CA4D57E0CE0B29A3520D7CA389FB04FF5E2AF29AD8048298444EF"
+    },
+    {
+      "package_id": "camt.mail.route_analyzer",
+      "name": "E-mailroute Analyse",
+      "version": "1.7.0",
+      "channel": "Beta",
+      "category": "Forensics",
+      "description": "Offline reconstructie van e-mailroutes, authenticatie en afleverheaders. Optionele IP-locaties via ipapi.co.",
+      "filename": "CAMT_Email_Route_Analyzer_v1_7_0.camtmodule",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Email_Route_Analyzer_v1_7_0.camtmodule",
+      "sha256": "7D1669984DE1AA2EB450FC95DF4FB38EA432D42BA427EB3D1E5848D3B7838CAC"
+    },
+    {
+      "package_id": "camt.network.trace_route_visualizer",
+      "name": "Traceroute Route Visualizer",
+      "version": "1.0.0",
+      "channel": "Beta",
+      "category": "Network",
+      "description": "Visualiseer Windows tracert en Linux/macOS traceroute met klikbare hops en optionele wereldkaart.",
+      "filename": "CAMT_Traceroute_Route_Visualizer_v1_0_0.camtmodule",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Traceroute_Route_Visualizer_v1_0_0.camtmodule",
+      "sha256": "BDF697E2DF8F5FBC44CDFA11EC7D2C8218F371AD09A51D49E212D889A2833BD5"
     }
   ],
   "signing": {
