@@ -413,13 +413,13 @@
     {
       "package_id": "camt.network.trace_route_visualizer",
       "name": "Traceroute Route Visualizer",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "channel": "Beta",
       "category": "Network",
-      "description": "Visualiseer Windows tracert en Linux/macOS traceroute met klikbare hops en optionele wereldkaart.",
-      "filename": "CAMT_Traceroute_Route_Visualizer_v1_0_0.camtmodule",
-      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Traceroute_Route_Visualizer_v1_0_0.camtmodule",
-      "sha256": "BDF697E2DF8F5FBC44CDFA11EC7D2C8218F371AD09A51D49E212D889A2833BD5"
+      "description": "Start traceroute vanuit CAMT met een hostnaam of IP-adres en visualiseer de hops met optionele GeoIP.",
+      "filename": "CAMT_Traceroute_Route_Visualizer_v1_1_0.camtmodule",
+      "download_url": "https://raw.githubusercontent.com/cyberfirepulse/CAMT-Updates/main/modules/CAMT_Traceroute_Route_Visualizer_v1_1_0.camtmodule",
+      "sha256": "D56AFCB19E605E4B2604C6774E506534BF1FBF5C6B5010B597223D0D76276796"
     }
   ],
   "signing": {
